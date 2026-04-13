@@ -2440,7 +2440,7 @@ function shopFilter(cat) {
       <div>
         <div class="footer-logo" onclick="showPage('home')"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664ef03576f44996b0a05f81_Logo%20Wrapper.svg" alt="HALT Fire"></div>
         <p class="footer-tagline">Innovative, USA-made fire safety products that are easy to use, easy to store, and easy to find.</p>
-        <a href="mailto:info@haltfire.com" style="color:var(--lime);font-size:14px;font-weight:600;text-decoration:none">info@haltfire.com</a>
+        <a href="mailto:customerservice@haltfire.com" style="color:var(--lime);font-size:14px;font-weight:600;text-decoration:none">customerservice@haltfire.com</a>
       </div>
       <div>
         <div class="footer-col-title">Links</div>
@@ -2641,7 +2641,7 @@ document.addEventListener('submit', function(e) {
   data.forEach((v, k) => params.append(k, v));
   const subject = encodeURIComponent('HALT Fire Website Inquiry');
   const body = encodeURIComponent(Array.from(data.entries()).map(([k,v]) => k + ': ' + v).join('\n'));
-  window.location.href = 'mailto:info@haltfire.com?subject=' + subject + '&body=' + body;
+  window.location.href = 'mailto:customerservice@haltfire.com?subject=' + subject + '&body=' + body;
   // Show success state
   const btn = form.querySelector('button[type="submit"]');
   if (btn) { btn.textContent = 'Sent!'; btn.disabled = true; }
