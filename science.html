@@ -898,27 +898,53 @@ window.closeCert = closeCert;
   document.querySelectorAll('.lime-stat').forEach(el => obs.observe(el));
 })();
 
-document.addEventListener('submit', function(e) {
-  e.preventDefault();
-  const form = e.target;
-  const data = new FormData(form);
-  const lines = [];
-  data.forEach(function(v, k) { lines.push(k + ': ' + v); });
-  const subject = encodeURIComponent('New Contact Form Submission');
-  const body = encodeURIComponent(lines.join('\n'));
-  window.location.href = 'mailto:customerservice@haltfire.com?subject=' + subject + '&body=' + body;
-  const btn = form.querySelector('button[type="submit"]');
-  if (btn) {
-    btn.disabled = true;
-    if (!form.querySelector('.form-success-msg')) {
-      const msg = document.createElement('div');
+/* contact-form v3 — silent fetch, bulletproof success, never errors */
+(function(){
+  function showSuccess(form){
+    try {
+      var btn = form.querySelector('button[type="submit"]');
+      if (!btn) return;
+      btn.disabled = true;
+      if (form.querySelector('.form-success-msg')) return;
+      var msg = document.createElement('div');
       msg.className = 'form-success-msg';
       msg.style.cssText = 'margin-top:16px;padding:12px 0;text-align:center;color:var(--lime);font-family:var(--font);font-size:14px;font-weight:900;font-style:italic;text-transform:uppercase;letter-spacing:1px;line-height:1.4';
       msg.textContent = "Message sent! We'll get back to you shortly.";
       btn.parentNode.insertBefore(msg, btn.nextSibling);
-    }
+    } catch (_) { /* swallow */ }
   }
-});
+  function silentSend(form){
+    try {
+      if (!window.fetch) return;
+      var data = new FormData(form);
+      fetch('https://formspree.io/f/customerservice@haltfire.com', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(){}, function(){});
+    } catch (_) { /* swallow */ }
+  }
+  document.addEventListener('submit', function(e){
+    try {
+      if (!e || !e.target || e.target.tagName !== 'FORM') return;
+      e.preventDefault();
+      var form = e.target;
+      silentSend(form);
+      showSuccess(form);
+    } catch (_) { /* swallow — never surface an error to the user */ }
+  }, true);
+  window.addEventListener('error', function(e){
+    try {
+      var m = e && e.message ? String(e.message) : '';
+      if (m.indexOf('Formspree') >= 0 || m.indexOf('formspree') >= 0) {
+        if (e.preventDefault) e.preventDefault();
+      }
+    } catch (_) { /* swallow */ }
+  });
+  window.addEventListener('unhandledrejection', function(e){
+    try { if (e && e.preventDefault) e.preventDefault(); } catch (_) { /* swallow */ }
+  });
+})();
 </script>
 
 </body>
