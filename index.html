@@ -49,7 +49,7 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
 .mob-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--dark2);border-bottom:1px solid rgba(200,255,42,0.1);padding:24px 32px;z-index:199}
 .mob-menu.open{display:block}
 .mob-menu a{display:block;font-family:var(--font);font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.7);padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06);cursor:pointer;text-decoration:none}
-.mob-menu a:hover{color:var(--lime)}
+.mob-menu a:hover,.mob-menu a.active{color:var(--lime)}
 
 /* LAYOUT */
 .con{max-width:1280px;margin:0 auto;padding:0 32px}
@@ -537,7 +537,7 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
       <li><a href="science.html" id="nav-science">the science</a></li>
       <li><a href="shop.html" id="nav-store">Shop</a></li>
       <li><a href="about.html" id="nav-about">about us</a></li>
-      <li><a href="retailers.html" id="nav-retailers" style="color:var(--lime)">for retailers</a></li>
+      <li><a href="retailers.html" id="nav-retailers">for retailers</a></li>
     </ul>
     <div class="nav-ctas">
       <a href="index.html#contact" class="btn-outline-lime">Get In Touch</a>
@@ -548,12 +548,12 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
     </button>
   </div>
   <div class="mob-menu" id="mob-menu">
-    <a href="index.html" onclick="toggleMob()">Home</a>
+    <a href="index.html" onclick="toggleMob()" class="active">Home</a>
     <a href="science.html" onclick="toggleMob()">The Science</a>
     <a href="shop.html" onclick="toggleMob()">Shop</a>
     <a href="about.html" onclick="toggleMob()">About Us</a>
     
-    <a href="retailers.html" onclick="toggleMob()" style="color:var(--lime)">For Retailers</a>
+    <a href="retailers.html" onclick="toggleMob()">For Retailers</a>
     <a href="shop.html" style="color:var(--lime);cursor:pointer">Shop Now →</a>
   </div>
 </nav>
@@ -889,8 +889,8 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
     <div class="con">
       <div class="fade-up" style="text-align:center;margin-bottom:56px">
         <div class="section-eyebrow">Proven Effectiveness</div>
-        <h2 class="section-title">Works On <span class="red">Every Material</span></h2>
-        <p class="section-sub">HALT suppresses fires across every type of combustible material</p>
+        <h2 class="section-title">Works On <span class="red">Multiple Materials</span></h2>
+        <p class="section-sub">HALT suppresses fires across multiple types of combustible material</p>
       </div>
       <div class="mat-grid">
         <div class="mat-item"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f1f1193b433881c01215b_image%20243.svg" alt="Grease"><span>Grease</span><p class="mat-desc">Cooking oils, heating grease, kitchen fires — Class K</p></div>
@@ -903,109 +903,6 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
       </div>
     </div>
   </section>
-
-  <!-- COMPARISON TABLE -->
-  <section style="padding:100px 0;background:#181818">
-    <div class="con">
-      <div class="fade-up" style="text-align:center;margin-bottom:56px">
-        <div class="section-eyebrow">The Proof</div>
-        <h2 class="section-title">HALT vs <span class="lime">The Competition</span></h2>
-        <p class="section-sub">How HALT stacks up against traditional fire extinguishers</p>
-      </div>
-      <div class="table-wrap">
-        <table class="ctable">
-          <thead><tr>
-            <th></th>
-            <th class="halt-col"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/9c111588-534c-ff69-d3d6-98948a0f57d1.png" style="width:60px;display:block;margin:0 auto 8px;object-fit:contain;filter:drop-shadow(0 4px 16px rgba(0,0,0,.2))" alt="HALT">HALT</th>
-            <th><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7cda32e30d72ece08d86_table_img_2.webp" style="width:90px;height:90px;display:block;margin:0 auto 6px;object-fit:contain;opacity:1" alt=""></th>
-            <th><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7ce703f4f06524c1b836_table_img_3.webp" style="width:90px;height:90px;display:block;margin:0 auto 6px;object-fit:contain;opacity:1" alt=""></th>
-            <th><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7cf7bfca01108180d8f6_table_img_4.webp" style="width:90px;height:90px;display:block;margin:0 auto 6px;object-fit:contain;opacity:1" alt=""></th>
-            <th><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7d6732e30d72ece0f052_table_img_5.webp" style="width:90px;height:90px;display:block;margin:0 auto 6px;object-fit:contain;opacity:1" alt=""></th>
-          </tr></thead>
-          <tbody>
-            <tr><td>Made in the USA</td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7d8506b0ad83394e568a_question_mark.svg" alt="?"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td></tr>
-            <tr><td>Non-Toxic / No Forever Chemicals</td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7d8506b0ad83394e568a_question_mark.svg" alt="?"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td></tr>
-            <tr><td>Eco-Friendly: PFAS, Fluorine, VOC Free</td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7d8506b0ad83394e568a_question_mark.svg" alt="?"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td></tr>
-            <tr><td>Safe Around Children & Pets</td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7d8506b0ad83394e568a_question_mark.svg" alt="?"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td></tr>
-            <tr><td>Effective on Class A (Wood, Paper, Cloth)</td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7d8506b0ad83394e568a_question_mark.svg" alt="?"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td></tr>
-            <tr><td>Effective on Class B (Oil, Grease, Fuel)</td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7d8506b0ad83394e568a_question_mark.svg" alt="?"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td></tr>
-            <tr><td>Effective on Class C (Electrical)</td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td></tr>
-            <tr><td>Effective on Li-Ion Battery Fires</td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td></tr>
-            <tr><td><em>Prevents Reignition</em></td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- POWERHOUSE MARKETING STRATEGY -->
-  <section style="padding:100px 0;background:#181818">
-    <div class="con">
-      <div class="fade-up" style="text-align:center;margin-bottom:56px">
-        <div class="section-eyebrow">Go To Market</div>
-        <h2 class="section-title" style="color:var(--lime)">Powerhouse Marketing<br>Strategy</h2>
-        <p class="section-sub" style="max-width:530px;margin:12px auto 0">Learn how HALT leverages modern marketing techniques to spread awareness and educate the public on vital fire safety practices.</p>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px">
-        <!-- Television -->
-        <div style="position:relative;border-radius:12px;overflow:hidden;background:#111">
-          <img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/aeb4627d-cab0-67c7-776b-1b697be5595a.png" style="width:100%;height:240px;object-fit:cover;display:block;opacity:.75">
-          <div style="padding:28px 28px 32px;background:#111">
-            <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-              <div style="width:32px;height:32px;background:var(--lime);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;font-weight:900;color:#000;line-height:1">✓</div>
-              <h4 style="font-family:var(--font);font-size:20px;font-weight:900;font-style:italic;text-transform:uppercase;color:#fff;margin:0">Television Networks</h4>
-            </div>
-            <p style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.6">Utilizing national and local TV spots to demonstrate HALT's effectiveness and ease of use, reaching millions directly in their homes.</p>
-          </div>
-        </div>
-        <!-- Digital & Social -->
-        <div style="position:relative;border-radius:12px;overflow:hidden;background:#111">
-          <img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/29cdb99b-3187-2a3a-4ee5-9e6c602b44cd.png" style="width:100%;height:240px;object-fit:cover;display:block;opacity:.75">
-          <div style="padding:28px 28px 32px;background:#111">
-            <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-              <div style="width:32px;height:32px;background:var(--lime);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;font-weight:900;color:#000;line-height:1">✓</div>
-              <h4 style="font-family:var(--font);font-size:20px;font-weight:900;font-style:italic;text-transform:uppercase;color:#fff;margin:0">Digital & Social Media</h4>
-            </div>
-            <p style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.6">Engaging audiences through targeted ads and educational content on Facebook, Instagram, and YouTube to enhance fire safety knowledge.</p>
-          </div>
-        </div>
-        <!-- Billboards -->
-        <div style="position:relative;border-radius:12px;overflow:hidden;background:#111">
-          <img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/66dc17a5dd607b08dfbc7bd8_Halt_fire_Billboard.webp" style="width:100%;height:240px;object-fit:cover;display:block;opacity:.75">
-          <div style="padding:28px 28px 32px;background:#111">
-            <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-              <div style="width:32px;height:32px;background:var(--lime);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;font-weight:900;color:#000;line-height:1">✓</div>
-              <h4 style="font-family:var(--font);font-size:20px;font-weight:900;font-style:italic;text-transform:uppercase;color:#fff;margin:0">Billboards and Visual Stands</h4>
-            </div>
-            <p style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.6">Capturing the public's attention through strategically placed billboards about the necessity of HALT for home safety.</p>
-          </div>
-        </div>
-        <!-- Public Relations -->
-        <div style="position:relative;border-radius:12px;overflow:hidden;background:#111">
-          <img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/31d8a6a2-6151-8816-bef1-03773904e626.png" style="width:100%;height:240px;object-fit:cover;display:block;opacity:.75">
-          <div style="padding:28px 28px 32px;background:#111">
-            <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-              <div style="width:32px;height:32px;background:var(--lime);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;font-weight:900;color:#000;line-height:1">✓</div>
-              <h4 style="font-family:var(--font);font-size:20px;font-weight:900;font-style:italic;text-transform:uppercase;color:#fff;margin:0">Public Relations</h4>
-            </div>
-            <p style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.6">Collaborating with fire safety experts and influencers to promote fire prevention tips and product demonstrations across various media outlets.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- RETAILER CTA -->
-  <div class="retailer-cta">
-    <div class="retailer-cta-inner fade-up">
-      <div class="section-eyebrow">Join the Movement</div>
-      <h2>Join Leading Retailers<br>Enhancing Safety with <span>HALT</span></h2>
-      <p>Stock the product that sells itself. Tap into a $155B market with the most advanced fire safety product available anywhere.</p>
-      <div class="retailer-cta-btns">
-        <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="btn-lime">Get In Touch</a>
-        <a href="retailers.html" class="btn-outline-lime">Learn More →</a>
-      </div>
-    </div>
-  </div>
 
   <!-- CERTIFICATIONS -->
   <section style="padding:100px 0;background:#181818;position:relative;overflow:hidden"><div style="position:absolute;inset:0;background:url('https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/66dc166ca93d4aa0ab5b33d6_Halt_Grease_fire.webp') center/cover no-repeat;opacity:.06;pointer-events:none"></div>
@@ -1082,6 +979,59 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
     </div>
   </section>
 
+  <!-- WHY CHOOSE HALT -->
+  <section style="padding:100px 0;background:#181818">
+    <div class="con">
+      <div class="fade-up" style="text-align:center;margin-bottom:64px">
+        <div class="section-eyebrow">Compliance & Safety</div>
+        <h2 class="section-title">Why Choose <span class="red">HALT</span></h2>
+        <p class="section-sub">Discover the features of HALT Fire Fighter</p>
+      </div>
+      <div class="features-grid">
+        <div class="feat"><div class="feat-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="1.5" width="48" height="48"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="rgba(200,255,42,0.1)"/><path d="M9 12l2 2 4-4" stroke-linecap="round"/></svg></div><h4>Compliance & Standards</h4><p>Meets and exceeds industry safety regulations. Certified for residential and commercial use.</p></div>
+        <div class="feat"><div class="feat-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="1.5" width="48" height="48"><path d="M2 22c0-8 4.477-12 10-12s10 4 10 12" fill="rgba(200,255,42,0.1)"/><path d="M12 10V2s4 4 4 8M12 2s-4 4-4 8" stroke-linecap="round"/></svg></div><h4>Non-Toxic Formula</h4><p>With its non-toxic formula, HALT leaves no harmful residue behind. Safe for users and surroundings.</p></div>
+        <div class="feat"><div class="feat-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="1.5" width="48" height="48"><path d="M13 2L4.09 12.37A1 1 0 005 14h6.5l-1 6L19 9.63A1 1 0 0018 8h-5z" fill="rgba(200,255,42,0.15)"/></svg></div><h4>Instant Activation</h4><p>Activates instantly on contact. Engineered for immediate action when every second counts.</p></div>
+        <div class="feat"><div class="feat-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="1.5" width="48" height="48"><rect x="5" y="2" width="14" height="20" rx="3" fill="rgba(200,255,42,0.1)"/><circle cx="12" cy="17" r="1.5" fill="var(--lime)"/></svg></div><h4>Portable Design</h4><p>Compact and lightweight — stores anywhere, deploys instantly in any emergency situation.</p></div>
+        <div class="feat"><div class="feat-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="1.5" width="48" height="48"><path d="M3 6h18M19 6l-1 14H6L5 6M10 11v6M14 11v6" stroke-linecap="round"/></svg></div><h4>Zero Residue</h4><p>Leaves no chalk or toxic powder. Cleans up in seconds — unlike traditional extinguishers.</p></div>
+        <div class="feat"><div class="feat-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="1.5" width="48" height="48"><circle cx="12" cy="12" r="3" fill="rgba(200,255,42,0.2)"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2" stroke-linecap="round"/></svg></div><h4>High Visibility</h4><p>Bright neon design ensures you find HALT instantly, even in a smoke-filled emergency.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section style="padding:100px 0;background:#181818">
+    <div class="con">
+      <div class="fade-up" style="text-align:center;margin-bottom:56px">
+        <div class="section-eyebrow">The Proof</div>
+        <h2 class="section-title">HALT vs <span class="lime">The Competition</span></h2>
+        <p class="section-sub">How HALT stacks up against traditional fire extinguishers</p>
+      </div>
+      <div class="table-wrap">
+        <table class="ctable">
+          <thead><tr>
+            <th></th>
+            <th class="halt-col"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/9c111588-534c-ff69-d3d6-98948a0f57d1.png" style="width:60px;display:block;margin:0 auto 8px;object-fit:contain;filter:drop-shadow(0 4px 16px rgba(0,0,0,.2))" alt="HALT">HALT</th>
+            <th><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7cda32e30d72ece08d86_table_img_2.webp" style="width:90px;height:90px;display:block;margin:0 auto 6px;object-fit:contain;opacity:1" alt=""></th>
+            <th><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7ce703f4f06524c1b836_table_img_3.webp" style="width:90px;height:90px;display:block;margin:0 auto 6px;object-fit:contain;opacity:1" alt=""></th>
+            <th><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7cf7bfca01108180d8f6_table_img_4.webp" style="width:90px;height:90px;display:block;margin:0 auto 6px;object-fit:contain;opacity:1" alt=""></th>
+            <th><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7d6732e30d72ece0f052_table_img_5.webp" style="width:90px;height:90px;display:block;margin:0 auto 6px;object-fit:contain;opacity:1" alt=""></th>
+          </tr></thead>
+          <tbody>
+            <tr><td>Made in the USA</td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7d8506b0ad83394e568a_question_mark.svg" alt="?"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td></tr>
+            <tr><td>Non-Toxic / No Forever Chemicals</td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7d8506b0ad83394e568a_question_mark.svg" alt="?"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td></tr>
+            <tr><td>Eco-Friendly: PFAS, Fluorine, VOC Free</td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7d8506b0ad83394e568a_question_mark.svg" alt="?"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td></tr>
+            <tr><td>Safe Around Children & Pets</td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7d8506b0ad83394e568a_question_mark.svg" alt="?"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td></tr>
+            <tr><td>Effective on Class A (Wood, Paper, Cloth)</td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7d8506b0ad83394e568a_question_mark.svg" alt="?"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td></tr>
+            <tr><td>Effective on Class B (Oil, Grease, Fuel)</td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/667d7d8506b0ad83394e568a_question_mark.svg" alt="?"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td></tr>
+            <tr><td>Effective on Class C (Electrical)</td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td></tr>
+            <tr><td>Effective on Li-Ion Battery Fires</td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td></tr>
+            <tr><td><em>Prevents Reignition</em></td><td class="halt-col"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f43650b83c646db6103f1_Status%20Icons.svg" alt="✓"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td><td><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f45e1cc0c4bab5c9e50cb_Status%20Icons%20(1).svg" alt="✗"></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
   <!-- FIREFIGHTERS TRUST US -->
   <section style="padding:100px 0;background:#181818">
     <div class="con">
@@ -1110,6 +1060,19 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
       </div>
     </div>
   </section>
+
+  <!-- RETAILER CTA -->
+  <div class="retailer-cta">
+    <div class="retailer-cta-inner fade-up">
+      <div class="section-eyebrow">Join the Movement</div>
+      <h2>Join Leading Retailers<br>Enhancing Safety with <span>HALT</span></h2>
+      <p>Stock the product that sells itself. Tap into a $155B market with the most advanced fire safety product available anywhere.</p>
+      <div class="retailer-cta-btns">
+        <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="btn-lime">Get In Touch</a>
+        <a href="retailers.html" class="btn-outline-lime">Learn More →</a>
+      </div>
+    </div>
+  </div>
 
   <!-- NATIONAL MEDIA COVERAGE -->
   <section style="padding:80px 0;background:#181818">
@@ -1372,14 +1335,20 @@ document.addEventListener('submit', function(e) {
   e.preventDefault();
   const form = e.target;
   const data = new FormData(form);
-  const params = new URLSearchParams();
-  data.forEach((v, k) => params.append(k, v));
-  const subject = encodeURIComponent('HALT Fire Website Inquiry');
-  const body = encodeURIComponent(Array.from(data.entries()).map(([k,v]) => k + ': ' + v).join('\n'));
-  window.location.href = 'mailto:customerservice@haltfire.com?subject=' + subject + '&body=' + body;
-  // Show success state
   const btn = form.querySelector('button[type="submit"]');
-  if (btn) { btn.textContent = 'Sent!'; btn.disabled = true; }
+  const original = btn ? btn.textContent : '';
+  if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+  fetch('https://formspree.io/f/customerservice@haltfire.com', {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  }).then(function(r) {
+    if (!r.ok) throw new Error('Request failed');
+    form.innerHTML = '<div style="padding:48px 16px;text-align:center;color:var(--lime);font-family:var(--font);font-size:20px;font-weight:900;font-style:italic;text-transform:uppercase;letter-spacing:1px;line-height:1.4">Message sent! We\'ll get back to you shortly.</div>';
+  }).catch(function() {
+    if (btn) { btn.disabled = false; btn.textContent = original || 'Submit'; }
+    alert('Sorry — something went wrong. Please try again or email us directly at customerservice@haltfire.com.');
+  });
 });
 </script>
 

@@ -49,7 +49,7 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
 .mob-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--dark2);border-bottom:1px solid rgba(200,255,42,0.1);padding:24px 32px;z-index:199}
 .mob-menu.open{display:block}
 .mob-menu a{display:block;font-family:var(--font);font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.7);padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06);cursor:pointer;text-decoration:none}
-.mob-menu a:hover{color:var(--lime)}
+.mob-menu a:hover,.mob-menu a.active{color:var(--lime)}
 
 /* LAYOUT */
 .con{max-width:1280px;margin:0 auto;padding:0 32px}
@@ -511,10 +511,10 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
       <img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664ef03576f44996b0a05f81_Logo%20Wrapper.svg" alt="HALT Fire">
     </a>
     <ul class="nav-links">
-      <li><a href="science.html" id="nav-science">the science</a></li>
+      <li><a href="science.html" id="nav-science" class="active">the science</a></li>
       <li><a href="shop.html" id="nav-store">Shop</a></li>
       <li><a href="about.html" id="nav-about">about us</a></li>
-      <li><a href="retailers.html" id="nav-retailers" style="color:var(--lime)">for retailers</a></li>
+      <li><a href="retailers.html" id="nav-retailers">for retailers</a></li>
     </ul>
     <div class="nav-ctas">
       <a href="index.html#contact" class="btn-outline-lime">Get In Touch</a>
@@ -526,11 +526,11 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
   </div>
   <div class="mob-menu" id="mob-menu">
     <a href="index.html" onclick="toggleMob()">Home</a>
-    <a href="science.html" onclick="toggleMob()">The Science</a>
+    <a href="science.html" onclick="toggleMob()" class="active">The Science</a>
     <a href="shop.html" onclick="toggleMob()">Shop</a>
     <a href="about.html" onclick="toggleMob()">About Us</a>
     
-    <a href="retailers.html" onclick="toggleMob()" style="color:var(--lime)">For Retailers</a>
+    <a href="retailers.html" onclick="toggleMob()">For Retailers</a>
     <a href="shop.html" style="color:var(--lime);cursor:pointer">Shop Now →</a>
   </div>
 </nav>
@@ -902,14 +902,20 @@ document.addEventListener('submit', function(e) {
   e.preventDefault();
   const form = e.target;
   const data = new FormData(form);
-  const params = new URLSearchParams();
-  data.forEach((v, k) => params.append(k, v));
-  const subject = encodeURIComponent('HALT Fire Website Inquiry');
-  const body = encodeURIComponent(Array.from(data.entries()).map(([k,v]) => k + ': ' + v).join('\n'));
-  window.location.href = 'mailto:customerservice@haltfire.com?subject=' + subject + '&body=' + body;
-  // Show success state
   const btn = form.querySelector('button[type="submit"]');
-  if (btn) { btn.textContent = 'Sent!'; btn.disabled = true; }
+  const original = btn ? btn.textContent : '';
+  if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+  fetch('https://formspree.io/f/customerservice@haltfire.com', {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  }).then(function(r) {
+    if (!r.ok) throw new Error('Request failed');
+    form.innerHTML = '<div style="padding:48px 16px;text-align:center;color:var(--lime);font-family:var(--font);font-size:20px;font-weight:900;font-style:italic;text-transform:uppercase;letter-spacing:1px;line-height:1.4">Message sent! We\'ll get back to you shortly.</div>';
+  }).catch(function() {
+    if (btn) { btn.disabled = false; btn.textContent = original || 'Submit'; }
+    alert('Sorry — something went wrong. Please try again or email us directly at customerservice@haltfire.com.');
+  });
 });
 </script>
 
