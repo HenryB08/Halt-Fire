@@ -1277,40 +1277,96 @@ window.closeCert = closeCert;
   document.querySelectorAll('.lime-stat').forEach(el => obs.observe(el));
 })();
 
-/* contact-form v4 — pure mailto, bulletproof success, never errors */
+/* contact-form v5 — Formspree POST (mojyvlqb), inline success/error messages */
 (function(){
-  function showSuccess(form){
+  var ENDPOINT = 'https://formspree.io/f/mojyvlqb';
+
+  function clearMessages(form){
+    try {
+      var old = form.querySelectorAll('.form-success-msg, .form-error-msg');
+      for (var i = 0; i < old.length; i++) old[i].remove();
+    } catch (_) { /* swallow */ }
+  }
+  function insertAfterSubmit(form, el){
     try {
       var btn = form.querySelector('button[type="submit"]');
-      if (!btn) return;
-      btn.disabled = true;
-      if (form.querySelector('.form-success-msg')) return;
+      if (btn && btn.parentNode) btn.parentNode.insertBefore(el, btn.nextSibling);
+      else form.appendChild(el);
+    } catch (_) { /* swallow */ }
+  }
+  function showSuccess(form){
+    try {
+      clearMessages(form);
       var msg = document.createElement('div');
       msg.className = 'form-success-msg';
       msg.style.cssText = 'margin-top:16px;padding:12px 0;text-align:center;color:var(--lime);font-family:var(--font);font-size:14px;font-weight:900;font-style:italic;text-transform:uppercase;letter-spacing:1px;line-height:1.4';
       msg.textContent = "Message sent! We'll get back to you shortly.";
-      btn.parentNode.insertBefore(msg, btn.nextSibling);
+      insertAfterSubmit(form, msg);
     } catch (_) { /* swallow */ }
   }
-  function openMailto(form){
+  function showError(form){
     try {
-      var data = new FormData(form);
-      var lines = [];
-      data.forEach(function(v, k){ lines.push(k + ': ' + v); });
-      var subject = encodeURIComponent('New Contact Form Submission');
-      var body = encodeURIComponent(lines.join('\n'));
-      window.location.href = 'mailto:customerservice@haltfire.com?subject=' + subject + '&body=' + body;
+      clearMessages(form);
+      var msg = document.createElement('div');
+      msg.className = 'form-error-msg';
+      msg.style.cssText = 'margin-top:16px;padding:12px 0;text-align:center;color:#ff3b3b;font-family:var(--font);font-size:14px;font-weight:900;font-style:italic;text-transform:uppercase;letter-spacing:1px;line-height:1.4';
+      msg.textContent = 'Something went wrong. Please email customerservice@haltfire.com';
+      insertAfterSubmit(form, msg);
     } catch (_) { /* swallow */ }
   }
+  function setSubmitting(form, isSubmitting, originalText){
+    try {
+      var btn = form.querySelector('button[type="submit"]');
+      if (!btn) return;
+      btn.disabled = !!isSubmitting;
+      if (isSubmitting) {
+        btn.dataset.origText = btn.textContent;
+        btn.textContent = 'Sending…';
+      } else if (originalText !== undefined) {
+        btn.textContent = originalText;
+      }
+    } catch (_) { /* swallow */ }
+  }
+  function resetButton(form){
+    try {
+      var btn = form.querySelector('button[type="submit"]');
+      if (!btn) return;
+      var orig = btn.dataset.origText;
+      if (orig) btn.textContent = orig;
+      btn.disabled = false;
+    } catch (_) { /* swallow */ }
+  }
+
   document.addEventListener('submit', function(e){
     try {
       if (!e || !e.target || e.target.tagName !== 'FORM') return;
       e.preventDefault();
       var form = e.target;
-      openMailto(form);
-      showSuccess(form);
-    } catch (_) { /* swallow — never surface an error to the user */ }
+      if (!window.fetch) { showError(form); return; }
+      var data = new FormData(form);
+      setSubmitting(form, true);
+      fetch(ENDPOINT, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res){
+        if (res && res.ok) {
+          try { form.reset(); } catch (_) {}
+          resetButton(form);
+          showSuccess(form);
+        } else {
+          resetButton(form);
+          showError(form);
+        }
+      }, function(){
+        resetButton(form);
+        showError(form);
+      });
+    } catch (_) {
+      try { showError(e && e.target); } catch (_) {}
+    }
   }, true);
+
   window.addEventListener('unhandledrejection', function(e){
     try { if (e && e.preventDefault) e.preventDefault(); } catch (_) { /* swallow */ }
   });
