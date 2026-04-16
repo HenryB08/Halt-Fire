@@ -29,26 +29,26 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
 
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(14,14,14,0.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(200,255,42,0.1);transition:all .3s;overflow:visible}
-.nav-inner{max-width:1280px;margin:0 auto;padding:0 32px;height:88px;display:flex;align-items:center;justify-content:space-between;overflow:visible}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 32px;height:100px;display:flex;align-items:center;justify-content:space-between;overflow:visible}
 .nav-logo{cursor:pointer}
-.nav-logo img{height:72px;display:block}
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{font-family:var(--font);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.55);text-decoration:none;cursor:pointer;transition:color .2s}
+.nav-logo img{height:96px;display:block}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{font-family:var(--font);font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.55);text-decoration:none;cursor:pointer;transition:color .2s}
 .nav-links a:hover,.nav-links a.active{color:var(--lime)}
-.nav-ctas{display:flex;gap:10px}
-.btn-lime{background:var(--lime);color:#000;font-family:var(--font);font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:1px;padding:10px 22px;border-radius:100px;border:none;cursor:pointer;text-decoration:none;transition:all .2s;display:inline-block}
+.nav-ctas{display:flex;gap:12px}
+.btn-lime{background:var(--lime);color:#000;font-family:var(--font);font-size:15px;font-weight:900;text-transform:uppercase;letter-spacing:1px;padding:14px 30px;border-radius:100px;border:none;cursor:pointer;text-decoration:none;transition:all .2s;display:inline-block}
 .btn-lime:hover{background:var(--lime-dark);transform:translateY(-1px)}
-.btn-outline-lime{background:transparent;color:var(--lime);font-family:var(--font);font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:1px;padding:9px 22px;border-radius:100px;border:1.5px solid rgba(200,255,42,0.4);cursor:pointer;text-decoration:none;transition:all .2s;display:inline-block}
+.btn-outline-lime{background:transparent;color:var(--lime);font-family:var(--font);font-size:15px;font-weight:900;text-transform:uppercase;letter-spacing:1px;padding:13px 30px;border-radius:100px;border:2px solid rgba(200,255,42,0.5);cursor:pointer;text-decoration:none;transition:all .2s;display:inline-block}
 .btn-outline-lime:hover{border-color:var(--lime);background:rgba(200,255,42,0.08)}
 .btn-red{background:var(--red);color:#fff;font-family:var(--font);font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:1px;padding:10px 22px;border-radius:100px;border:none;cursor:pointer;text-decoration:none;transition:all .2s;display:inline-block}
 .btn-red:hover{background:var(--red-dark);transform:translateY(-1px)}
 .btn-dark{background:var(--dark3);color:#fff;font-family:var(--font);font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:1px;padding:10px 22px;border-radius:100px;border:1px solid rgba(255,255,255,.15);cursor:pointer;text-decoration:none;transition:all .2s;display:inline-block}
 .btn-dark:hover{background:#2a2a2a;transform:translateY(-1px)}
-.mob-btn{display:none;background:none;border:none;cursor:pointer;padding:4px}
-.mob-btn span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;transition:all .3s}
-.mob-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--dark2);border-bottom:1px solid rgba(200,255,42,0.1);padding:24px 32px;z-index:199}
+.mob-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.mob-btn span{display:block;width:28px;height:2.5px;background:#fff;margin:6px 0;transition:all .3s;border-radius:2px}
+.mob-menu{display:none;position:fixed;top:100px;left:0;right:0;background:var(--dark2);border-bottom:1px solid rgba(200,255,42,0.1);padding:28px 32px;z-index:199}
 .mob-menu.open{display:block}
-.mob-menu a{display:block;font-family:var(--font);font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.7);padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06);cursor:pointer;text-decoration:none}
+.mob-menu a{display:block;font-family:var(--font);font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.7);padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06);cursor:pointer;text-decoration:none}
 .mob-menu a:hover,.mob-menu a.active{color:var(--lime)}
 
 /* LAYOUT */
@@ -370,7 +370,11 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
 
 @media(max-width:1100px){.hero-product{display:none}.audience-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr;gap:48px}.footer-grid{grid-template-columns:1fr 1fr;gap:40px}.product-hero-grid{grid-template-columns:1fr}.vs-grid{grid-template-columns:1fr}.pg-banner-inner{grid-template-columns:1fr}.pg-banner-img{display:none}}
 @media(max-width:768px){
-  .nav-links,.nav-ctas{display:none}
+  .nav-links{display:none}.nav-ctas{display:none}
+  .nav-inner{height:80px;padding:0 20px}
+  .nav-logo img{height:72px}
+  .mob-menu{top:80px;padding:24px 20px}
+  .mob-menu a:last-child{border-bottom:none}
   .mob-btn{display:block}
   .steps-grid{grid-template-columns:1fr}
   .fire-grid{grid-template-columns:1fr 1fr}
@@ -420,7 +424,7 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
   /* Floating cans — hide on mobile */
   [style*="width:380px;margin-right:-40px"]{display:none !important}
   /* Hero section padding */
-  [style*="padding-top:88px"]{padding-top:80px !important}
+  [style*="padding-top:100px"]{padding-top:80px !important}
 }
 @media(max-width:480px){
   .con,.con-sm{padding:0 20px}
@@ -542,7 +546,7 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
 <!-- ═══════════════════════════════════════════
      RETAILERS PAGE — HERO (distinct from home)
 ════════════════════════════════════════════ -->
-<section style="min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;background:#040404;padding-top:88px;padding-bottom:0;box-sizing:border-box">
+<section style="min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;background:#040404;padding-top:100px;padding-bottom:0;box-sizing:border-box">
 
   <!-- Dark grid texture + glows -->
   <div style="position:absolute;inset:0;z-index:0">
