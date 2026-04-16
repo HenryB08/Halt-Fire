@@ -515,6 +515,7 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
       <li><a href="shop.html" id="nav-store">Shop</a></li>
       <li><a href="about.html" id="nav-about">about us</a></li>
       <li><a href="retailers.html" id="nav-retailers" class="active">for retailers</a></li>
+      <li><a href="index.html#contact" id="nav-contact" onclick="var el=document.getElementById('contact')||document.getElementById('ret-contact')||document.getElementById('about-contact');if(el){event.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}">contact us</a></li>
     </ul>
     <div class="nav-ctas">
       <a href="index.html#contact" class="btn-outline-lime">Get In Touch</a>
@@ -531,6 +532,7 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
     <a href="about.html" onclick="toggleMob()">About Us</a>
     
     <a href="retailers.html" onclick="toggleMob()" class="active">For Retailers</a>
+    <a href="index.html#contact" onclick="toggleMob();var el=document.getElementById('contact')||document.getElementById('ret-contact')||document.getElementById('about-contact');if(el){event.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}">Contact Us</a>
     <a href="shop.html" style="color:var(--lime);cursor:pointer">Shop Now →</a>
   </div>
 </nav>
