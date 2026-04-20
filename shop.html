@@ -490,7 +490,9 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
 .shopify-buy__cart__title,.shopify-buy__cart__subtotal__text,.shopify-buy__cart__subtotal__price{color:#fff !important;font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif !important}
 .shopify-buy__cart-item__title{color:#fff !important;font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif !important}
 .shopify-buy__cart-item__price{color:#C8FF2A !important}
-.shopify-buy__cart-item__quantity-input{background:#222222 !important;color:#ffffff !important;border:1px solid rgba(255,255,255,.15) !important;border-radius:8px !important}
+.shopify-buy__cart-item__quantity-input{background:#333333 !important;color:#ffffff !important;border:1px solid rgba(255,255,255,.3) !important;border-radius:4px !important}
+.shopify-buy__cart-item__quantity-container input,.shopify-buy__cart-item__quantity-container button{background:#333333 !important;color:#ffffff !important;border-color:rgba(255,255,255,.3) !important}
+.shopify-buy__btn--cart-tab__quantity,.shopify-buy__quantity-decrement span,.shopify-buy__quantity-increment span{color:#ffffff !important}
 .shopify-buy__cart-toggle{background:#C8FF2A !important;border-radius:100px !important}
 .shopify-buy__cart-toggle__count{color:#000000 !important}
 .shopify-buy__option-select__label{color:rgba(255,255,255,.5) !important;font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif !important}
@@ -868,6 +870,17 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
           },
           "lineItems": {
             "color": "#ffffff"
+          },
+          "lineItemQuantityInput": {
+            "background": "#333333",
+            "color": "#ffffff",
+            "border": "1px solid rgba(255,255,255,0.3)",
+            "border-radius": "4px"
+          },
+          "lineItemQuantity": {
+            "background": "#333333",
+            "color": "#ffffff",
+            "border-color": "rgba(255,255,255,0.3)"
           },
           "subtotalText": {
             "color": "#ffffff"
