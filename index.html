@@ -382,8 +382,8 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
   .nav-logo img{height:72px}
   #announcement-grid{grid-template-columns:1fr !important;gap:32px !important}
   #announcement-stats{grid-template-columns:1fr !important}
-  #announcement-logos img{height:32px !important}
-  #halt-industrial-logo{height:48px !important}
+  #announcement-logos img{height:60px !important}
+  #halt-industrial-logo{height:90px !important}
   #announcement-headline{font-size:clamp(32px,8vw,48px) !important}
   #announcement-ctas{flex-direction:column !important}
   #announcement-ctas>*{width:100% !important;text-align:center !important}
@@ -458,6 +458,12 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
   [style*="grid-template-columns:1fr 1fr;gap:16px"]{grid-template-columns:1fr !important}
   /* Review cards floating */
   [style*="width:380px"]{display:none !important}
+  #announcement-logos img{height:48px !important}
+  #halt-industrial-logo{height:72px !important}
+}
+@media(max-width:375px){
+  #announcement-logos img{height:42px !important}
+  #halt-industrial-logo{height:64px !important}
 }
 </style>
 <style>
