@@ -202,6 +202,225 @@
       .hero { padding: 90px 0 60px; min-height: auto; }
       .hero-stats { grid-template-columns: 1fr 1fr; }
     }
+
+    /* ── Division selector cards ── */
+    .div-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .div-card {
+      position: relative;
+      background: var(--dark2);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform .3s, border-color .3s, box-shadow .3s;
+      text-decoration: none;
+      min-height: 560px;
+    }
+    .div-card:hover { transform: translateY(-8px); }
+    .div-card.lime:hover   { border-color: rgba(200,255,42,.4); box-shadow: 0 24px 60px rgba(200,255,42,.1); }
+    .div-card.orange:hover { border-color: rgba(234,79,0,.45);  box-shadow: 0 24px 60px rgba(234,79,0,.12); }
+    .div-card.blue:hover   { border-color: rgba(26,111,255,.45); box-shadow: 0 24px 60px rgba(26,111,255,.12); }
+    .div-card-visual {
+      height: 240px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .div-card.lime   .div-card-visual { background: linear-gradient(135deg, rgba(200,255,42,.18), rgba(200,255,42,.02) 70%); }
+    .div-card.orange .div-card-visual { background: linear-gradient(135deg, rgba(234,79,0,.22),  rgba(234,79,0,.03) 70%); }
+    .div-card.blue   .div-card-visual { background: linear-gradient(135deg, rgba(26,111,255,.2), rgba(26,111,255,.03) 70%); }
+    .div-card-visual svg.bigicon {
+      width: 100px;
+      height: 100px;
+      stroke-width: 1.5;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: .9;
+    }
+    .div-card.lime   .div-card-visual svg.bigicon { stroke: var(--lime); }
+    .div-card.orange .div-card-visual svg.bigicon { stroke: var(--orange); }
+    .div-card.blue   .div-card-visual svg.bigicon { stroke: var(--blue); }
+    .div-card-tag {
+      position: absolute;
+      top: 18px; left: 18px;
+      background: rgba(0,0,0,.7);
+      backdrop-filter: blur(10px);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-family: var(--font);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+    .div-card.lime   .div-card-tag { color: var(--lime); }
+    .div-card.orange .div-card-tag { color: var(--orange); }
+    .div-card.blue   .div-card-tag { color: var(--blue); }
+    .div-card-body { padding: 32px; flex: 1; display: flex; flex-direction: column; }
+    .div-card h3 {
+      font-family: var(--font);
+      font-weight: 900;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: 32px;
+      line-height: .95;
+      margin-bottom: 14px;
+      color: #fff;
+    }
+    .div-card p { color: rgba(255,255,255,.62); font-size: 15px; line-height: 1.55; margin-bottom: 20px; }
+    .div-card-list { list-style: none; padding: 0; margin: 0 0 28px; }
+    .div-card-list li {
+      font-size: 14px;
+      color: rgba(255,255,255,.78);
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .div-card-list li:last-child { border-bottom: none; }
+    .div-card-list li::before {
+      content: "";
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .div-card.lime   .div-card-list li::before { background: var(--lime); }
+    .div-card.orange .div-card-list li::before { background: var(--orange); }
+    .div-card.blue   .div-card-list li::before { background: var(--blue); }
+    .div-card-cta {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font);
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+    .div-card.lime   .div-card-cta { color: var(--lime); }
+    .div-card.orange .div-card-cta { color: var(--orange); }
+    .div-card.blue   .div-card-cta { color: var(--blue); }
+    .div-card-cta svg { width: 16px; height: 16px; transition: transform .25s; }
+    .div-card:hover .div-card-cta svg { transform: translateX(4px); }
+    @media (max-width: 1000px) { .div-grid { grid-template-columns: 1fr; } .div-card { min-height: auto; } }
+
+    /* ── Acquisition banner ── */
+    .acq {
+      background: linear-gradient(120deg, rgba(234,79,0,.06) 0%, rgba(200,255,42,.04) 100%), var(--dark2);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 24px;
+      padding: 56px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .acq::before {
+      content: "";
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 380px; height: 380px;
+      background: radial-gradient(circle, rgba(234,79,0,.25), transparent 65%);
+      pointer-events: none;
+    }
+    .acq-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(234,79,0,.12);
+      border: 1px solid rgba(234,79,0,.3);
+      border-radius: 100px;
+      padding: 6px 14px 6px 8px;
+      font-family: var(--font);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 20px;
+    }
+    .acq-badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); animation: pulse 2s infinite; }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .5; transform: scale(1.3); }
+    }
+    .acq h2 {
+      font-family: var(--font);
+      font-weight: 900;
+      font-style: italic;
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: .95;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .acq h2 .or { color: var(--orange); }
+    .acq p { color: rgba(255,255,255,.7); font-size: 16px; line-height: 1.65; margin-bottom: 24px; max-width: 540px; }
+    .acq-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .acq-meta {
+      position: relative;
+      z-index: 1;
+      background: rgba(0,0,0,.4);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 16px;
+      padding: 28px;
+    }
+    .acq-meta-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .acq-meta-row:last-child { border-bottom: none; }
+    .acq-meta-label { font-size: 11px; color: rgba(255,255,255,.45); letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; }
+    .acq-meta-val { font-family: var(--font); font-weight: 800; font-size: 15px; color: #fff; }
+    @media (max-width: 900px) {
+      .acq { grid-template-columns: 1fr; padding: 40px 28px; gap: 32px; }
+    }
+
+    /* ── Press logos strip ── */
+    .press-strip { padding: 80px 0 60px; background: var(--dark); }
+    .press-eyebrow {
+      text-align: center;
+      font-family: var(--font);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 32px;
+    }
+    .press-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 16px;
+      align-items: center;
+    }
+    .press-tile {
+      background: #fff;
+      border-radius: 12px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px;
+      transition: transform .25s;
+    }
+    .press-tile:hover { transform: translateY(-3px); }
+    .press-tile img { max-height: 44px; max-width: 110px; object-fit: contain; }
+    @media (max-width: 1000px) { .press-grid { grid-template-columns: repeat(4, 1fr); } }
+    @media (max-width: 600px)  { .press-grid { grid-template-columns: repeat(2, 1fr); } }
   </style>
 </head>
 <body>
@@ -374,7 +593,132 @@
       </div>
     </div>
 
-    <!-- Additional sections will be added in subsequent commits -->
+    <!-- ═══════════════════════════════════════════════════════
+         DIVISION SELECTOR — three full cards
+    ═══════════════════════════════════════════════════════ -->
+    <section class="sec" id="divisions">
+      <div class="con">
+        <div style="text-align:center; max-width:780px; margin:0 auto 64px">
+          <div class="eyebrow reveal">Three Divisions, One Mission</div>
+          <h2 class="h-display h2 reveal" style="margin:14px 0 18px">Pick Your <span style="color:var(--lime)">Setting</span>.</h2>
+          <p class="lead reveal" style="margin:0 auto">From the kitchen to the federal flight line, HALT delivers the same PFAS-free chemistry in the format that fits your job. No compromises across categories.</p>
+        </div>
+
+        <div class="div-grid">
+
+          <!-- Consumer -->
+          <a href="consumer.html" class="div-card lime reveal">
+            <div class="div-card-visual">
+              <span class="div-card-tag">Consumer</span>
+              <svg class="bigicon" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </div>
+            <div class="div-card-body">
+              <h3>HALT! Consumer</h3>
+              <p>Three targeted home formulations developed for the fires consumers actually face &mdash; kitchen grease, grills, and lithium-ion batteries.</p>
+              <ul class="div-card-list">
+                <li>HALT! Household &mdash; kitchen, electrical, textiles</li>
+                <li>HALT! Grill &mdash; grease &amp; outdoor cooking fires</li>
+                <li>HALT! Li-Ion &mdash; battery thermal runaway</li>
+                <li>NSF &amp; USDA registered &middot; 4-year shelf life</li>
+              </ul>
+              <span class="div-card-cta">Explore Consumer
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Industrial -->
+          <a href="industrial.html" class="div-card orange reveal">
+            <div class="div-card-visual">
+              <span class="div-card-tag">Industrial</span>
+              <svg class="bigicon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><line x1="6" y1="11" x2="6" y2="11.01"></line><line x1="10" y1="11" x2="10" y2="11.01"></line></svg>
+            </div>
+            <div class="div-card-body">
+              <h3>HALT Industrial</h3>
+              <p>The bulk-format division born from the GreenFire acquisition. PFAS-free agents in 5-gal totes, 55-gal drums, and 275-gal totes for fleets and facilities.</p>
+              <ul class="div-card-list">
+                <li>HALT Industrial Pro Defense (long-term retardant)</li>
+                <li>HALT Industrial GFFF &mdash; AFFF replacement</li>
+                <li>HALT Industrial Wetting Agent / Multi-Class Foam</li>
+                <li>GreenScreen Silver &middot; NSF White Book</li>
+              </ul>
+              <span class="div-card-cta">Explore Industrial
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Professional -->
+          <a href="professional.html" class="div-card blue reveal">
+            <div class="div-card-visual">
+              <span class="div-card-tag">Professional</span>
+              <svg class="bigicon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+            </div>
+            <div class="div-card-body">
+              <h3>HALT Professional</h3>
+              <p>Contractor-grade 14&nbsp;oz and 20&nbsp;oz cans for hot-work crews. Built for sprinkler installers, plumbers, welders, HVAC techs, roofers, and GCs.</p>
+              <ul class="div-card-list">
+                <li>HALT Pro 14&nbsp;oz Fire Suppressor</li>
+                <li>HALT Pro 20&nbsp;oz Heat Barrier</li>
+                <li>OSHA-compliant for hot-work permits</li>
+                <li>Job-site &amp; truck-cab format</li>
+              </ul>
+              <span class="div-card-cta">Explore Professional
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         ACQUISITION BANNER
+    ═══════════════════════════════════════════════════════ -->
+    <section class="sec" id="acquisition" style="padding-top:0">
+      <div class="con">
+        <div class="acq reveal">
+          <div style="position:relative; z-index:1">
+            <div class="acq-badge">
+              <span class="acq-badge-dot"></span>
+              Now Live &middot; Acquisition &amp; Launch
+            </div>
+            <h2>HALT Fire Acquires <span class="or">Green Fire</span><br>and Launches HALT Industrial.</h2>
+            <p>The acquisition of Green Fire (gogreenfire.com) brings a decade of industrial PFAS-free chemistry under the HALT brand &mdash; creating the first vertically integrated fire safety company offering safe, sustainable suppression from the household can to the 275-gallon tote.</p>
+            <div class="acq-actions">
+              <a href="https://www.prnewswire.com/news-releases/halt-fire-acquires-green-fire-and-launches-halt-industrial-creating-a-vertically-integrated-fire-safety-company-as-a-global-leader-in-safe--sustainable-firefighting-solutions-302751129.html" target="_blank" rel="noopener" class="btn btn-orange">Read PR Newswire Announcement</a>
+              <a href="industrial.html" class="btn btn-ghost">See HALT Industrial</a>
+            </div>
+          </div>
+          <div class="acq-meta">
+            <div class="acq-meta-row"><span class="acq-meta-label">Acquired</span><span class="acq-meta-val">Green Fire (gogreenfire.com)</span></div>
+            <div class="acq-meta-row"><span class="acq-meta-label">New Division</span><span class="acq-meta-val">HALT Industrial</span></div>
+            <div class="acq-meta-row"><span class="acq-meta-label">Industrial CEO</span><span class="acq-meta-val">Brandon Miller</span></div>
+            <div class="acq-meta-row"><span class="acq-meta-label">Heritage</span><span class="acq-meta-val">2016 &mdash; 2026</span></div>
+            <div class="acq-meta-row"><span class="acq-meta-label">Coverage</span><span class="acq-meta-val">Consumer &middot; Industrial &middot; Professional</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         PRESS LOGOS — As Seen On
+    ═══════════════════════════════════════════════════════ -->
+    <section class="press-strip">
+      <div class="con">
+        <div class="press-eyebrow reveal">As Seen On</div>
+        <div class="press-grid reveal">
+          <div class="press-tile"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/9a1157c4-ae77-930e-b45f-ed4b117f11ca.png" alt="CBS"></div>
+          <div class="press-tile"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/daa54da3-3354-7c8d-c8ed-2b1c4baa5974.png" alt="BET"></div>
+          <div class="press-tile"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/1934fabc-3274-3e07-e1a9-894e1766c10f.png" alt="FOX News"></div>
+          <div class="press-tile"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/733ad98e-8fa1-5da3-555c-073539a5c225.png" alt="Inside Edition"></div>
+          <div class="press-tile"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/9c3cd75a-1d14-012c-71fe-ab80a7e9f9e7.png" alt="Steals &amp; Deals" style="transform:scale(2)"></div>
+          <div class="press-tile"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/ee5a9dd7-8f05-f69a-5369-3df1e285d66d.png" alt="CNBC"></div>
+          <div class="press-tile"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/6f28f686-042e-2e7a-f98c-4df0148a0884.png" alt="WSJ"></div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
