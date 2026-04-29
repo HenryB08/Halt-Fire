@@ -1686,13 +1686,16 @@ window.closeCert = closeCert;
 <!-- ACQUISITION ANNOUNCEMENT POPUP (sessionStorage-gated, shows once per session) -->
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-#ha-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:99999;align-items:center;justify-content:center}
-#ha-box{background:#0E0E0E;max-width:560px;width:92%;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.8);border-radius:12px}
-#ha-top{background:#0E0E0E;padding:28px 44px;display:flex;align-items:center;justify-content:center;gap:28px;border-bottom:1px solid rgba(200,255,42,0.2)}
+#ha-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:99999;align-items:center;justify-content:center;padding:16px;box-sizing:border-box}
+#ha-box{background:#0E0E0E;max-width:560px;width:92%;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.8);border-radius:12px;position:relative;box-sizing:border-box}
+#ha-close{position:absolute;top:12px;right:12px;background:#0E0E0E;color:#C8FF2A;border:1px solid rgba(200,255,42,0.3);border-radius:4px;width:32px;height:32px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:background 0.2s,border-color 0.2s;flex-shrink:0}
+#ha-close:hover{background:#1a1a1a;border-color:#C8FF2A}
+#ha-close svg{display:block}
+#ha-top{background:#0E0E0E;padding:28px 44px;display:flex;align-items:center;justify-content:center;gap:28px;border-bottom:1px solid rgba(200,255,42,0.2);box-sizing:border-box}
 #ha-halt-logo{height:72px;width:auto}
 #ha-sep{width:1px;height:50px;background:rgba(255,255,255,0.15);flex-shrink:0}
 #ha-gf-logo{height:36px;width:auto;opacity:0.85}
-#ha-inner{padding:32px 44px 36px;text-align:center;background:#0E0E0E url("https://gogreenfire.com/wp-content/uploads/2022/03/AdobeStock_392851313-e1681745697201-1300x867.jpeg") center/cover no-repeat;position:relative}
+#ha-inner{padding:32px 44px 36px;text-align:center;background:#0E0E0E url("https://gogreenfire.com/wp-content/uploads/2022/03/AdobeStock_392851313-e1681745697201-1300x867.jpeg") center/cover no-repeat;position:relative;box-sizing:border-box}
 #ha-inner-overlay{position:absolute;inset:0;background:rgba(14,14,14,0.82);z-index:0}
 #ha-inner-content{position:relative;z-index:1}
 #ha-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#C8FF2A;margin-bottom:16px;display:block}
@@ -1702,13 +1705,24 @@ window.closeCert = closeCert;
 #ha-copy strong{color:#ffffff;font-weight:600}
 #ha-pr{display:block;margin-bottom:26px}
 #ha-pr a{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#C8FF2A;text-decoration:none;border-bottom:1px solid rgba(200,255,42,0.4);padding-bottom:2px}
-#ha-btn{display:block;width:100%;background:transparent;color:#C8FF2A;border:2px solid #C8FF2A;padding:16px 32px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:background 0.2s,color 0.2s}
+#ha-btn{display:block;width:100%;background:transparent;color:#C8FF2A;border:2px solid #C8FF2A;padding:16px 32px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:background 0.2s,color 0.2s;box-sizing:border-box;white-space:nowrap}
 #ha-btn:hover{background:#C8FF2A;color:#0E0E0E}
-#ha-foot{padding:13px 44px;text-align:center;border-top:1px solid rgba(255,255,255,0.08);background:#0a0a0a}
+#ha-foot{padding:13px 44px;text-align:center;border-top:1px solid rgba(255,255,255,0.08);background:#0a0a0a;box-sizing:border-box}
 #ha-foot p{font-family:'Barlow',sans-serif;font-size:11px;color:rgba(255,255,255,0.3);margin:0}
+@media(max-width:480px){
+#ha-box{width:94%}
+#ha-top{padding:20px}
+#ha-halt-logo{height:52px}
+#ha-gf-logo{height:28px}
+#ha-inner{padding:20px}
+#ha-headline{font-size:20px}
+#ha-copy{font-size:13px}
+#ha-foot{padding:13px 20px}
+}
 </style>
 <div id="ha-overlay">
 <div id="ha-box">
+<button id="ha-close" onclick="document.getElementById('ha-overlay').style.display='none';sessionStorage.setItem('ha_v1','1');" aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="1" x2="13" y2="13" stroke="#C8FF2A" stroke-width="2" stroke-linecap="round"/><line x1="13" y1="1" x2="1" y2="13" stroke="#C8FF2A" stroke-width="2" stroke-linecap="round"/></svg></button>
 <div id="ha-top">
 <img id="ha-halt-logo" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/10e3f309-a967-0307-1fec-28288c3acb92.png" alt="HALT Fire">
 <div id="ha-sep"></div>
