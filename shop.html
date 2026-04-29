@@ -677,6 +677,9 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
       "product": {
         "styles": {
           "product": {
+            "background-color": "#181818",
+            "border": "1px solid rgba(255,255,255,0.06)",
+            "border-radius": "16px",
             "@media (min-width: 601px)": {
               "max-width": "calc(25% - 20px)",
               "margin-left": "20px",
@@ -693,8 +696,29 @@ body{font-family:var(--body);background:var(--dark);color:var(--white);overflow-
             "imgWrapper": {
               "padding-top": "calc(75% + 15px)",
               "position": "relative",
-              "height": "0"
+              "height": "0",
+              "border-radius": "12px",
+              "overflow": "hidden",
+              "background-color": "#111111"
             }
+          },
+          "title": {
+            "color": "#ffffff",
+            "font-family": "Barlow Condensed, Arial Narrow, Arial, sans-serif",
+            "font-weight": "900",
+            "text-transform": "uppercase"
+          },
+          "price": {
+            "color": "#C8FF2A",
+            "font-family": "Barlow Condensed, Arial Narrow, Arial, sans-serif"
+          },
+          "button": {
+            "background-color": "#C8FF2A",
+            "color": "#000000",
+            "border-radius": "100px",
+            "font-family": "Barlow Condensed, Arial Narrow, Arial, sans-serif",
+            "font-weight": "900",
+            "text-transform": "uppercase"
           }
         },
         "buttonDestination": "modal",
