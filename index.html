@@ -1687,7 +1687,7 @@ window.closeCert = closeCert;
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 #ha-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:99999;align-items:center;justify-content:center}
-#ha-box{background:#0E0E0E;max-width:560px;width:92%;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.8);border-radius:12px}
+#ha-box{background:#0E0E0E;max-width:560px;width:92%;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.8);border-radius:12px;position:relative}
 #ha-top{background:#0E0E0E;padding:28px 44px;display:flex;align-items:center;justify-content:center;gap:28px;border-bottom:1px solid rgba(200,255,42,0.2)}
 #ha-halt-logo{height:72px;width:auto}
 #ha-sep{width:1px;height:50px;background:rgba(255,255,255,0.15);flex-shrink:0}
@@ -1709,6 +1709,7 @@ window.closeCert = closeCert;
 </style>
 <div id="ha-overlay">
 <div id="ha-box">
+<button onclick="document.getElementById('ha-overlay').style.display='none';sessionStorage.setItem('ha_v1','1');" style="position:absolute;top:12px;right:16px;background:none;border:none;color:#C8FF2A;font-size:28px;font-weight:700;cursor:pointer;z-index:999999;line-height:1;padding:4px 8px;">&times;</button>
 <div id="ha-top">
 <img id="ha-halt-logo" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/10e3f309-a967-0307-1fec-28288c3acb92.png" alt="HALT Fire">
 <div id="ha-sep"></div>
