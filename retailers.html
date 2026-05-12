@@ -890,6 +890,19 @@ customerservice@haltfire.com
 </div>
 
 <!-- ===================== HOME PAGE ===================== -->
+<div id="cert-modal" onclick="closeCertModal()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9999;align-items:center;justify-content:center">
+<div onclick="event.stopPropagation()" style="background:#1a1a1a;border:1px solid rgba(255,255,255,.12);max-width:480px;width:90%;position:relative;overflow:hidden">
+<button onclick="closeCertModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;color:rgba(0,0,0,.5);font-size:24px;cursor:pointer;line-height:1;z-index:2">&times;</button>
+<div id="cert-modal-header" style="background:#fff;padding:28px;display:flex;align-items:center;justify-content:center;min-height:110px">
+<img class="cm-logo" src="" alt="" style="height:72px;width:auto;object-fit:contain;display:block">
+</div>
+<div style="padding:32px">
+<h3 class="cm-title" style="font-family:var(--font);font-size:22px;color:#fff;text-transform:uppercase;margin-bottom:12px"></h3>
+<p class="cm-body" style="font-size:14px;color:rgba(255,255,255,.65);line-height:1.8;margin-bottom:24px"></p>
+<a class="cm-link" href="#" target="_blank" rel="noopener" class="btn-g" style="font-size:12px;padding:12px 24px">Learn More &rarr;</a>
+</div>
+</div>
+</div>
 <main class="page active" id="page-retailers">
 
 <!-- HERO -->
@@ -1240,12 +1253,12 @@ function showCertModal(key) {
   m.querySelector('.cm-title').textContent = d.title;
   m.querySelector('.cm-body').textContent = d.body;
   m.querySelector('.cm-link').href = d.link;
-  m.classList.add('open');
+  m.style.display = 'flex';
   document.body.style.overflow = 'hidden';
 }
 function closeCertModal() {
   var m = document.getElementById('cert-modal'); if (!m) return;
-  m.classList.remove('open');
+  m.style.display = 'none';
   document.body.style.overflow = '';
 }
 document.addEventListener('keydown', function(e) {
