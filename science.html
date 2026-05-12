@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="https://schema.org/WebPage">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>The Science Behind HALT Fire | PFAS-Free Suppression Technology | UL Classified | NSF P1</title>
-<meta name="description" content="HALT Fire uses patented GreenFire technology — fluorine-free, biodegradable surfactants that achieve equivalent fire suppression without PFAS contamination. UL Classified, NSF certified.">
+<meta name="description" content="HALT Fire uses patented GreenFire technology — fluorine-free biodegradable surfactants. UL Classified, NSF certified.">
 <meta property="og:title" content="The Science Behind HALT Fire | PFAS-Free Suppression Technology | UL Classified | NSF P1">
-<meta property="og:description" content="HALT Fire uses patented GreenFire technology — fluorine-free, biodegradable surfactants that achieve equivalent fire suppression without PFAS contamination. UL Classified, NSF certified.">
+<meta property="og:description" content="HALT Fire uses patented GreenFire technology — fluorine-free biodegradable surfactants. UL Classified, NSF certified.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://gogreenfire.com/wp-content/uploads/2022/03/AdobeStock_392851313-e1681745697201-1300x867.jpeg">
 <link rel="canonical" href="https://haltfire.com/science.html">
@@ -805,15 +805,8 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .btn-og,.btn-g{font-size:9px!important;padding:10px 12px!important}
 }
 </style>
-<style>
-/* On individual pages, show main content by default */
-.page { display: none; }
-.page.active { display: block; }
-/* Fix nav for multi-page - active state via class not JS */
-</style>
 </head>
 <body>
-
 <!-- TOPBAR -->
 <div class="topbar" id="topbar">
 <div class="topbar-inner">
@@ -852,7 +845,7 @@ customerservice@haltfire.com
 <!-- NAV -->
 <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
 <div class="nav-inner">
-<a href="index.html" class="nav-logo" onclick="nav('home')" aria-label="HALT Fire Home">
+<a href="index.html" class="nav-logo" onclick="window.location='index.html'" aria-label="HALT Fire Home">
 <img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/8c7f2cbe-39b2-9320-be0b-bb06479a0b8a.png" alt="HALT Fire - Non-Toxic Fire Suppression">
 </a>
 <ul class="nav-links" role="list">
@@ -866,7 +859,7 @@ customerservice@haltfire.com
 <li><a href="contact.html" id="nav-contact">Contact</a></li>
 </ul>
 <div class="nav-ctas">
-<a href="#" onclick="nav('firedept');setTimeout(()=>{const f=document.querySelector('#page-firedept .contact-sec');if(f)f.scrollIntoView({behavior:'smooth'})},400)" class="btn-og" style="font-size:10px;letter-spacing:1px;white-space:nowrap">Fire Dept Sales</a>
+<a href="#" onclick="window.location='firedept.html';setTimeout(()=>{const f=document.querySelector('#page-firedept .contact-sec');if(f)f.scrollIntoView({behavior:'smooth'})},400)" class="btn-og" style="font-size:10px;letter-spacing:1px;white-space:nowrap">Fire Dept Sales</a>
 <a href="https://get.haltfire.com" target="_blank" rel="noopener" class="btn-g" style="font-size:10px;letter-spacing:1px;white-space:nowrap">Shop Consumer</a>
 </div>
 <button class="mob-btn" id="mob-btn" onclick="toggleMob()" aria-label="Open menu" aria-expanded="false">
@@ -878,358 +871,18 @@ customerservice@haltfire.com
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mob" role="dialog" aria-modal="true" aria-label="Mobile menu">
 <button class="mob-close" onclick="toggleMob()" aria-label="Close menu">&times;</button>
-<a href="#" onclick="nav('firedept');toggleMob()">Fire Department</a>
-<a href="#" onclick="nav('consumer');toggleMob()">Home Use</a>
-<a href="#" onclick="nav('industrial');toggleMob()">Industrial</a>
-<a href="#" onclick="nav('professional');toggleMob()">Professional</a>
-<a href="#" onclick="nav('science');toggleMob()">The Science</a>
-<a href="#" onclick="nav('about');toggleMob()">About</a>
-<a href="#" onclick="nav('retailers');toggleMob()">Retailers</a>
-<a href="#" onclick="nav('contact');toggleMob()">Contact</a>
+<a href="#" onclick="window.location='firedept.html';toggleMob()">Fire Department</a>
+<a href="#" onclick="window.location='consumer.html';toggleMob()">Home Use</a>
+<a href="#" onclick="window.location='industrial.html';toggleMob()">Industrial</a>
+<a href="#" onclick="window.location='professional.html';toggleMob()">Professional</a>
+<a href="#" onclick="window.location='science.html';toggleMob()">The Science</a>
+<a href="#" onclick="window.location='about.html';toggleMob()">About</a>
+<a href="#" onclick="window.location='retailers.html';toggleMob()">Retailers</a>
+<a href="#" onclick="window.location='contact.html';toggleMob()">Contact</a>
 <a href="https://get.haltfire.com" target="_blank" rel="noopener" style="color:var(--green);margin-top:20px">Shop Now at get.haltfire.com &rarr;</a>
 </div>
 
 <!-- ===================== HOME PAGE ===================== -->
-<main class="page active" id="page-home">
-
-<!-- HERO SLIDER -->
-<section class="hero" aria-label="HALT Fire hero">
-<div class="slide on" style="background-image:url('https://gogreenfire.com/wp-content/uploads/2022/05/GreenFire-Fire-Supression-Slider1-1.jpeg');background-position:center center" role="img" aria-label="HALT Fire suppression in action"><div class="slide-overlay"></div></div>
-<div class="slide" style="background-image:url('https://gogreenfire.com/wp-content/uploads/2022/05/GreenFire-Fire-Prevention-Slider-utility-1.jpeg');background-position:center center" role="img" aria-label="HALT utility fire prevention"><div class="slide-overlay"></div></div>
-<div class="slide" style="background-image:url('https://gogreenfire.com/wp-content/uploads/2022/05/GReenFire-Fire-Supression-truck-1.jpeg');background-position:center center" role="img" aria-label="HALT Industrial fire truck deployment"><div class="slide-overlay"></div></div>
-<div class="slide" style="background-image:url('https://gogreenfire.com/wp-content/uploads/2022/05/GreenFire-Fire-Prevention-Slider-1.jpeg');background-position:center center" role="img" aria-label="HALT fire prevention"><div class="slide-overlay"></div></div>
-<div class="slide" style="background-image:url('https://gogreenfire.com/wp-content/uploads/2020/02/forest-1500x843.jpg');background-position:center center" role="img" aria-label="HALT wildland fire protection"><div class="slide-overlay"></div></div>
-<div class="slide" style="background-image:url('https://gogreenfire.com/wp-content/uploads/2020/10/FD-ENGINE-920x400-1-1500x843.jpg');background-position:center center" role="img" aria-label="HALT fire department engine"><div class="slide-overlay"></div></div>
-<div class="hero-content">
-<div class="hero-body">
-<img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="HALT Fire" style="width:48px;height:48px;display:block;margin:0 auto 6px;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 4px 12px rgba(0,0,0,.5))">
-<span class="hero-eye">NSF Certified &middot; UL Classified &middot; 100% PFAS-Free &middot; Made in USA</span>
-<h1>America's Most Complete<br><em>PFAS-Free Fire Safety</em> Platform</h1>
-<p class="hero-lead">HALT Fire is the only brand delivering NSF-certified, government-tested PFAS-free fire suppression across every sector — home, industrial, and professional trades. Powered by patented GreenFire&reg; technology. Zero forever chemicals. Zero compromise.</p>
-<div class="hero-ctas">
-<a href="industrial.html" class="btn-g">Explore HALT Industrial</a>
-<a href="https://get.haltfire.com" target="_blank" rel="noopener" class="btn-og">Shop Consumer Products</a>
-</div>
-</div>
-</div>
-<div class="dots" role="tablist" aria-label="Slide controls">
-<button class="dot on" onclick="goSlide(0)" role="tab" aria-selected="true" aria-label="Slide 1"></button>
-<button class="dot" onclick="goSlide(1)" role="tab" aria-selected="false" aria-label="Slide 2"></button>
-<button class="dot" onclick="goSlide(2)" role="tab" aria-selected="false" aria-label="Slide 3"></button>
-<button class="dot" onclick="goSlide(3)" role="tab" aria-selected="false" aria-label="Slide 4"></button>
-<button class="dot" onclick="goSlide(4)" role="tab" aria-selected="false" aria-label="Slide 5"></button>
-<button class="dot" onclick="goSlide(5)" role="tab" aria-selected="false" aria-label="Slide 6"></button>
-</div>
-<button class="hero-prev" onclick="goSlide(cur-1)" aria-label="Previous slide">
-<svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
-PREV
-</button>
-<button class="hero-next" onclick="goSlide(cur+1)" aria-label="Next slide">
-NEXT
-<svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
-</button>
-<div class="hero-scroll" aria-hidden="true"><div class="hero-scroll-line"></div>SCROLL</div>
-</section>
-
-<!-- STATS BAND -->
-<div class="stats-band" role="region" aria-label="Key statistics">
-<div class="con">
-<div class="stats-grid stagger">
-<div class="stat-item"><div class="stat-num" data-count="35" data-suffix="+">35+</div><div class="stat-label">Years of GreenFire® Science Behind Every Formula</div></div>
-<div class="stat-item"><div class="stat-num" data-count="100" data-suffix="%">100%</div><div class="stat-label">PFAS-Free — Zero Forever Chemicals in Every Product</div></div>
-<div class="stat-item"><div class="stat-num" data-static="true">NSF</div><div class="stat-label">White Book Listed — Food-Safe Fire Protection</div></div>
-<div class="stat-item"><div class="stat-num" data-static="true">UL</div><div class="stat-label">Classified &amp; Government-Tested (DOD, DOE, EPA, FAA)</div></div>
-</div>
-</div>
-</div>
-<div class="cert-strip" role="region" aria-label="Certifications">
-<div class="con">
-<div class="cert-strip-inner">
-<button onclick="showCertModal('ul')" class="cert-btn"><img src="https://gogreenfire.com/wp-content/uploads/2023/04/GreenFire_UL_Classified.jpeg" alt="UL Classified" class="cert-logo"></button>
-<button onclick="showCertModal('nfpa')" class="cert-btn"><img src="https://gogreenfire.com/wp-content/uploads/2025/03/NFPA-Badge.png" alt="NFPA Individual Member" class="cert-logo"></button>
-<button onclick="showCertModal('nsf')" class="cert-btn"><img src="https://gogreenfire.com/wp-content/uploads/2022/03/DM-REV-1-NSF-LOGO-P1-e1649111989397.png" alt="NSF Nonfood Compounds P1" class="cert-logo"></button>
-<button onclick="showCertModal('omri')" class="cert-btn"><img src="https://gogreenfire.com/wp-content/uploads/2020/10/omri-listed-logo.jpg" alt="OMRI Listed For Organic Use" class="cert-logo"></button>
-<button onclick="showCertModal('greenscreen')" class="cert-btn"><img src="https://gogreenfire.com/wp-content/uploads/2021/04/greenscreen-certified-logo_400_400_s-e1649112024950.png" alt="GreenScreen Certified" class="cert-logo"></button>
-<button onclick="showCertModal('usa')" class="cert-btn"><img src="https://gogreenfire.com/wp-content/uploads/2022/03/USA.png" alt="Made in USA" class="cert-logo"></button>
-</div>
-<p style="font-family:var(--nav);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#999;text-align:center;margin-top:14px;margin-bottom:0">&#9432; Click any certification to learn more</p>
-</div>
-</div>
-
-<!-- THREE DIVISIONS -->
-<section class="bg-white sec" aria-labelledby="div-heading">
-<div class="con">
-<div class="sh center reveal">
-<span class="eyebrow-flame"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="">One Company. Three Divisions.</span>
-<h2 id="div-heading">HALT Fire <em>Product Families</em></h2>
-<p class="lead">From the kitchen to the command center &mdash; non-toxic, PFAS-free fire suppression for every application, every industry, every scale.</p>
-</div>
-</div>
-<div class="div-grid stagger">
-<a href="consumer.html" class="div-card c" aria-label="HALT Consumer Division">
-<img src="https://gogreenfire.com/wp-content/uploads/2020/12/AdobeStock_223068772-1500x843.jpeg" alt="HALT Consumer Fire Spray for homes and kitchens" loading="lazy">
-<div class="div-overlay"></div>
-<div class="div-body">
-<div class="div-tag">HALT Consumer</div>
-<h3>Home &amp; Family</h3>
-<p>Non-toxic kitchen, grill &amp; Li-Ion fire sprays. Safe around food, children &amp; pets. No training required. 4-year shelf life.</p>
-<span class="div-link">Shop Now &rarr;</span>
-</div>
-</a>
-<a href="industrial.html" class="div-card i" aria-label="HALT Industrial Division">
-<img src="https://gogreenfire.com/wp-content/uploads/2020/12/firefighter-fire-firefighting-A5P7EBD-1500x843.jpg" alt="HALT Industrial PFAS-free firefighting foam for fire departments" loading="lazy">
-<div class="div-overlay"></div>
-<div class="div-body">
-<div class="div-tag">HALT Industrial</div>
-<h3>Industrial &amp; Municipal</h3>
-<p>Drop-in AFFF replacement. PFAS-free GFFF for fire departments, oil &amp; gas, aviation &amp; utilities. DOD/EPA tested.</p>
-<span class="div-link">Request Pricing &rarr;</span>
-</div>
-</a>
-<a href="professional.html" class="div-card p" aria-label="HALT Professional Division">
-<img src="https://gogreenfire.com/wp-content/uploads/2020/12/UTILITY-2-1500x843.jpeg" alt="HALT Professional Contractor Series for tradespeople" loading="lazy">
-<div class="div-overlay"></div>
-<div class="div-body">
-<div class="div-tag">HALT Professional</div>
-<h3>Contractor Series</h3>
-<p>HALT Pro Suppressor &amp; Heat Barrier for welders, HVAC, plumbers, electricians &amp; roofers. OSHA compliant.</p>
-<span class="div-link">Learn More &rarr;</span>
-</div>
-</a>
-</div>
-</section>
-
-<!-- BROWSE BY INDUSTRY -->
-<section class="bg-light sec-sm" aria-labelledby="industry-heading">
-<div class="con">
-<div class="sh reveal">
-<span class="eyebrow">HALT Industrial</span>
-<h2 id="industry-heading">Browse by <em>Industry</em></h2>
-<p class="lead">HALT Industrial serves every sector where fire risk demands the safest, most effective suppression technology available.</p>
-</div>
-</div>
-<div class="ind-grid">
-<a href="firedept.html" class="ind-card"><img src="https://gogreenfire.com/wp-content/uploads/2020/02/forest-1500x843.jpg" alt="Wildland fire suppression" loading="lazy"><div class="ind-ov"><h4>Wildland</h4></div><div class="ind-popup"><h4>Wildland</h4><p>PFAS-free foam for wildland & forest fire suppression. Works with existing ground equipment. Zero environmental contamination.</p><span class="btn-g" onclick="event.stopPropagation();nav('firedept')">Learn More &rarr;</span></div></a>
-<a href="firedept.html" class="ind-card"><img src="https://gogreenfire.com/wp-content/uploads/2020/10/FD-ENGINE-920x400-1-1500x843.jpg" alt="Municipal fire department" loading="lazy"><div class="ind-ov"><h4>Municipal Fire Dept.</h4></div><div class="ind-popup"><h4>Municipal Fire Dept.</h4><p>Drop-in AFFF replacement for municipal fire departments. Same equipment, zero PFAS, zero reignition. Trusted by departments across the US.</p><span class="btn-g" onclick="event.stopPropagation();nav('firedept')">Learn More &rarr;</span></div></a>
-<a href="industrial.html" class="ind-card"><img src="https://gogreenfire.com/wp-content/uploads/2020/12/firefighter-fire-firefighting-A5P7EBD-1500x843.jpg" alt="Industrial and oil and gas fire suppression" loading="lazy"><div class="ind-ov"><h4>Industrial / Oil &amp; Gas</h4></div><div class="ind-popup"><h4>Industrial / Oil &amp; Gas</h4><p>GFFF for petroleum facilities, refineries, chemical plants, and pipeline operations. DOD, DOE, EPA & FAA tested.</p><span class="btn-g" onclick="event.stopPropagation();nav('industrial')">Learn More &rarr;</span></div></a>
-<a href="industrial.html" class="ind-card"><img src="https://gogreenfire.com/wp-content/uploads/2020/10/helmuts-1500x843.png" alt="Commercial fire protection" loading="lazy"><div class="ind-ov"><h4>Commercial</h4></div><div class="ind-popup"><h4>Commercial</h4><p>Non-toxic fire suppression for commercial facilities, data centers, and warehouses. NSF certified. Zero corrosion to equipment.</p><span class="btn-g" onclick="event.stopPropagation();nav('industrial')">Learn More &rarr;</span></div></a>
-<a href="industrial.html" class="ind-card"><img src="https://gogreenfire.com/wp-content/uploads/2020/10/9623-3f7da378-7882-4a4c-be4a-961c854d2fbf-1500x843.jpg" alt="Urban interface fire protection" loading="lazy"><div class="ind-ov"><h4>Urban Interface</h4></div><div class="ind-popup"><h4>Urban Interface</h4><p>Protection at the boundary of developed land and wildland. HALT works with both structure and wildland protocols.</p><span class="btn-g" onclick="event.stopPropagation();nav('industrial')">Learn More &rarr;</span></div></a>
-<a href="industrial.html" class="ind-card"><img src="https://gogreenfire.com/wp-content/uploads/2020/12/Picture6-1500x843.png" alt="Utilities fire protection" loading="lazy"><div class="ind-ov"><h4>Utilities</h4></div><div class="ind-popup"><h4>Utilities</h4><p>Suppression and pre-treatment for electrical utilities, substations, and transmission lines. Non-conductive, non-corrosive.</p><span class="btn-g" onclick="event.stopPropagation();nav('industrial')">Learn More &rarr;</span></div></a>
-<a href="professional.html" class="ind-card"><img src="https://gogreenfire.com/wp-content/uploads/2020/12/UTILITY-2-1500x843.jpeg" alt="Contractor professional fire protection" loading="lazy"><div class="ind-ov"><h4>Contractor Pro</h4></div><div class="ind-popup"><h4>Contractor Pro</h4><p>OSHA-compliant job site fire protection for welders, HVAC techs, plumbers & roofers. 14oz Suppressor + 16oz Heat Barrier.</p><span class="btn-g" onclick="event.stopPropagation();nav('professional')">Learn More &rarr;</span></div></a>
-<a href="consumer.html" class="ind-card"><img src="https://gogreenfire.com/wp-content/uploads/2020/12/AdobeStock_223068772-1500x843.jpeg" alt="Residential home fire protection" loading="lazy"><div class="ind-ov"><h4>Residential</h4></div><div class="ind-popup"><h4>Residential</h4><p>Kitchen, grill & Li-Ion fire sprays for the home. Non-toxic, NSF food-safe, no training needed. 4-year shelf life.</p><span class="btn-g" onclick="event.stopPropagation();nav('consumer')">Shop Now &rarr;</span></div></a>
-</div>
-</section>
-
-<!-- OUR COMMITMENT -->
-<div class="commit-wrap" role="region" aria-label="HALT Fire commitment">
-<div class="commit-bg"></div>
-<div class="commit-ov"></div>
-<div class="con commit-inner">
-<div class="section-flame"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="HALT Fire"></div>
-<h2 class="reveal">Our Commitment to People &amp; Planet</h2>
-<div class="commit-pills stagger">
-<div class="pill"><img src="https://gogreenfire.com/wp-content/uploads/2020/01/non-toxic.png" alt="Non-Toxic"><h3>Non-Toxic</h3></div>
-<div class="pill"><img src="https://gogreenfire.com/wp-content/uploads/2020/01/non-carcinogenic.png" alt="Non-Carcinogenic"><h3>Non-Carcinogenic</h3></div>
-<div class="pill"><img src="https://gogreenfire.com/wp-content/uploads/2020/01/eco.png" alt="Eco Friendly"><h3>Eco Friendly</h3></div>
-<div class="pill"><img src="https://gogreenfire.com/wp-content/uploads/2020/01/easy-clean.png" alt="Easy Cleanup"><h3>Easy Cleanup</h3></div>
-<div class="pill"><img src="https://gogreenfire.com/wp-content/uploads/2020/01/food-safe.png" alt="Food Safe"><h3>Food &amp; Environment Safe</h3></div>
-<div class="pill"><img src="https://gogreenfire.com/wp-content/uploads/2020/01/non-corrosive.png" alt="Non-Corrosive"><h3>Non-Corrosive</h3></div>
-<div class="pill"><img src="https://gogreenfire.com/wp-content/uploads/2020/01/surface-angle.png" alt="Any Surface"><h3>Adheres to Any Surface</h3></div>
-<div class="pill"><img src="https://gogreenfire.com/wp-content/uploads/2020/01/not-evaporate.png" alt="Protection"><h3>Protection Will Not Evaporate</h3></div>
-</div>
-</div>
-</div>
-
-<!-- WHAT MAKES HALT THE SAFEST -->
-<section class="bg-white sec" aria-labelledby="features-heading">
-<div class="con">
-<div class="sh reveal">
-<span class="eyebrow-flame"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="">The HALT Difference</span>
-<h2 id="features-heading">What Makes HALT the <em>Safest</em> Choice?</h2>
-<p class="lead">HALT Fire is the fluorine-free, PFAS-free replacement for AFFF and legacy wetting agents. As cancer is now the leading cause of death among firefighters, we are committed to being part of the solution &mdash; not the problem.</p>
-</div>
-<div class="feat-grid stagger">
-<div class="feat"><h3><b>Non-</b>Toxic Formula</h3><p>Independent third-party tests confirm HALT is "Practically Non-Toxic" &mdash; performing better than household dish soap. Safe for daily use.</p></div>
-<div class="feat"><h3><b>Non-</b>Carcinogenic</h3><p>Zero PFAS chemicals. Zero CA Prop 65 components known to cause cancer, birth defects, or reproductive harm. Independently verified.</p></div>
-<div class="feat"><h3><b>Eco</b> Friendly</h3><p>No phosphorous or PFAS chemicals that permanently contaminate waterways and harm fish and wildlife. Fully biodegradable formula.</p></div>
-<div class="feat"><h3><b>Easy</b> Cleanup</h3><p>All natural. After extinguishment, a quick rinse with water is all you need. No hazmat, no professional cleanup, no damage to equipment.</p></div>
-<div class="feat"><h3><b>Food &amp;</b> Environment Safe</h3><p>NSF White Book Listed since 2016 &mdash; independently certified safe for use on and around food processing equipment and food preparation surfaces.</p></div>
-<div class="feat"><h3><b>Non-</b>Corrosive</h3><p>Non-damaging to pumps and fittings aboard fire engines and industrial equipment. Confirmed through ongoing testing by firefighting customers.</p></div>
-<div class="feat"><h3><b>Any</b> Surface</h3><p>Acts as a superior heat barrier for welding, soldering, plumbing, and more &mdash; adheres at any angle and penetrates porous materials.</p></div>
-<div class="feat"><h3><b>Zero</b> Reignition</h3><p>Absorbs into material surfaces, providing a continuous protective coating that will not evaporate &mdash; preventing reignition long after application.</p></div>
-</div>
-</div>
-</section>
-
-<!-- ACQUISITION SPLIT -->
-<section style="padding:0" aria-labelledby="acq-heading">
-<div class="split">
-<img class="split-img reveal-left" src="https://gogreenfire.com/wp-content/uploads/2022/03/AdobeStock_392851313-e1681745697201-1300x867.jpeg" alt="HALT Industrial acquisition of GreenFire announced April 2026">
-<div class="split-body reveal-right">
-<span class="eyebrow">Official Announcement &mdash; April 2026</span>
-<h2 style="font-family:var(--font);font-size:clamp(22px,3vw,36px);color:#fff;text-transform:uppercase;line-height:1.2;margin-bottom:16px">HALT Fire Acquires GreenFire.<br>Launches <em style="color:var(--green);font-style:normal">HALT Industrial.</em></h2>
-<div style="width:90px;height:2px;background:#9c9c9c;margin:14px 0 24px"></div>
-<p style="font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:18px">In April 2026, HALT Fire acquired GreenFire &mdash; the pioneer of PFAS-free industrial firefighting foam &mdash; and launched HALT Industrial, bringing patented non-toxic technology to fire departments and industrial operators nationwide. The acquisition was covered by Morningstar, Benzinga, and over 186 media outlets.</p>
-<p style="font-size:13px;color:var(--muted);line-height:1.85;margin-bottom:28px">Existing GreenFire customers retain full access to all products, certifications, and SDS documents. No disruption. Same trusted technology &mdash; now under the HALT Industrial brand with expanded support and capabilities.</p>
-<div class="split-btns">
-<a href="https://www.prnewswire.com/news-releases/halt-fire-acquires-green-fire-and-launches-halt-industrial-creating-a-vertically-integrated-fire-safety-company-as-a-global-leader-in-safe--sustainable-firefighting-solutions-302751129.html" target="_blank" rel="noopener" class="btn-g">Read the Press Release</a>
-<a href="industrial.html" class="btn-og">Explore HALT Industrial</a>
-</div>
-</div>
-</div>
-</section>
-
-<!-- INDUSTRIAL PRODUCTS + CHART -->
-<section class="bg-light sec" aria-labelledby="ind-prod-heading">
-<div class="con">
-<div class="sh reveal">
-<span class="eyebrow-flame"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="">HALT Industrial Products</span>
-<h2 id="ind-prod-heading">The AFFF Replacement the<br>Industry Has Been <em>Waiting For</em></h2>
-</div>
-<div class="tox-grid">
-<div class="reveal-left">
-<img class="tox-img" src="https://gogreenfire.com/wp-content/uploads/2025/11/Fire-Fighting-Foam-Toxicity-1500x1250.png" alt="Fire Fighting Foam Toxicity Comparison &mdash; HALT GFFF vs AFFF vs Traditional Foam" loading="lazy">
-<p style="font-size:12px;color:var(--lt);margin-top:12px;font-family:var(--nav);letter-spacing:1px">FIGURE 1 &mdash; Third-party toxicity comparison: HALT GFFF vs. AFFF and traditional foam concentrates</p>
-<!-- BAR CHART -->
-<div class="chart-section" id="chart-tox">
-<div class="chart-title">Relative Toxicity Index (Lower = Safer)</div>
-<div class="bar-chart">
-<div class="bar-row"><span class="bar-label">HALT GFFF</span><div class="bar-track"><div class="bar-fill green" style="--w:8%">Safest</div></div><span class="bar-val">8</span></div>
-<div class="bar-row"><span class="bar-label">Dish Soap</span><div class="bar-track"><div class="bar-fill blue" style="--w:12%">Low</div></div><span class="bar-val">12</span></div>
-<div class="bar-row"><span class="bar-label">Class A Foam</span><div class="bar-track"><div class="bar-fill amber" style="--w:42%">Moderate</div></div><span class="bar-val">42</span></div>
-<div class="bar-row"><span class="bar-label">Legacy AFFF</span><div class="bar-track"><div class="bar-fill red" style="--w:97%">Highest</div></div><span class="bar-val">97</span></div>
-</div>
-</div>
-</div>
-<div class="reveal-right">
-<p style="font-size:15px;color:var(--muted);line-height:1.9;margin-bottom:28px">PFAS "forever chemicals" found in legacy AFFF foams are linked to cancer, reproductive harm, and permanent environmental contamination. HALT Industrial GFFF delivers equivalent or superior fire suppression performance &mdash; with zero PFAS and zero carcinogens.</p>
-<div class="plcard"><span class="plcard-label">HALT Industrial</span><h3>GFFF Firefighting Foam</h3><p>Drop-in AFFF replacement for fire departments and industrial operators. Same equipment, zero PFAS. Tested by DOD, DOE, EPA &amp; FAA. Zero reignition, full suppression.</p><div class="plcard-sz">Available: 5 Gal &middot; 55 Gal Drum &middot; 275 Gal Tote</div></div>
-<div class="plcard" style="position:relative;overflow:hidden;padding-right:170px">
-<img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/12831504-a35b-368d-57ce-0cce87ead1c2.png" alt="HALT Industrial Wetting Agent" style="position:absolute;right:0;top:0;bottom:0;height:100%;width:160px;object-fit:contain;object-position:center right;pointer-events:none;display:block">
-<span class="plcard-label">HALT Industrial</span>
-<h3>Wetting Agent Multi-Class</h3>
-<p>Class A-B wetting agent for structure, wildland, and vehicle fires. Fluorine &amp; PFAS free, non-toxic, non-corrosive to fire apparatus. Compatible with all standard equipment.</p>
-<div class="plcard-sz">Available: 5 Gal &middot; 55 Gal Drum &middot; 275 Gal Tote</div>
-</div>
-<div class="plcard" style="position:relative;overflow:hidden;padding-right:170px">
-<img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/e52e911a-8163-f903-2681-93af6858d97c.png" alt="HALT Industrial Heat Barrier" style="position:absolute;right:0;top:0;bottom:0;height:100%;width:160px;object-fit:contain;object-position:center right;pointer-events:none;display:block">
-<span class="plcard-label">HALT Industrial</span>
-<h3>Heat Barrier</h3>
-<p>Pre-treatment for hot-work environments: welding, HVAC, plumbing, roofing, and automotive. Adheres to any surface at any angle. Prevents fire before it starts.</p>
-<div class="plcard-sz">Available: 16oz Aerosol &middot; 5 Gal &middot; 55 Gal Drum &middot; 275 Gal Tote</div>
-</div>
-<a href="#" onclick="nav('industrial');setTimeout(function(){var el=document.getElementById('ind-products');if(el)el.scrollIntoView({behavior:'smooth'})},400)" class="btn-g" style="display:inline-block;margin-top:24px">View All Industrial Products &rarr;</a>
-</div>
-</div>
-</div>
-</section>
-
-<!-- DUAL MEDIA -->
-<section style="padding:0;background:#000" aria-label="Fire test video and environmental safety">
-<div class="dual">
-<div class="dual-panel">
-<img src="https://gogreenfire.com/wp-content/uploads/2022/05/GreenFire-Fire-Supression-Slider1-1.jpeg" alt="HALT Fire suppression in action — firefighters deploying HALT Industrial GFFF" style="filter:brightness(1.1) saturate(1.1)">
-<div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.3) 60%,rgba(0,0,0,.05) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 32px">
-<span style="font-family:var(--nav);font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--green);display:block;margin-bottom:12px">HALT Industrial</span>
-<h3 style="font-family:var(--font);font-size:28px;color:#fff;text-transform:uppercase;margin-bottom:12px;line-height:1.1">PFAS-Free in the Field</h3>
-<p style="font-size:13px;color:rgba(255,255,255,.7);max-width:340px;margin-bottom:24px;line-height:1.7">Fire departments across the US are replacing AFFF with HALT Industrial GFFF &mdash; same equipment, same training, zero PFAS.</p>
-<a href="industrial.html" style="font-family:var(--nav);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#0E0E0E;background:var(--green);padding:12px 24px;display:inline-block;transition:all .3s">Explore HALT Industrial &rarr;</a>
-</div>
-</div>
-<div class="dual-panel">
-<img src="https://gogreenfire.com/wp-content/uploads/2022/09/earrth-dewdrop-650x433-1-1500x1250.jpeg" alt="HALT Fire environmental safety — PFAS-free, biodegradable, safe for earth and water"">
-<div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.8) 0%,rgba(0,0,0,.25) 60%,rgba(0,0,0,.05) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:32px">
-<span class="eyebrow" style="margin-bottom:12px">100% PFAS-Free</span>
-<h3 style="font-family:var(--font);font-size:30px;color:#fff;text-transform:uppercase;margin-bottom:16px">Safe for People &amp;<br>the Environment</h3>
-<p style="font-size:14px;color:rgba(255,255,255,.8);max-width:360px;margin-bottom:24px;line-height:1.75">Zero PFAS. Zero phosphorous. Biodegradable. GreenScreen certified. HALT protects people, property, and the planet &mdash; always.</p>
-<a href="science.html" style="font-family:var(--nav);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#fff;border:1px solid rgba(255,255,255,.4);padding:12px 24px;transition:all .3s;display:inline-block" onmouseover="this.style.background='rgba(255,255,255,.15)'" onmouseout="this.style.background='transparent'">Read the Science &rarr;</a>
-</div>
-</div>
-</div>
-</section>
-
-<section class="sec" style="background:#000;padding:72px 0" aria-label="Media coverage">
-<div class="con" style="text-align:center">
-<span class="eyebrow" style="display:block;margin-bottom:12px">National Media Coverage</span>
-<h2 style="font-family:var(--font);font-size:clamp(28px,3.5vw,44px);color:#fff;text-transform:uppercase;margin-bottom:52px;line-height:1.1">As Seen <em>On</em></h2>
-<div class="media-logo-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;max-width:980px;margin:0 auto">
-<div style="background:#fff;height:76px;display:flex;align-items:center;justify-content:center;padding:12px 16px"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/1934fabc-3274-3e07-e1a9-894e1766c10f.png" alt="FOX News" style="max-width:100%;max-height:46px;object-fit:contain"></div>
-<div style="background:#fff;height:76px;display:flex;align-items:center;justify-content:center;padding:12px 16px"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/9a1157c4-ae77-930e-b45f-ed4b117f11ca.png" alt="CBS" style="max-width:100%;max-height:46px;object-fit:contain"></div>
-<div style="background:#fff;height:76px;display:flex;align-items:center;justify-content:center;padding:12px 16px"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/daa54da3-3354-7c8d-c8ed-2b1c4baa5974.png" alt="BET" style="max-width:100%;max-height:46px;object-fit:contain"></div>
-<div style="background:#fff;height:76px;display:flex;align-items:center;justify-content:center;padding:12px 16px"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/733ad98e-8fa1-5da3-555c-073539a5c225.png" alt="Inside Edition" style="max-width:100%;max-height:46px;object-fit:contain"></div>
-<div style="background:#fff;height:76px;display:flex;align-items:center;justify-content:center;padding:8px 12px;overflow:hidden"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/9c3cd75a-1d14-012c-71fe-ab80a7e9f9e7.png" alt="America's Steals and Deals" style="width:100%;height:100%;object-fit:contain;transform:scale(2.2);transform-origin:center"></div>
-<div style="background:#fff;height:76px;display:flex;align-items:center;justify-content:center;padding:12px 16px"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/ee5a9dd7-8f05-f69a-5369-3df1e285d66d.png" alt="CNBC" style="max-width:100%;max-height:46px;object-fit:contain"></div>
-<div style="background:#fff;height:76px;display:flex;align-items:center;justify-content:center;padding:12px 16px"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/6f28f686-042e-2e7a-f98c-4df0148a0884.png" alt="The Wall Street Journal" style="max-width:100%;max-height:46px;object-fit:contain"></div>
-<div style="background:#fff;height:76px;display:flex;align-items:center;justify-content:center;padding:12px 16px"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/0b574af9-5f13-7db5-932e-6959d42a9595.png" alt="The Washington Post" style="max-width:100%;max-height:46px;object-fit:contain"></div>
-<div style="background:#fff;height:76px;display:flex;align-items:center;justify-content:center;padding:12px 16px"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/9c607981-fbb3-67ed-ba88-fb3132e8d07a.png" alt="NBC" style="max-width:100%;max-height:46px;object-fit:contain"></div>
-<div style="background:#fff;height:76px;display:flex;align-items:center;justify-content:center;padding:12px 16px"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/e1fac359-1cf6-9399-7977-153a402e4d57.png" alt="ABC" style="max-width:100%;max-height:46px;object-fit:contain"></div>
-</div>
-<p style="font-family:var(--nav);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.2);margin-top:36px">HALT Fire has been featured across national broadcast, print, and digital media</p>
-</div>
-</section>
-
-<div style="background:#111;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:18px 0">
-<div class="con">
-<p style="font-size:11px;color:rgba(255,255,255,.35);text-align:center;line-height:1.7;max-width:860px;margin:0 auto"><strong style="color:rgba(255,255,255,.5)">Important Notice:</strong> HALT Fire Suppressors are a supplemental fire safety tool and do not replace state-required portable fire extinguishers. All applicable state laws and NFPA 10 requirements for fire extinguisher placement and maintenance remain in effect. HALT products are an added layer of protection — not a substitute for code-required equipment.</p>
-</div>
-</div>
-<!-- CONTACT -->
-<div class="contact-sec" id="home-contact" role="region" aria-label="Contact HALT Fire" style="position:relative;overflow:hidden;background:#0a0a0a">
-
-<!-- giant flame watermark -->
-<img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" aria-hidden="true" style="position:absolute;right:-60px;bottom:-40px;width:560px;height:560px;opacity:.06;pointer-events:none;filter:brightness(0) invert(1)">
-
-<!-- left green accent bar -->
-<div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--green)"></div>
-
-<div class="con" style="position:relative;z-index:1">
-<div class="contact-grid">
-<div class="reveal-left">
-<div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:16px">
-<img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" style="width:22px;height:22px;filter:none">
-<span class="eyebrow" style="margin-bottom:0">Get In Touch</span>
-</div>
-<h2>Contact <em style="font-style:normal;color:var(--green)">HALT Fire</em></h2>
-<p>Whether you're a fire department ready to replace AFFF, an industrial operator needing a PFAS-free foam solution, a contractor looking for job site fire protection, or a retailer interested in carrying HALT — our team is ready with pricing, product specs, SDS documents, certification packages, and samples.</p>
-<div class="c-info" style="border-left:2px solid rgba(204,255,0,.25);padding-left:16px;margin:24px 0">
-
-<div class="c-row"><strong>General: </strong>customerservice@haltfire.com</div>
-<div class="c-row"><strong>Industrial Sales: </strong>Sales@haltfire.com</div>
-<div class="c-row"><strong>Retail: </strong>Sales@haltfire.com</div>
-</div>
-<div style="display:flex;gap:12px;flex-wrap:wrap">
-<a href="https://get.haltfire.com" target="_blank" rel="noopener" class="btn-g">Shop Consumer &rarr;</a>
-<a href="industrial.html" class="btn-og">Industrial Pricing &rarr;</a>
-</div>
-</div>
-<form class="form reveal-right" action="https://formspree.io/f/mojyvlqb" method="POST" aria-label="Contact form">
-<div class="form-row">
-<div class="fg"><label for="hf-fn">First Name</label><input type="text" id="hf-fn" name="first_name" placeholder="John" required></div>
-<div class="fg"><label for="hf-ln">Last Name</label><input type="text" id="hf-ln" name="last_name" placeholder="Smith" required></div>
-</div>
-<div class="fg"><label for="hf-em">Email</label><input type="email" id="hf-em" name="email" placeholder="john@company.com" required></div>
-<div class="fg"><label for="hf-ph">Phone</label><input type="tel" id="hf-ph" name="phone" placeholder="+1 (555) 000-0000"></div>
-<div class="fg"><label for="hf-ty">I Am A...</label>
-<select id="hf-ty" name="type">
-<option value="">Select...</option>
-<option>Fire Department / Municipality</option>
-<option>Industrial / Commercial Buyer</option>
-<option>Contractor / Trades Professional</option>
-<option>Retailer</option>
-<option>Consumer</option>
-<option>Press / Media</option>
-</select>
-</div>
-<div class="fg"><label for="hf-ms">Message</label><textarea id="hf-ms" name="message" placeholder="Tell us what you need..."></textarea></div>
-<button type="submit" class="btn-sub">Send Message</button>
-</form>
-</div>
-</div>
-</div>
-</main>
-
-<!-- ===================== FIRE DEPARTMENT PAGE ===================== -->
-
 <main class="page active" id="page-science">
 <div class="ph">
 <div class="phb" style="background-image:url('https://gogreenfire.com/wp-content/uploads/2022/03/AdobeStock_392851313-e1681745697201-1300x867.jpeg')"></div>
@@ -1239,7 +892,7 @@ NEXT
 <h1>How HALT <em>Works</em></h1>
 <p>HALT's patented GreenFire® formula attacks fire at the molecular level — breaking the fire triangle through advanced wetting, thermal absorption, and persistent vapor barrier technology. 100% PFAS-free, fluorine-free, and phosphorous-free. Peer-reviewed, independently tested, and certified by NSF, UL, GreenScreen, and OMRI.</p>
 <div class="ph-ctas">
-<a href="#" href="contact.html" onclick="" class="btn-g">Request SDS Documents</a>
+<a href="contact.html" class="btn-g">Request SDS Documents</a>
 <a href="#s-chemistry" class="btn-og" style="color:#fff;border-color:rgba(255,255,255,.4)">Explore the Chemistry</a>
 </div>
 </div></div>
@@ -1333,9 +986,70 @@ NEXT
 </main>
 
 <!-- ===================== ABOUT PAGE ===================== -->
+<script>
+var certData = {
+  ul: {
+    logo: "https://gogreenfire.com/wp-content/uploads/2023/04/GreenFire_UL_Classified.jpeg",
+    title: "UL Classified — Underwriters Laboratories",
+    body: "HALT Industrial GFFF is UL Classified — independently evaluated by Underwriters Laboratories, the most recognized third-party safety certification body in North America. UL Classification confirms HALT Industrial GFFF has been tested against established fire safety performance standards. Fire departments, procurement officers, and AHJs (Authorities Having Jurisdiction) recognize UL Classification as a baseline requirement for AFFF replacement products. This is one of the most rigorous independent validations available for firefighting foam concentrates.",
+    link: "https://www.ul.com"
+  },
+  nfpa: {
+    logo: "https://gogreenfire.com/wp-content/uploads/2025/03/NFPA-Badge.png",
+    title: "NFPA Individual Member — National Fire Protection Association",
+    body: "HALT Industrial holds NFPA Individual Membership. The NFPA is the global authority on fire safety codes and standards. NFPA 11 governs the application of foam concentrates in firefighting — including proportioning, discharge, and performance requirements. NFPA 18 covers wetting agent concentrates. HALT Industrial GFFF is formulated in alignment with NFPA code requirements, ensuring compliance for fire department procurement and deployment.",
+    link: "https://www.nfpa.org"
+  },
+  nsf: {
+    logo: "https://gogreenfire.com/wp-content/uploads/2022/03/DM-REV-1-NSF-LOGO-P1-e1649111989397.png",
+    title: "NSF White Book Registration — Nonfood Compounds Class P1",
+    body: "HALT holds NSF White Book Registration (Class P1) — making it the first and only fire suppressant in history to be NSF White Book listed for food-safe use. This certification means HALT can be safely deployed in food processing facilities, commercial kitchens, grocery distribution centers, restaurants, and organic farms — with no hazmat cleanup required. Simply rinse with water. NSF Class P1 registration is required by major food retailers, USDA-certified facilities, and food-grade industrial operators.",
+    link: "https://www.nsf.org"
+  },
+  omri: {
+    logo: "https://gogreenfire.com/wp-content/uploads/2020/10/omri-listed-logo.jpg",
+    title: "OMRI Listed — Organic Materials Review Institute",
+    body: "HALT is OMRI Listed, approved for use in certified organic farming and food production environments. The OMRI seal confirms HALT contains no synthetic materials prohibited under USDA National Organic Program (NOP) standards. OMRI listing makes HALT the only fire suppression product approved for use in organic vineyards, orchards, organic food processing facilities, and certified organic agricultural operations — without risk of losing organic certification.",
+    link: "https://www.omri.org"
+  },
+  greenscreen: {
+    logo: "https://gogreenfire.com/wp-content/uploads/2021/04/greenscreen-certified-logo_400_400_s-e1649112024950.png",
+    title: "GreenScreen Certified™ — Chemical Hazard Assessment",
+    body: "GreenScreen Certified is one of the most rigorous chemical hazard assessment standards in the world. Achieving GreenScreen Certification means every ingredient in HALT has been screened at the molecular level against comprehensive health and environmental benchmarks. HALT's GreenScreen certification confirms zero PFAS, zero phosphorous, zero fluorine, and no known carcinogens — preferred by green building programs (LEED), sustainability procurement teams, municipal environmental compliance departments, and any organization with ESG or chemical transparency commitments.",
+    link: "https://www.greenscreenchemicals.org"
+  },
+  usa: {
+    logo: "https://gogreenfire.com/wp-content/uploads/2022/03/USA.png",
+    title: "Made in USA — Formulated, Manufactured &amp; Tested Domestically",
+    body: "Every HALT Industrial and HALT Professional product is formulated, manufactured, and quality-tested in the United States under direct oversight at US facilities — never imported or contract-manufactured overseas. Made in USA production means reliable domestic supply chains, rigorous batch-level quality control, and no dependence on foreign chemical manufacturing. For fire departments, municipalities, and government purchasers with Buy American requirements, HALT Industrial is the clear choice.",
+    link: "https://haltfire.com/about"
+  }
+};
 
-
-
+function showCertModal(key) {
+  var d = certData[key];
+  if (!d) return;
+  document.getElementById("cert-modal-logo").src = d.logo;
+  document.getElementById("cert-modal-logo").alt = d.title;
+  document.getElementById("cert-modal-title").textContent = d.title;
+  document.getElementById("cert-modal-body").textContent = d.body;
+  var link = document.getElementById("cert-modal-link");
+  if (key === "usa") {
+    link.style.display = "none";
+  } else {
+    link.style.display = "inline-block";
+    link.href = d.link;
+  }
+  var m = document.getElementById("cert-modal");
+  m.style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+function closeCertModal() {
+  document.getElementById("cert-modal").style.display = "none";
+  document.body.style.overflow = "";
+}
+document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeCertModal(); });
+</script>
 <script>
 // ===== CERT MODAL =====
 function showCertModal(key) {
