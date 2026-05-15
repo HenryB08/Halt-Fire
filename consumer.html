@@ -8,9 +8,17 @@
 <meta property="og:title" content="HALT Fire | Home Use Fire Suppression Sprays | NSF Certified Non-Toxic">
 <meta property="og:description" content="HALT consumer fire sprays are NSF certified, food-safe, and non-toxic. Stops kitchen, grill, and lithium-ion battery fires.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://haltfire.com/consumer.html">
 <meta property="og:image" content="https://gogreenfire.com/wp-content/uploads/2022/03/AdobeStock_392851313-e1681745697201-1300x867.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HALT Fire | Home Use Fire Suppression Sprays | NSF Certified Non-Toxic">
+<meta name="twitter:description" content="HALT consumer fire sprays are NSF certified, food-safe, and non-toxic. Stops kitchen, grill, and lithium-ion battery fires.">
 <link rel="canonical" href="https://haltfire.com/consumer.html">
 <link rel="shortcut icon" href="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg">
+<link rel="dns-prefetch" href="//mcusercontent.com">
+<link rel="dns-prefetch" href="//gogreenfire.com">
+<link rel="dns-prefetch" href="//cdn.prod.website-files.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Montserrat:wght@400;500;600;700&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ===== RESET & ROOT ===== */
@@ -811,9 +819,37 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 /* Nav CTA buttons shrink */
 .btn-og,.btn-g{font-size:9px!important;padding:10px 12px!important}
 }
+
+@media(max-width:1024px){
+.nav-inner{grid-template-columns:1fr auto;height:80px;padding:0 20px}
+.nav-logo img{height:64px!important}
+.mob-btn{justify-self:end;margin-left:auto}
+}
+@media(max-width:768px){
+.nav-inner{grid-template-columns:1fr auto;height:70px;padding:0 16px}
+.nav-logo img{height:56px!important}
+.ph{margin-top:70px}
+}
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"HALT Fire — Home Use Fire Suppression","description":"NSF certified, food-safe, non-toxic fire suppression sprays for kitchen, grill, and lithium-ion battery fires.","url":"https://haltfire.com/consumer.html","isPartOf":{"@type":"WebSite","name":"HALT Fire","url":"https://haltfire.com"}}</script>
 </head>
 <body>
+<!-- GREENFIRE REFERRAL BANNER -->
+<div id="gf-banner" style="display:none;background:var(--green);padding:10px 24px;text-align:center;position:relative;z-index:9998">
+<div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+<img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/8c7f2cbe-39b2-9320-be0b-bb06479a0b8a.png" alt="HALT Fire" style="height:28px;width:auto;display:block">
+<p style="margin:0;font-family:var(--nav);font-size:12px;font-weight:700;letter-spacing:1px;color:#000">GreenFire® is now HALT Fire — same trusted PFAS-free formula, expanded product line.<a href="about.html" style="color:#000;text-decoration:underline;margin-left:12px">Learn More →</a></p>
+<button onclick="document.getElementById('gf-banner').style.display='none'" style="background:none;border:none;cursor:pointer;color:#000;font-size:16px;font-weight:700;padding:0;line-height:1">×</button>
+</div>
+</div>
+<script>
+(function(){
+  if(document.referrer && document.referrer.indexOf('gogreenfire.com') !== -1){
+    var b = document.getElementById('gf-banner');
+    if(b){ b.style.display='block'; setTimeout(function(){ b.style.display='none'; }, 8000); }
+  }
+})();
+</script>
 <!-- TOPBAR -->
 <div class="topbar" id="topbar">
 <div class="topbar-inner">
@@ -1288,7 +1324,7 @@ customerservice@haltfire.com
 </div>
 <div class="f-bottom">
 <div class="f-copy">&copy; 2026 Prime Safety US Inc. &amp; HALT Industrial. All rights reserved. HALT Fire&reg; is a registered trademark. PFAS-free. Made in USA.</div>
-<div class="f-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="cookies.html">Cookie Policy</a></div>
+<div class="f-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
 </div>
 </div>
 </footer>
@@ -1365,12 +1401,12 @@ function showCertModal(key) {
   m.querySelector('.cm-title').textContent = d.title;
   m.querySelector('.cm-body').textContent = d.body;
   m.querySelector('.cm-link').href = d.link;
-  m.style.display = 'flex';
+  m.style.display='flex';
   document.body.style.overflow = 'hidden';
 }
 function closeCertModal() {
   var m = document.getElementById('cert-modal'); if (!m) return;
-  m.style.display = 'none';
+  m.style.display='none';
   document.body.style.overflow = '';
 }
 document.addEventListener('keydown', function(e) {
@@ -1451,7 +1487,7 @@ function toggleFaq(el) {
   var item = el.parentElement;
   var wasOpen = item.classList.contains('open');
   document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
-  if (!wasOpen) item.style.display = 'flex';
+  if (!wasOpen) item.style.display='flex';
 }
 
 // ===== BAR CHARTS =====
@@ -1597,5 +1633,5 @@ function submitForm(e, form) {
 }
 
 </script>
-
 </body>
+</html>
