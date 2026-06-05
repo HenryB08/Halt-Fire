@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>HALT Fire | PFAS-Free Fire Suppression | NSF Certified | Made in USA</title>
+<title>HALT Fire | #1 PFAS-Free Fire Suppression | NSF Certified | AFFF Replacement | Made in USA</title>
 <meta name="description" content="HALT Fire is America's most complete PFAS-free fire safety solution, NSF certified, UL Classified, and government-tested.">
 <meta property="og:title" content="HALT Fire | #1 PFAS-Free Fire Suppression | NSF Certified | AFFF Replacement | Made in USA">
 <meta property="og:description" content="HALT Fire is America's most complete PFAS-free fire safety solution, NSF certified, UL Classified, and government-tested.">
@@ -86,11 +86,12 @@ button{cursor:pointer}
 
 
 /* ===== HERO PREV / NEXT ===== */
-.hero-prev,.hero-next{position:absolute;top:50%;transform:translateY(-50%);z-index:4;background:rgba(0,0,0,.42);border:2px solid rgba(255,255,255,.35);border-radius:50%;width:54px;height:54px;cursor:pointer;color:#fff;display:flex;align-items:center;justify-content:center;transition:background .25s,border-color .25s,transform .25s;backdrop-filter:blur(6px);padding:0}
-.hero-prev{left:28px}
-.hero-next{right:28px}
-.hero-prev:hover,.hero-next:hover{background:rgba(204,255,0,.9);border-color:var(--green);color:#000;transform:translateY(-50%) scale(1.1)}
-.hero-prev svg,.hero-next svg{width:26px;height:26px;fill:currentColor;display:block}
+.hero-prev,.hero-next{position:absolute;top:50%;transform:translateY(-50%);z-index:4;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.5);font-family:var(--nav);font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;writing-mode:vertical-rl;display:flex;flex-direction:column;align-items:center;gap:10px;transition:color .3s,transform .3s;padding:12px 8px}
+.hero-prev{left:24px;text-orientation:mixed;transform:translateY(-50%) rotate(180deg)}
+.hero-next{right:24px}
+.hero-prev:hover,.hero-next:hover{color:#fff;transform:translateY(-50%) scale(1.1)}
+.hero-prev:hover{transform:translateY(-50%) rotate(180deg) scale(1.1)}
+.hero-prev svg,.hero-next svg{width:16px;height:16px;fill:currentColor}
 
 
 /* ===== PAGE ROUTER ===== */
@@ -161,7 +162,7 @@ button{cursor:pointer}
 .hero{position:relative;height:100vh;min-height:600px;overflow:hidden}
 .slide{position:absolute;inset:0;background-size:cover;background-position:center center;opacity:0;transition:opacity 1.4s var(--ease);transform:scale(1.08);transition:opacity 1.4s,transform 10s;filter:brightness(1.15) saturate(1.2)}
 .slide.on{opacity:1;transform:scale(1);filter:brightness(1.15) saturate(1.2)}
-.slide-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.35) 0%,rgba(0,0,0,.05) 55%,transparent 100%)}
+.slide-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55) 0%,rgba(0,0,0,.15) 40%,rgba(0,0,0,.05) 100%)}
 .hero-content{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 40px;z-index:2}
 .hero-body{max-width:820px}
 .hero-eye{font-family:var(--nav);font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--green);display:block;margin-bottom:14px;animation:fadeUp .8s .2s both;filter:drop-shadow(0 0 6px rgba(204,255,0,.5))}
@@ -917,7 +918,7 @@ customerservice@haltfire.com
 <a href="#" onclick="window.location='firedept.html';toggleMob()">Fire Department</a>
 <a href="#" onclick="window.location='consumer.html';toggleMob()">Home Use</a>
 <a href="#" onclick="window.location='industrial.html';toggleMob()">Industrial</a>
-<a href="#" onclick="window.location='professional.html';toggleMob()">Contractors</a>
+<a href="#" onclick="window.location='professional.html';toggleMob()">Professional</a>
 <a href="#" onclick="window.location='science.html';toggleMob()">The Science</a>
 <a href="#" onclick="window.location='about.html';toggleMob()">About</a>
 <a href="#" onclick="window.location='retailers.html';toggleMob()">Retailers</a>
@@ -952,10 +953,10 @@ customerservice@haltfire.com
 <div class="hero-content">
 <div class="hero-body">
 <img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="HALT Fire" style="width:48px;height:48px;display:block;margin:0 auto 6px;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 4px 12px rgba(0,0,0,.5))">
-<span class="hero-eye" id="slide-eye">NSF Certified &middot; UL Classified &middot; 100% PFAS-Free &middot; Made in USA</span>
-<h1 id="slide-title">America's Most Complete<br><em>PFAS-Free Fire Safety</em> Solution</h1>
-<p class="hero-lead" id="slide-lead">HALT Fire is the only brand delivering NSF-certified, government-tested PFAS-free fire suppression across every sector, home, industrial, and professional trades. Powered by patented GreenFire&reg; technology. Zero forever chemicals. Zero compromise.</p>
-<div class="hero-ctas" id="slide-ctas">
+<span class="hero-eye">NSF Certified &middot; UL Classified &middot; 100% PFAS-Free &middot; Made in USA</span>
+<h1>America's Most Complete<br><em>PFAS-Free Fire Safety</em> Solution</h1>
+<p class="hero-lead">HALT Fire is the only brand delivering NSF-certified, government-tested PFAS-free fire suppression across every sector, home, industrial, and professional trades. Powered by patented GreenFire&reg; technology. Zero forever chemicals. Zero compromise.</p>
+<div class="hero-ctas">
 <a href="industrial.html" class="btn-g">Explore HALT Industrial</a>
 <a href="https://get.haltfire.com" target="_blank" rel="noopener" class="btn-og">Shop Consumer Products</a>
 </div>
@@ -970,10 +971,12 @@ customerservice@haltfire.com
 <button class="dot" onclick="goSlide(5)" role="tab" aria-selected="false" aria-label="Slide 6"></button>
 </div>
 <button class="hero-prev" onclick="goSlide(cur-1)" aria-label="Previous slide">
-<svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+<svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+PREV
 </button>
 <button class="hero-next" onclick="goSlide(cur+1)" aria-label="Next slide">
-<svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+NEXT
+<svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
 </button>
 <div class="hero-scroll" aria-hidden="true"><div class="hero-scroll-line"></div>SCROLL</div>
 </section>
@@ -1321,7 +1324,7 @@ customerservice@haltfire.com
 </div>
 <div class="f-bottom">
 <div class="f-copy">&copy; 2026 Prime Safety US Inc. &amp; HALT Industrial. All rights reserved. HALT Fire&reg; is a registered trademark. PFAS-free. Made in USA.</div>
-<div class="f-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
+<div class="f-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
 </div>
 </div>
 </footer>
@@ -1452,69 +1455,6 @@ function toggleMob() {
 var slides = document.querySelectorAll('.slide');
 var dots = document.querySelectorAll('.dot');
 var cur = 0;
-
-var slideContent = [
-  {
-    eye: "NSF Certified &middot; UL Classified &middot; 100% PFAS-Free &middot; Made in USA",
-    title: "America's Most Complete<br><em>PFAS-Free Fire Safety</em> Solution",
-    lead: "The only brand delivering government-tested PFAS-free fire suppression across every sector. Powered by patented GreenFire&reg; technology. Zero forever chemicals.",
-    cta1: {text:"Explore HALT Industrial", href:"industrial.html", cls:"btn-g"},
-    cta2: {text:"Shop Consumer Products", href:"https://get.haltfire.com", cls:"btn-og", ext:true}
-  },
-  {
-    eye: "Utilities &middot; Oil &amp; Gas &middot; Aviation &middot; Industrial",
-    title: "Zero PFAS.<br><em>Zero Compromise.</em>",
-    lead: "HALT Industrial GFFF is the drop-in AFFF replacement trusted by utilities, oil &amp; gas, and aviation. DOD, DOE, EPA &amp; FAA tested.",
-    cta1: {text:"Industrial Solutions", href:"industrial.html", cls:"btn-g"},
-    cta2: {text:"Contact Sales", href:"contact.html", cls:"btn-og"}
-  },
-  {
-    eye: "AFFF Replacement &middot; Drop-In Compatible &middot; No Retraining",
-    title: "Switch Your Department<br><em>In a Single Day</em>",
-    lead: "HALT GFFF works with existing apparatus and nozzles. No new equipment. No retraining. Fully compliant with the DOD 2026 AFFF mandate.",
-    cta1: {text:"Fire Dept Solutions", href:"firedept.html", cls:"btn-g"},
-    cta2: {text:"Fire Dept Contact", href:"firedept.html", cls:"btn-og"}
-  },
-  {
-    eye: "NSF P1 Certified &middot; Food-Safe &middot; Non-Toxic",
-    title: "Kitchen. Grill.<br><em>Lithium-Ion.</em> Protected.",
-    lead: "HALT consumer sprays are the first NSF-certified, food-safe fire suppressants for the home. Non-toxic. PFAS-free. 4-year shelf life.",
-    cta1: {text:"Shop Home Use", href:"consumer.html", cls:"btn-g"},
-    cta2: {text:"See All Products", href:"https://get.haltfire.com", cls:"btn-og", ext:true}
-  },
-  {
-    eye: "Wildland &middot; Forest &middot; Ground Application",
-    title: "Protecting Wildlands<br><em>Without Poisoning Them</em>",
-    lead: "PFAS-free foam for wildland and forest fire suppression. Compatible with existing ground equipment. Zero environmental contamination.",
-    cta1: {text:"Industrial Solutions", href:"industrial.html", cls:"btn-g"},
-    cta2: {text:"The Science", href:"science.html", cls:"btn-og"}
-  },
-  {
-    eye: "Municipal &middot; Structural &middot; Department Ready",
-    title: "End PFAS Exposure.<br><em>Protect Your Crew.</em>",
-    lead: "72% of firefighter deaths are cancer-related. HALT GFFF eliminates PFAS exposure without changing your equipment or operations.",
-    cta1: {text:"Fire Dept Solutions", href:"firedept.html", cls:"btn-g"},
-    cta2: {text:"Fire Dept Contact", href:"firedept.html", cls:"btn-og"}
-  }
-];
-
-function updateHeroContent(idx) {
-  var s = slideContent[idx];
-  if (!s) return;
-  var eye = document.getElementById('slide-eye');
-  var title = document.getElementById('slide-title');
-  var lead = document.getElementById('slide-lead');
-  var ctas = document.getElementById('slide-ctas');
-  if (eye) eye.innerHTML = s.eye;
-  if (title) title.innerHTML = s.title;
-  if (lead) lead.innerHTML = s.lead;
-  if (ctas) {
-    var ext2 = s.cta2.ext ? ' target="_blank" rel="noopener"' : '';
-    ctas.innerHTML = '<a href="' + s.cta1.href + '" class="' + s.cta1.cls + '">' + s.cta1.text + '</a>' +
-      '<a href="' + s.cta2.href + '" class="' + s.cta2.cls + '"' + ext2 + '>' + s.cta2.text + '</a>';
-  }
-}
-
 if (slides.length > 0) {
   window.cur = cur;
   function goSlide(n) {
@@ -1525,7 +1465,6 @@ if (slides.length > 0) {
     window.cur = cur;
     slides[cur].classList.add('on');
     if (dots[cur]) { dots[cur].classList.add('on'); dots[cur].setAttribute('aria-selected','true'); }
-    updateHeroContent(cur);
   }
   setInterval(function(){ goSlide(cur + 1); }, 5000);
 } else {

@@ -988,7 +988,7 @@ customerservice@haltfire.com
 <span style="display:inline-block;background:var(--green);color:#0E0E0E;font-family:var(--nav);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:4px 12px;border-radius:100px;margin-bottom:10px">Household Fires</span>
 <h3 itemprop="name">HALT! Household</h3>
 <p>The original HALT fire spray for kitchens, living rooms, garages, and vehicles. Aim, squeeze, sweep, fire out. Safe around children, pets, and food.</p>
-<div class="prod-sz">Available: 10oz &middot; 4-Pack &middot; 8-Pack</div>
+<div class="prod-sz">Available: 10oz &middot; 16oz &middot; 4-Pack &middot; 8-Pack</div>
 <a href="https://get.haltfire.com" target="_blank" rel="noopener" class="btn-g" style="font-size:11px;padding:10px 18px">Shop Now &rarr;</a>
 </div>
 </div>
@@ -1486,8 +1486,8 @@ observeReveal();
 function toggleFaq(el) {
   var item = el.parentElement;
   var wasOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); i.querySelector('.faq-q').setAttribute('aria-expanded','false'); });
-  if (!wasOpen) { item.classList.add('open'); el.setAttribute('aria-expanded','true'); }
+  document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+  if (!wasOpen) item.style.display='flex';
 }
 
 // ===== BAR CHARTS =====
