@@ -19,6 +19,7 @@
 <link rel="dns-prefetch" href="//gogreenfire.com">
 <link rel="dns-prefetch" href="//cdn.prod.website-files.com">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Montserrat:wght@400;500;600;700&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ===== RESET & ROOT ===== */
@@ -32,7 +33,7 @@
 --nav:'Raleway',sans-serif;
 --body:'Montserrat',sans-serif;
 --max:1200px;
---ease:cubic-bezier(.25,.46,.45,.94);
+--ease:cubic-bezier(.22,1,.36,1);
 }
 html{scroll-behavior:smooth;font-size:15px}
 body{font-family:var(--body);background:#0a0a0a;color:rgba(255,255,255,.82);line-height:1.9;overflow-x:hidden;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
@@ -830,8 +831,10 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .nav-logo img{height:56px!important}
 .ph{margin-top:70px}
 }
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"The Science Behind HALT Fire","description":"Patented GreenFire technology — fluorine-free, biodegradable surfactants achieving fire suppression without PFAS.","url":"https://haltfire.com/science.html","isPartOf":{"@type":"WebSite","name":"HALT Fire","url":"https://haltfire.com"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://haltfire.com/"}, {"@type": "ListItem", "position": 2, "name": "The Science", "item": "https://haltfire.com/science.html"}]}</script>
 </head>
 <body>
 <!-- GREENFIRE REFERRAL BANNER -->
@@ -930,7 +933,7 @@ customerservice@haltfire.com
 <div onclick="event.stopPropagation()" style="background:#1a1a1a;border:1px solid rgba(255,255,255,.12);max-width:480px;width:90%;position:relative;overflow:hidden">
 <button onclick="closeCertModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;color:rgba(0,0,0,.5);font-size:24px;cursor:pointer;line-height:1;z-index:2">&times;</button>
 <div id="cert-modal-header" style="background:#fff;padding:28px;display:flex;align-items:center;justify-content:center;min-height:110px">
-<img class="cm-logo" src="" alt="" style="height:72px;width:auto;object-fit:contain;display:block" aria-hidden="true">
+<img loading="lazy" decoding="async" class="cm-logo" src="" alt="" style="height:72px;width:auto;object-fit:contain;display:block" aria-hidden="true">
 </div>
 <div style="padding:32px">
 <h3 class="cm-title" style="font-family:var(--font);font-size:22px;color:#fff;text-transform:uppercase;margin-bottom:12px"></h3>
@@ -957,7 +960,7 @@ customerservice@haltfire.com
 <section class="sec bg-white" aria-labelledby="triangle-heading">
 <div class="con">
 <div class="sh center reveal">
-<span class="eyebrow-flame"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" aria-hidden="true">Fire Triangle Science</span>
+<span class="eyebrow-flame" aria-hidden="true"><img loading="lazy" decoding="async" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="">Fire Triangle Science</span>
 <h2 id="triangle-heading">Three Elements. One Solution.</h2>
 <p class="lead">Every fire requires three elements: fuel, heat, and oxygen. HALT's patented formula attacks all three simultaneously &mdash; extinguishing faster and preventing reignition longer than any PFAS-based alternative.</p>
 </div>
@@ -1008,7 +1011,7 @@ customerservice@haltfire.com
 <!-- TEST VIDEO + CERTS -->
 <div class="dual">
 <div class="dual-panel">
-<img src="https://gogreenfire.com/wp-content/uploads/2020/10/Crib-Fire-Test-1500x844.jpg" alt="Standard crib fire test &mdash; HALT independent performance verification">
+<img loading="lazy" decoding="async" src="https://gogreenfire.com/wp-content/uploads/2020/10/Crib-Fire-Test-1500x844.jpg" alt="Standard crib fire test &mdash; HALT independent performance verification">
 <div style="position:absolute;inset:0;background:rgba(0,0,0,.55);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px">
 <span class="eyebrow" style="margin-bottom:12px">Independent Testing</span>
 <h3 style="font-family:var(--font);font-size:32px;color:#fff;text-transform:uppercase;margin-bottom:14px">Standard Crib Fire Test</h3>
@@ -1021,12 +1024,12 @@ customerservice@haltfire.com
 <span class="eyebrow" style="margin-bottom:14px">Certifications &amp; Listings</span>
 <h3 style="font-family:var(--font);font-size:30px;color:#fff;text-transform:uppercase;margin-bottom:28px">Independently <em style="color:var(--green);font-style:normal">Verified</em></h3>
 <div style="display:grid;grid-template-columns:repeat(6,1fr);border:1px solid rgba(255,255,255,.1);overflow:hidden;margin-top:4px">
-<button onclick="showCertModal('ul')" class="cert-btn" style="background:#fff;padding:0;border:none;border-right:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;height:76px;border-radius:0"><img src="https://gogreenfire.com/wp-content/uploads/2023/04/GreenFire_UL_Classified.jpeg" alt="UL Classified" style="height:52px;width:auto;max-width:90%;object-fit:contain;display:block;opacity:1;filter:none"></button>
-<button onclick="showCertModal('nfpa')" class="cert-btn" style="background:#fff;padding:0;border:none;border-right:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;height:76px;border-radius:0"><img src="https://gogreenfire.com/wp-content/uploads/2025/03/NFPA-Badge.png" alt="NFPA Member" style="height:52px;width:auto;max-width:90%;object-fit:contain;display:block;opacity:1;filter:none"></button>
-<button onclick="showCertModal('nsf')" class="cert-btn" style="background:#fff;padding:0;border:none;border-right:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;height:76px;border-radius:0"><img src="https://gogreenfire.com/wp-content/uploads/2022/03/DM-REV-1-NSF-LOGO-P1-e1649111989397.png" alt="NSF P1" style="height:52px;width:auto;max-width:90%;object-fit:contain;display:block;opacity:1;filter:none"></button>
-<button onclick="showCertModal('omri')" class="cert-btn" style="background:#fff;padding:0;border:none;border-right:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;height:76px;border-radius:0"><img src="https://gogreenfire.com/wp-content/uploads/2020/10/omri-listed-logo.jpg" alt="OMRI Listed" style="height:52px;width:auto;max-width:90%;object-fit:contain;display:block;opacity:1;filter:none"></button>
-<button onclick="showCertModal('greenscreen')" class="cert-btn" style="background:#fff;padding:0;border:none;border-right:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;height:76px;border-radius:0"><img src="https://gogreenfire.com/wp-content/uploads/2021/04/greenscreen-certified-logo_400_400_s-e1649112024950.png" alt="GreenScreen" style="height:52px;width:auto;max-width:90%;object-fit:contain;display:block;opacity:1;filter:none"></button>
-<button onclick="showCertModal('usa')" class="cert-btn" style="background:#fff;padding:0;border:none;display:flex;align-items:center;justify-content:center;height:76px;border-radius:0"><img src="https://gogreenfire.com/wp-content/uploads/2022/03/USA.png" alt="Made in USA" style="height:52px;width:auto;max-width:90%;object-fit:contain;display:block;opacity:1;filter:none"></button>
+<button onclick="showCertModal('ul')" class="cert-btn" style="background:#fff;padding:0;border:none;border-right:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;height:76px;border-radius:0"><img loading="lazy" decoding="async" src="https://gogreenfire.com/wp-content/uploads/2023/04/GreenFire_UL_Classified.jpeg" alt="UL Classified" style="height:52px;width:auto;max-width:90%;object-fit:contain;display:block;opacity:1;filter:none"></button>
+<button onclick="showCertModal('nfpa')" class="cert-btn" style="background:#fff;padding:0;border:none;border-right:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;height:76px;border-radius:0"><img loading="lazy" decoding="async" src="https://gogreenfire.com/wp-content/uploads/2025/03/NFPA-Badge.png" alt="NFPA Member" style="height:52px;width:auto;max-width:90%;object-fit:contain;display:block;opacity:1;filter:none"></button>
+<button onclick="showCertModal('nsf')" class="cert-btn" style="background:#fff;padding:0;border:none;border-right:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;height:76px;border-radius:0"><img loading="lazy" decoding="async" src="https://gogreenfire.com/wp-content/uploads/2022/03/DM-REV-1-NSF-LOGO-P1-e1649111989397.png" alt="NSF P1" style="height:52px;width:auto;max-width:90%;object-fit:contain;display:block;opacity:1;filter:none"></button>
+<button onclick="showCertModal('omri')" class="cert-btn" style="background:#fff;padding:0;border:none;border-right:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;height:76px;border-radius:0"><img loading="lazy" decoding="async" src="https://gogreenfire.com/wp-content/uploads/2020/10/omri-listed-logo.jpg" alt="OMRI Listed" style="height:52px;width:auto;max-width:90%;object-fit:contain;display:block;opacity:1;filter:none"></button>
+<button onclick="showCertModal('greenscreen')" class="cert-btn" style="background:#fff;padding:0;border:none;border-right:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;height:76px;border-radius:0"><img loading="lazy" decoding="async" src="https://gogreenfire.com/wp-content/uploads/2021/04/greenscreen-certified-logo_400_400_s-e1649112024950.png" alt="GreenScreen" style="height:52px;width:auto;max-width:90%;object-fit:contain;display:block;opacity:1;filter:none"></button>
+<button onclick="showCertModal('usa')" class="cert-btn" style="background:#fff;padding:0;border:none;display:flex;align-items:center;justify-content:center;height:76px;border-radius:0"><img loading="lazy" decoding="async" src="https://gogreenfire.com/wp-content/uploads/2022/03/USA.png" alt="Made in USA" style="height:52px;width:auto;max-width:90%;object-fit:contain;display:block;opacity:1;filter:none"></button>
 </div>
 <p style="font-size:11px;color:rgba(255,255,255,.35);margin-top:14px;font-family:var(--nav);letter-spacing:1px;text-align:center">CLICK ANY CERTIFICATION TO LEARN MORE</p>
 </div>
@@ -1035,7 +1038,7 @@ customerservice@haltfire.com
 </div>
 
 <div class="cta-band">
-<h2><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" style="width:36px;height:36px;display:inline-block;vertical-align:middle;margin-right:12px;margin-bottom:4px" aria-hidden="true">Request SDS &amp; Technical Documents</h2>
+<h2 aria-hidden="true"><img loading="lazy" decoding="async" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" style="width:36px;height:36px;display:inline-block;vertical-align:middle;margin-right:12px;margin-bottom:4px">Request SDS &amp; Technical Documents</h2>
 <p>Safety Data Sheets, performance test reports, and certification documents available upon request.</p>
 <a href="#" onclick="document.querySelector('#page-science .contact-sec')?document.querySelector('#page-science .contact-sec').scrollIntoView({behavior:'smooth'}):window.location='contact.html'" class="btn-white">Contact Our Science Team &rarr;</a>
 </div>
@@ -1046,8 +1049,8 @@ customerservice@haltfire.com
 <div class="con">
 <div class="f-grid">
 <div>
-<a href="index.html" class="f-logo"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/8c7f2cbe-39b2-9320-be0b-bb06479a0b8a.png" alt="HALT Fire &mdash; Non-Toxic PFAS-Free Fire Suppression Powered by GreenFire Technology"></a>
-<p class="f-tag"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" style="width:18px;height:18px;display:inline-block;vertical-align:middle;margin-right:6px;margin-bottom:2px" aria-hidden="true"> 100% PFAS-free fire suppression for consumers, fire departments, contractors, and industrial operators. Powered by patented GreenFire&reg; technology. NSF certified. UL classified. Made in USA. &copy; 2026 Prime Safety US Inc.</p>
+<a href="index.html" class="f-logo" aria-hidden="true"><img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/8c7f2cbe-39b2-9320-be0b-bb06479a0b8a.png" alt="HALT Fire &mdash; Non-Toxic PFAS-Free Fire Suppression Powered by GreenFire Technology"></a>
+<p class="f-tag"><img loading="lazy" decoding="async" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" style="width:18px;height:18px;display:inline-block;vertical-align:middle;margin-right:6px;margin-bottom:2px"> 100% PFAS-free fire suppression for consumers, fire departments, contractors, and industrial operators. Powered by patented GreenFire&reg; technology. NSF certified. UL classified. Made in USA. &copy; 2026 Prime Safety US Inc.</p>
 <div class="f-soc">
 <a href="https://www.instagram.com/haltfireofficial" target="_blank" rel="noopener" class="soc" aria-label="HALT Fire Instagram"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
 <a href="https://www.facebook.com/people/HaltFire/61557769262146/" target="_blank" rel="noopener" class="soc" aria-label="HALT Fire Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
@@ -1087,7 +1090,7 @@ customerservice@haltfire.com
 </div>
 <div class="f-bottom">
 <div class="f-copy">&copy; 2026 Prime Safety US Inc. &amp; HALT Industrial. All rights reserved. HALT Fire&reg; is a registered trademark. PFAS-free. Made in USA.</div>
-<div class="f-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+<div class="f-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
 </div>
 </div>
 </footer>

@@ -19,6 +19,7 @@
 <link rel="dns-prefetch" href="//gogreenfire.com">
 <link rel="dns-prefetch" href="//cdn.prod.website-files.com">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Montserrat:wght@400;500;600;700&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ===== RESET & ROOT ===== */
@@ -32,7 +33,7 @@
 --nav:'Raleway',sans-serif;
 --body:'Montserrat',sans-serif;
 --max:1200px;
---ease:cubic-bezier(.25,.46,.45,.94);
+--ease:cubic-bezier(.22,1,.36,1);
 }
 html{scroll-behavior:smooth;font-size:15px}
 body{font-family:var(--body);background:#0a0a0a;color:rgba(255,255,255,.82);line-height:1.9;overflow-x:hidden;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
@@ -830,8 +831,10 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .nav-logo img{height:56px!important}
 .ph{margin-top:70px}
 }
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"About HALT Fire","description":"HALT Fire is owned by Prime Safety US Inc. Fire safety experts, chemists, and entrepreneurs united by a mission to eliminate PFAS from firefighting.","url":"https://haltfire.com/about.html","isPartOf":{"@type":"WebSite","name":"HALT Fire","url":"https://haltfire.com"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://haltfire.com/"}, {"@type": "ListItem", "position": 2, "name": "About", "item": "https://haltfire.com/about.html"}]}</script>
 </head>
 <body>
 <!-- GREENFIRE REFERRAL BANNER -->
@@ -930,7 +933,7 @@ customerservice@haltfire.com
 <div onclick="event.stopPropagation()" style="background:#1a1a1a;border:1px solid rgba(255,255,255,.12);max-width:480px;width:90%;position:relative;overflow:hidden">
 <button onclick="closeCertModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;color:rgba(0,0,0,.5);font-size:24px;cursor:pointer;line-height:1;z-index:2">&times;</button>
 <div id="cert-modal-header" style="background:#fff;padding:28px;display:flex;align-items:center;justify-content:center;min-height:110px">
-<img class="cm-logo" src="" alt="" style="height:72px;width:auto;object-fit:contain;display:block" aria-hidden="true">
+<img loading="lazy" decoding="async" class="cm-logo" src="" alt="" style="height:72px;width:auto;object-fit:contain;display:block" aria-hidden="true">
 </div>
 <div style="padding:32px">
 <h3 class="cm-title" style="font-family:var(--font);font-size:22px;color:#fff;text-transform:uppercase;margin-bottom:12px"></h3>
@@ -957,7 +960,7 @@ customerservice@haltfire.com
 <img src="https://gogreenfire.com/wp-content/uploads/2022/03/AdobeStock_392851313-e1681745697201-1300x867.jpeg" alt="HALT Fire mission &mdash; non-toxic fire suppression protecting people and the environment" loading="lazy">
 </div>
 <div class="mission-body">
-<span class="eyebrow-flame"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" aria-hidden="true">Our Mission</span>
+<span class="eyebrow-flame" aria-hidden="true"><img loading="lazy" decoding="async" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="">Our Mission</span>
 <h2 id="mission-heading">Fire Safety That's <em>Safe</em> for<br>Everyone.</h2>
 <p>Since GreenFire&rsquo;s founding in 2016, the mission has been clear: fire suppression products should protect life — not create new health hazards for the people who use them or the communities they protect. Every formula we make is 100% PFAS-free, non-carcinogenic, and NSF certified safe around food, children, and the environment.</p>
 <p>HALT Fire&rsquo;s April 2026 acquisition of GreenFire marks the pivotal next chapter — unifying the leading PFAS-free consumer fire safety brand with the most rigorously certified industrial firefighting foam on the market. Together, HALT now serves consumers at home, fire departments in the field, contractors on job sites, and industrial operators in the most demanding environments on earth.</p>
@@ -991,31 +994,31 @@ customerservice@haltfire.com
 <div class="tl-items">
 <div class="tl-item reveal">
 <div class="tl-content"><div class="tl-year">2016</div><h3>GreenFire Founded</h3><p>GreenFire&reg; is formed to provide a safe &amp; effective green fire suppression alternative &mdash; establishing the patented PFAS-free formula and science that would power the entire HALT product line.</p></div>
-<div class="tl-year-col" style="position:relative"><div class="tl-dot" style="position:relative;left:auto;transform:none;margin:0 auto"><img class="tl-flame" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" aria-hidden="true"></div></div>
+<div class="tl-year-col" style="position:relative"><div class="tl-dot" style="position:relative;left:auto;transform:none;margin:0 auto"><img loading="lazy" decoding="async" class="tl-flame" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" aria-hidden="true"></div></div>
 </div>
 <div class="tl-item reveal">
-<div class="tl-year-col" style="position:relative"><div class="tl-dot" style="position:relative;left:auto;transform:none;margin:0 auto"><img class="tl-flame" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" aria-hidden="true"></div></div>
+<div class="tl-year-col" style="position:relative"><div class="tl-dot" style="position:relative;left:auto;transform:none;margin:0 auto"><img loading="lazy" decoding="async" class="tl-flame" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" aria-hidden="true"></div></div>
 <div class="tl-content"><div class="tl-year">2018</div><h3>First NSF Registration for Food-Safe Fire Protection</h3><p>GreenFire&reg; obtains the first NSF Registration Mark for a food-safe fire protection product as a wetting agent &mdash; confirming the formula is safe around food processing equipment and food preparation surfaces.</p></div>
 </div>
 <div class="tl-item reveal">
 <div class="tl-content"><div class="tl-year">2020</div><h3>Multi-Class Patent Secured</h3><p>GreenFire&reg; obtains a Multi-Class A/B Wetting Agent Firefighting Foam patent &mdash; cementing the proprietary PFAS-free formula as the leading technology for structure, wildland, and vehicle fire suppression.</p></div>
-<div class="tl-year-col" style="position:relative"><div class="tl-dot" style="position:relative;left:auto;transform:none;margin:0 auto"><img class="tl-flame" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" aria-hidden="true"></div></div>
+<div class="tl-year-col" style="position:relative"><div class="tl-dot" style="position:relative;left:auto;transform:none;margin:0 auto"><img loading="lazy" decoding="async" class="tl-flame" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" aria-hidden="true"></div></div>
 </div>
 <div class="tl-item reveal">
-<div class="tl-year-col" style="position:relative"><div class="tl-dot" style="position:relative;left:auto;transform:none;margin:0 auto"><img class="tl-flame" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" aria-hidden="true"></div></div>
+<div class="tl-year-col" style="position:relative"><div class="tl-dot" style="position:relative;left:auto;transform:none;margin:0 auto"><img loading="lazy" decoding="async" class="tl-flame" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" aria-hidden="true"></div></div>
 <div class="tl-content"><div class="tl-year">2022</div><h3>UL Certification &amp; ASTM E84 Ratings</h3><p>GreenFire&reg; obtains Multi-Class Foam Wetting Agent UL Certification. GreenFire Pro Defense obtains ASTM E84 rating. GreenFire&reg; also obtains ASTM E84 Class 1(A) rating &mdash; meeting the highest standards in fire safety and building materials.</p></div>
 </div>
 <div class="tl-item reveal">
 <div class="tl-content"><div class="tl-year">2024</div><h3>HALT! Consumer Products Formed</h3><p>HALT! Fire consumer products are formed using the GreenFire&reg; formula &mdash; bringing proven PFAS-free fire suppression technology into the home as a safer &amp; more effective solution for everyday consumers.</p></div>
-<div class="tl-year-col" style="position:relative"><div class="tl-dot" style="position:relative;left:auto;transform:none;margin:0 auto"><img class="tl-flame" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" aria-hidden="true"></div></div>
+<div class="tl-year-col" style="position:relative"><div class="tl-dot" style="position:relative;left:auto;transform:none;margin:0 auto"><img loading="lazy" decoding="async" class="tl-flame" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" aria-hidden="true"></div></div>
 </div>
 <div class="tl-item reveal">
-<div class="tl-year-col" style="position:relative"><div class="tl-dot" style="position:relative;left:auto;transform:none;margin:0 auto"><img class="tl-flame" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" aria-hidden="true"></div></div>
+<div class="tl-year-col" style="position:relative"><div class="tl-dot" style="position:relative;left:auto;transform:none;margin:0 auto"><img loading="lazy" decoding="async" class="tl-flame" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" aria-hidden="true"></div></div>
 <div class="tl-content"><div class="tl-year">2025</div><h3>HALT! Industrial Formed &amp; National Consumer Expansion</h3><p>HALT! Industrial is officially formed — combining HALT!'s sales and commercial operations with the science and expertise of the GreenFire® formula. HALT! Fire home extinguishers and fire blankets expand nationwide across grocery, military, drug, and Amazon channels simultaneously.</p></div>
 </div>
 <div class="tl-item reveal">
 <div class="tl-content"><div class="tl-year">2026</div><h3>HALT Fire Acquires GreenFire® — One Unified Platform</h3><p>In April 2026, HALT Fire (Prime Safety US Inc.) officially acquires Fire Suppression Innovations Inc. (GreenFire®), announced via PR Newswire. The acquisition creates America's most complete PFAS-free fire suppression platform — unifying consumer, industrial, and professional divisions under a single brand committed to zero forever chemicals.</p></div>
-<div class="tl-year-col" style="position:relative"><div class="tl-dot" style="position:relative;left:auto;transform:none;margin:0 auto"><img class="tl-flame" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" aria-hidden="true"></div></div>
+<div class="tl-year-col" style="position:relative"><div class="tl-dot" style="position:relative;left:auto;transform:none;margin:0 auto"><img loading="lazy" decoding="async" class="tl-flame" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" aria-hidden="true"></div></div>
 </div>
 </div>
 </div>
@@ -1032,49 +1035,49 @@ customerservice@haltfire.com
 </div>
 <div class="team-grid stagger" style="grid-template-columns:repeat(4,1fr)">
 <div class="team-card">
-<div class="team-avatar" style="width:80px;height:80px;font-size:20px;padding:0;overflow:hidden;background:transparent"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/1096a8e0-5315-c534-f031-35cc524cf899.jpeg" alt="Robert Schiederer" style="width:100%;height:116%;margin-top:-16%;object-fit:cover;object-position:center top;display:block;border-radius:50%" width="80" height="80"></div>
+<div class="team-avatar" style="width:80px;height:80px;font-size:20px;padding:0;overflow:hidden;background:transparent" width="80" height="80"><img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/1096a8e0-5315-c534-f031-35cc524cf899.jpeg" alt="Robert Schiederer" style="width:100%;height:116%;margin-top:-16%;object-fit:cover;object-position:center top;display:block;border-radius:50%"></div>
 <div class="team-name">Rob Schiederer</div>
 <div class="team-title">President</div>
 <div class="team-bio">Rob brings over 40 years experience in CPG. He created &amp; scaled one of the most successful sales &amp; marketing agencies in Bentonville, Arkansas, merging with another agency &amp; acquiring 5 others before being acquired by Accenture. He has worked with Kraft Foods, Unilever, Mars Chocolate, Hershey, Kimberly Clark, Walmart &amp; Sam's Club.</div>
 </div>
 <div class="team-card">
-<div class="team-avatar" style="width:80px;height:80px;font-size:20px;padding:0;overflow:hidden;background:transparent"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/0b41d97f-26cd-dbd2-d487-a7e75a56e247.png" alt="Jerry Bello" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:50%" width="80" height="80"></div>
+<div class="team-avatar" style="width:80px;height:80px;font-size:20px;padding:0;overflow:hidden;background:transparent" width="80" height="80"><img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/0b41d97f-26cd-dbd2-d487-a7e75a56e247.png" alt="Jerry Bello" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:50%"></div>
 <div class="team-name">Jerry Bello</div>
 <div class="team-title">Chairman</div>
 <div class="team-bio">A serial entrepreneur, Jerry has repeatedly identified consumer trends ahead of the curve &amp; created disruptive products, including Veggie Straws &amp; Brownie Brittle, leading to major exits. Before CPG, Jerry was an intravenous medicine pharmacist, founding an infusion services healthcare company later acquired by Pediatric Services of America.</div>
 </div>
 <div class="team-card">
-<div class="team-avatar" style="width:80px;height:80px;font-size:20px;padding:0;overflow:hidden;background:transparent"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/5f2eb4f0-c4cc-d91b-8206-1d845838da9a.png" alt="Ramesh Varadaraj" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:50%" width="80" height="80"></div>
+<div class="team-avatar" style="width:80px;height:80px;font-size:20px;padding:0;overflow:hidden;background:transparent" width="80" height="80"><img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/5f2eb4f0-c4cc-d91b-8206-1d845838da9a.png" alt="Ramesh Varadaraj" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:50%"></div>
 <div class="team-name">Ramesh Varadaraj</div>
 <div class="team-title">Lead Chemist &amp; Patent Development</div>
 <div class="team-bio">Dr. Varadaraj is a chemical innovation expert with a PhD in Chemistry and over 30 years of experience at major energy companies, holding more than 200 patents in energy and environmental technologies. Known for inventing the globally used COREXIT 9500 oil spill dispersant, he now serves as GreenFire FSI's Chief Technical Officer, leading R&amp;D and product innovation for advanced fire and smoke suppression solutions.</div>
 </div>
 <div class="team-card">
-<div class="team-avatar" style="width:80px;height:80px;font-size:20px;padding:0;overflow:hidden;background:transparent"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/75e8949a-15d9-ce81-71c0-e694b39792e4.jpg" alt="Chad Selk" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:50%" width="80" height="80"></div>
+<div class="team-avatar" style="width:80px;height:80px;font-size:20px;padding:0;overflow:hidden;background:transparent" width="80" height="80"><img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/75e8949a-15d9-ce81-71c0-e694b39792e4.jpg" alt="Chad Selk" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:50%"></div>
 <div class="team-name">Chad Selk</div>
 <div class="team-title">Fire Department Expert &amp; Liaison</div>
 <div class="team-bio">Fire Captain of the City of Riverside Fire Department, Chad brings over 25 years experience in emergency response, leadership &amp; public safety. He has earned multiple Firefighter of the Year honors &amp; served in specialties including Search &amp; Rescue and Hazardous Materials. Chad holds degrees in fire science &amp; organizational leadership.</div>
 </div>
 <div class="team-card">
-<div class="team-avatar" style="width:80px;height:80px;font-size:20px;padding:0;overflow:hidden;background:transparent"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/ab695eea-0629-b3e5-6c03-e425f85002e9.jpg" alt="Brandon Miller" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:50%" width="80" height="80"></div>
+<div class="team-avatar" style="width:80px;height:80px;font-size:20px;padding:0;overflow:hidden;background:transparent" width="80" height="80"><img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/ab695eea-0629-b3e5-6c03-e425f85002e9.jpg" alt="Brandon Miller" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:50%"></div>
 <div class="team-name">Brandon Miller</div>
 <div class="team-title">Product Development &amp; Environmental Integrity</div>
 <div class="team-bio">Brandon is a pioneering leader in the organics industry with over 25 years of experience, known for developing innovative solutions in commercial food production &amp; overcoming challenges in a rapidly evolving field. Dedicated to environmental &amp; human health, he joined the GreenFire team in 2016 to advance responsible, chemical-free firefighting &amp; fire protection technologies.</div>
 </div>
 <div class="team-card">
-<div class="team-avatar" style="width:80px;height:80px;font-size:20px;padding:0;overflow:hidden;background:transparent"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/2965230d-de71-f075-41c6-9bfe8a54c15b.jpg" alt="Seth Sundquist" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:50%" width="80" height="80"></div>
+<div class="team-avatar" style="width:80px;height:80px;font-size:20px;padding:0;overflow:hidden;background:transparent" width="80" height="80"><img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/2965230d-de71-f075-41c6-9bfe8a54c15b.jpg" alt="Seth Sundquist" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:50%"></div>
 <div class="team-name">Seth Sundquist</div>
 <div class="team-title">New Business Development &amp; R&amp;D</div>
 <div class="team-bio">Seth is a longtime business owner &amp; licensed contractor with nearly two decades of experience, specializing in mechanical systems including commercial plumbing, boilers &amp; fire sprinklers. Known for developing the innovative fire-prevention tool heat barrier and for operating with a strong focus on client education, authenticity &amp; transparency.</div>
 </div>
 <div class="team-card">
-<div class="team-avatar" style="width:80px;height:80px;font-size:20px;padding:0;overflow:hidden;background:#111"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/a4c6061f-a752-08cb-2bb4-5eca63e25730.png" onmouseover="this.parentNode.style.background='#1a1a1a'" onmouseout="this.parentNode.style.background='#1a1a1a'" alt="Anthony Fallon" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;border-radius:50%;transform:scale(1.15)" width="80" height="80"></div>
+<div class="team-avatar" style="width:80px;height:80px;font-size:20px;padding:0;overflow:hidden;background:#111" width="80" height="80"><img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/a4c6061f-a752-08cb-2bb4-5eca63e25730.png" onmouseover="this.parentNode.style.background='#1a1a1a'" onmouseout="this.parentNode.style.background='#1a1a1a'" alt="Anthony Fallon" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;border-radius:50%;transform:scale(1.15)"></div>
 <div class="team-name">Anthony Fallon</div>
 <div class="team-title">Head of E-Commerce</div>
 <div class="team-bio">Anthony leads HALT Fire e-commerce operations and Shopify storefront, driving consumer sales strategy, conversion optimization, and digital retail growth across all consumer product lines.</div>
 </div>
 <div class="team-card">
-<div class="team-avatar" style="width:80px;height:80px;font-size:20px;padding:0;overflow:hidden;background:#111"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/d53277d5-36c2-dd0d-6a01-1ea288628a67.png" onmouseover="this.parentNode.style.background='#1a1a1a'" onmouseout="this.parentNode.style.background='#1a1a1a'" alt="Reed Radford" style="width:100%;height:100%;object-fit:cover;object-position:35% 15%;display:block;border-radius:50%;transform:scale(1.15)" width="80" height="80"></div>
+<div class="team-avatar" style="width:80px;height:80px;font-size:20px;padding:0;overflow:hidden;background:#111" width="80" height="80"><img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/d53277d5-36c2-dd0d-6a01-1ea288628a67.png" onmouseover="this.parentNode.style.background='#1a1a1a'" onmouseout="this.parentNode.style.background='#1a1a1a'" alt="Reed Radford" style="width:100%;height:100%;object-fit:cover;object-position:35% 15%;display:block;border-radius:50%;transform:scale(1.15)"></div>
 <div class="team-name">Reed Radford</div>
 <div class="team-title">Head of Industrial Sales</div>
 <div class="team-bio">Reed leads HALT Industrial sales, managing relationships with fire departments, municipalities, industrial operators, and government agencies transitioning away from AFFF to HALT PFAS-free solutions.</div>
@@ -1092,14 +1095,14 @@ customerservice@haltfire.com
 <div class="con commit-inner">
 <h2 class="reveal">HALT Fire's Founding Commitments</h2>
 <div class="commit-pills stagger">
-<div class="pill"><img src="https://gogreenfire.com/wp-content/uploads/2020/01/non-toxic.png" alt="Non-Toxic"><h3>Non-Toxic</h3></div>
-<div class="pill"><img src="https://gogreenfire.com/wp-content/uploads/2020/01/non-carcinogenic.png" alt="Non-Carcinogenic"><h3>Non-Carcinogenic</h3></div>
-<div class="pill"><img src="https://gogreenfire.com/wp-content/uploads/2020/01/eco.png" alt="Eco Friendly"><h3>Eco Friendly</h3></div>
-<div class="pill"><img src="https://gogreenfire.com/wp-content/uploads/2020/01/easy-clean.png" alt="Easy Cleanup"><h3>Easy Cleanup</h3></div>
-<div class="pill"><img src="https://gogreenfire.com/wp-content/uploads/2020/01/food-safe.png" alt="Food Safe"><h3>Food &amp; Environment Safe</h3></div>
-<div class="pill"><img src="https://gogreenfire.com/wp-content/uploads/2020/01/non-corrosive.png" alt="Non-Corrosive"><h3>Non-Corrosive</h3></div>
-<div class="pill"><img src="https://gogreenfire.com/wp-content/uploads/2020/01/surface-angle.png" alt="Any Surface"><h3>Any Surface</h3></div>
-<div class="pill"><img src="https://gogreenfire.com/wp-content/uploads/2020/01/not-evaporate.png" alt="Zero Reignition"><h3>Zero Reignition</h3></div>
+<div class="pill"><img loading="lazy" decoding="async" src="https://gogreenfire.com/wp-content/uploads/2020/01/non-toxic.png" alt="Non-Toxic"><h3>Non-Toxic</h3></div>
+<div class="pill"><img loading="lazy" decoding="async" src="https://gogreenfire.com/wp-content/uploads/2020/01/non-carcinogenic.png" alt="Non-Carcinogenic"><h3>Non-Carcinogenic</h3></div>
+<div class="pill"><img loading="lazy" decoding="async" src="https://gogreenfire.com/wp-content/uploads/2020/01/eco.png" alt="Eco Friendly"><h3>Eco Friendly</h3></div>
+<div class="pill"><img loading="lazy" decoding="async" src="https://gogreenfire.com/wp-content/uploads/2020/01/easy-clean.png" alt="Easy Cleanup"><h3>Easy Cleanup</h3></div>
+<div class="pill"><img loading="lazy" decoding="async" src="https://gogreenfire.com/wp-content/uploads/2020/01/food-safe.png" alt="Food Safe"><h3>Food &amp; Environment Safe</h3></div>
+<div class="pill"><img loading="lazy" decoding="async" src="https://gogreenfire.com/wp-content/uploads/2020/01/non-corrosive.png" alt="Non-Corrosive"><h3>Non-Corrosive</h3></div>
+<div class="pill"><img loading="lazy" decoding="async" src="https://gogreenfire.com/wp-content/uploads/2020/01/surface-angle.png" alt="Any Surface"><h3>Any Surface</h3></div>
+<div class="pill"><img loading="lazy" decoding="async" src="https://gogreenfire.com/wp-content/uploads/2020/01/not-evaporate.png" alt="Zero Reignition"><h3>Zero Reignition</h3></div>
 </div>
 </div>
 </main>
@@ -1109,8 +1112,8 @@ customerservice@haltfire.com
 <div class="con">
 <div class="f-grid">
 <div>
-<a href="index.html" class="f-logo"><img src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/8c7f2cbe-39b2-9320-be0b-bb06479a0b8a.png" alt="HALT Fire &mdash; Non-Toxic PFAS-Free Fire Suppression Powered by GreenFire Technology"></a>
-<p class="f-tag"><img src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" style="width:18px;height:18px;display:inline-block;vertical-align:middle;margin-right:6px;margin-bottom:2px" aria-hidden="true"> 100% PFAS-free fire suppression for consumers, fire departments, contractors, and industrial operators. Powered by patented GreenFire&reg; technology. NSF certified. UL classified. Made in USA. &copy; 2026 Prime Safety US Inc.</p>
+<a href="index.html" class="f-logo" aria-hidden="true"><img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/8c7f2cbe-39b2-9320-be0b-bb06479a0b8a.png" alt="HALT Fire &mdash; Non-Toxic PFAS-Free Fire Suppression Powered by GreenFire Technology"></a>
+<p class="f-tag"><img loading="lazy" decoding="async" src="https://cdn.prod.website-files.com/664edabdd0c0f28f5db049cf/664f0f88f07959f43549db61_Fire%20Icon.svg" alt="" style="width:18px;height:18px;display:inline-block;vertical-align:middle;margin-right:6px;margin-bottom:2px"> 100% PFAS-free fire suppression for consumers, fire departments, contractors, and industrial operators. Powered by patented GreenFire&reg; technology. NSF certified. UL classified. Made in USA. &copy; 2026 Prime Safety US Inc.</p>
 <div class="f-soc">
 <a href="https://www.instagram.com/haltfireofficial" target="_blank" rel="noopener" class="soc" aria-label="HALT Fire Instagram"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
 <a href="https://www.facebook.com/people/HaltFire/61557769262146/" target="_blank" rel="noopener" class="soc" aria-label="HALT Fire Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
@@ -1150,7 +1153,7 @@ customerservice@haltfire.com
 </div>
 <div class="f-bottom">
 <div class="f-copy">&copy; 2026 Prime Safety US Inc. &amp; HALT Industrial. All rights reserved. HALT Fire&reg; is a registered trademark. PFAS-free. Made in USA.</div>
-<div class="f-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+<div class="f-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
 </div>
 </div>
 </footer>
