@@ -832,6 +832,31 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .ph{margin-top:70px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}}
+/* ===== MOBILE POLISH (appended, mobile-only overrides) ===== */
+@media(max-width:768px){
+html,body{overflow-x:hidden!important;max-width:100%}
+img,svg,video,canvas,iframe{max-width:100%}
+.con{padding-left:22px!important;padding-right:22px!important}
+.prob-grid,[style*="grid-template-columns:1fr 1fr"],[style*="grid-template-columns:repeat(2,1fr)"],[style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:minmax(0,1fr)!important}
+[style*="grid-template-columns:repeat(4,1fr)"],[style*="grid-template-columns:repeat(5,1fr)"],[style*="grid-template-columns:repeat(6,1fr)"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.tox-grid,.split,.contact-grid,.feat-grid,.prod-grid,.dual,.pro-split,.vs-split,.chem-chart,.mission-split,.news-feat,.fire-triangle,.channels-grid,.contact-channels{grid-template-columns:minmax(0,1fr)!important}
+.stagger,.reveal-right,.reveal-left,.plcard,.split-body,.prod-card,.pro-panel,.feat{min-width:0!important;max-width:100%!important}
+.plcard{padding-right:22px!important;padding-left:22px!important}
+.plcard img{position:static!important;top:auto!important;right:auto!important;bottom:auto!important;width:auto!important;max-width:140px!important;height:auto!important;margin:0 0 14px!important;object-position:left center!important}
+.plcard-sz{white-space:normal!important}
+.ct-wrap,.m-tablewrap{max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+body{font-size:16px}
+.lead{font-size:16px!important;line-height:1.75!important}
+h1,h2,h3{overflow-wrap:anywhere}
+.btn-g,.btn-og,.btn-white{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.form-row{grid-template-columns:1fr!important}
+input,select,textarea,.fg input,.fg textarea,.fg select{font-size:16px!important}
+}
+@media(max-width:480px){
+.con{padding-left:18px!important;padding-right:18px!important}
+.plcard img{max-width:120px!important}
+[style*="grid-template-columns:repeat(5,1fr)"],[style*="grid-template-columns:repeat(6,1fr)"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Contact HALT Fire","description":"Contact HALT Fire for sales, customer support, and industrial pricing.","url":"https://haltfire.com/contact.html","isPartOf":{"@type":"WebSite","name":"HALT Fire","url":"https://haltfire.com"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://haltfire.com/"}, {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://haltfire.com/contact.html"}]}</script>

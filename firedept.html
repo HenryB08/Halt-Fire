@@ -832,6 +832,41 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .ph{margin-top:70px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}}
+/* ===== MOBILE POLISH (appended, mobile-only overrides) ===== */
+@media(max-width:768px){
+html,body{overflow-x:hidden!important;max-width:100%}
+img,svg,video,canvas,iframe{max-width:100%}
+.con{padding-left:22px!important;padding-right:22px!important}
+/* collapse remaining two-column layouts (class + inline) */
+.prob-grid,.stat-callout,[style*="grid-template-columns:1fr 1fr"],[style*="grid-template-columns:repeat(2,1fr)"]{grid-template-columns:1fr!important}
+/* dense stat bands drop from four columns to two on mobile */
+[style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:repeat(2,1fr)!important}
+/* product cards: image stacks above the copy instead of overlapping it */
+.plcard{padding-right:22px!important;padding-left:22px!important}
+.plcard img{position:static!important;top:auto!important;right:auto!important;bottom:auto!important;width:auto!important;max-width:140px!important;height:auto!important;margin:0 0 14px!important;object-position:left center!important}
+.plcard-sz{white-space:normal!important}
+/* toxicity bar chart fits within the phone */
+.bar-label{width:60px!important;font-size:10px!important}
+.bar-val{width:26px!important}
+.bar-row{gap:10px!important}
+/* stat callouts each take full width */
+.stat-call{min-width:0!important;flex:1 1 100%!important}
+/* comfortable reading */
+body{font-size:16px}
+.lead,.prob-text p,.split-body p{font-size:16px!important;line-height:1.75!important}
+/* long uppercase headings always wrap, never clip */
+h1,h2,h3,.hero h1{overflow-wrap:anywhere}
+/* tap targets at least 44px */
+.btn-g,.btn-og,.btn-white{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+/* forms: single column, full-width, 16px to stop iOS zoom */
+.form-row{grid-template-columns:1fr!important}
+.fg input,.fg textarea,.fg select{font-size:16px!important}
+}
+@media(max-width:480px){
+.con{padding-left:18px!important;padding-right:18px!important}
+.stat-callout{gap:14px!important}
+.plcard img{max-width:120px!important}
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"HALT Fire — AFFF Replacement for Fire Departments","description":"HALT Industrial GFFF is the drop-in AFFF replacement trusted by fire departments. Zero PFAS, DOD/EPA tested.","url":"https://haltfire.com/firedept.html","isPartOf":{"@type":"WebSite","name":"HALT Fire","url":"https://haltfire.com"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://haltfire.com/"}, {"@type": "ListItem", "position": 2, "name": "Fire Departments", "item": "https://haltfire.com/firedept.html"}]}</script>

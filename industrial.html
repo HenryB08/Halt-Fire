@@ -826,6 +826,42 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .ph{margin-top:70px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}}
+/* ===== MOBILE POLISH (appended, mobile-only overrides) ===== */
+@media(max-width:768px){
+html,body{overflow-x:hidden!important;max-width:100%}
+img,svg,video,canvas,iframe{max-width:100%}
+.con{padding-left:22px!important;padding-right:22px!important}
+/* collapse remaining multi-column layouts (class + inline) */
+.prob-grid,[style*="grid-template-columns:1fr 1fr"],[style*="grid-template-columns:repeat(2,1fr)"],[style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:minmax(0,1fr)!important}
+[style*="grid-template-columns:repeat(4,1fr)"],[style*="grid-template-columns:repeat(5,1fr)"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+/* keep collapsed grid tracks from being forced wider than the screen by long content */
+.tox-grid,.split,.contact-grid,.feat-grid,.prod-grid,.dual,.pro-split,.vs-split,.chem-chart,.mission-split,.news-feat{grid-template-columns:minmax(0,1fr)!important}
+.stagger,.reveal-right,.reveal-left,.plcard,.split-body,.prod-card,.pro-panel{min-width:0!important;max-width:100%!important}
+/* product cards with absolute images: image stacks above the copy */
+.plcard{padding-right:22px!important;padding-left:22px!important}
+.plcard img{position:static!important;top:auto!important;right:auto!important;bottom:auto!important;width:auto!important;max-width:140px!important;height:auto!important;margin:0 0 14px!important;object-position:left center!important}
+.plcard-sz{white-space:normal!important}
+/* wide tables stay inside their own horizontal scroll, never the page */
+.ct-wrap,.m-tablewrap{max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+/* toxicity bar chart fits within the phone */
+.bar-label{width:60px!important;font-size:10px!important}
+.bar-val{width:26px!important}
+.bar-row{gap:10px!important}
+/* comfortable reading */
+body{font-size:16px}
+.lead{font-size:16px!important;line-height:1.75!important}
+/* long uppercase headings always wrap, never clip */
+h1,h2,h3{overflow-wrap:anywhere}
+/* tap targets at least 44px */
+.btn-g,.btn-og,.btn-white{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+/* forms: single column, full-width, 16px to stop iOS zoom */
+.form-row{grid-template-columns:1fr!important}
+input,select,textarea,.fg input,.fg textarea,.fg select{font-size:16px!important}
+}
+@media(max-width:480px){
+.con{padding-left:18px!important;padding-right:18px!important}
+.plcard img{max-width:120px!important}
+}
 </style>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"HALT Industrial — PFAS-Free GFFF Firefighting Foam","description":"PFAS-free firefighting foam for fire departments, oil & gas, aviation, utilities. DOD, DOE, EPA & FAA tested.","url":"https://haltfire.com/industrial.html","isPartOf":{"@type":"WebSite","name":"HALT Fire","url":"https://haltfire.com"}}</script>
