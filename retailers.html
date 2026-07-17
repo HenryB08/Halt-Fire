@@ -28,7 +28,7 @@
 --green:#CCFF00;--green-dark:#a8d400;--green-light:#d8ff44;
 --dark:#131416;--dark2:#1a1c1f;
 --white:#fff;--light:#161616;
---text:rgba(255,255,255,.88);--muted:rgba(255,255,255,.55);--lt:rgba(255,255,255,.35);
+--text:rgba(255,255,255,.88);--muted:rgba(255,255,255,.8);--lt:rgba(255,255,255,.72);
 --font:'Fugaz One',sans-serif;
 --nav:'Raleway',sans-serif;
 --body:'Montserrat',sans-serif;
@@ -86,7 +86,7 @@ button{cursor:pointer}
 
 
 /* ===== HERO PREV / NEXT ===== */
-.hero-prev,.hero-next{position:absolute;top:50%;transform:translateY(-50%);z-index:4;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.5);font-family:var(--nav);font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;writing-mode:vertical-rl;display:flex;flex-direction:column;align-items:center;gap:10px;transition:color .3s,transform .3s;padding:12px 8px}
+.hero-prev,.hero-next{position:absolute;top:50%;transform:translateY(-50%);z-index:4;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.78);font-family:var(--nav);font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;writing-mode:vertical-rl;display:flex;flex-direction:column;align-items:center;gap:10px;transition:color .3s,transform .3s;padding:12px 8px}
 .hero-prev{left:24px;text-orientation:mixed;transform:translateY(-50%) rotate(180deg)}
 .hero-next{right:24px}
 .hero-prev:hover,.hero-next:hover{color:#fff;transform:translateY(-50%) scale(1.1)}
@@ -101,11 +101,11 @@ button{cursor:pointer}
 .topbar{background:var(--dark);height:40px;line-height:40px;font-size:11.5px;font-family:var(--nav);position:fixed;top:0;left:0;right:0;z-index:600;transition:transform .3s;border-bottom:1px solid rgba(255,255,255,.06)}
 .topbar.hidden{transform:translateY(-100%)}
 .topbar-inner{width:100%;padding:0 40px;display:flex;justify-content:space-between;align-items:center}
-.topbar-left{color:rgba(255,255,255,.5);display:flex;gap:28px}
-.topbar-left a{color:rgba(255,255,255,.45);transition:color .25s;display:flex;align-items:center;gap:7px;letter-spacing:.3px}
+.topbar-left{color:rgba(255,255,255,.78);display:flex;gap:28px}
+.topbar-left a{color:rgba(255,255,255,.76);transition:color .25s;display:flex;align-items:center;gap:7px;letter-spacing:.3px}
 .topbar-left a:hover{color:#fff}
 .topbar-right{display:flex;gap:6px;align-items:center}
-.topbar-soc{width:30px;height:30px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);transition:color .25s,background .25s,transform .2s,border-color .25s;flex-shrink:0;border:1px solid rgba(255,255,255,.18)}
+.topbar-soc{width:30px;height:30px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.74);transition:color .25s,background .25s,transform .2s,border-color .25s;flex-shrink:0;border:1px solid rgba(255,255,255,.18)}
 .topbar-soc svg{width:15px;height:15px;fill:currentColor;display:block}
 .topbar-soc:hover{color:#fff;background:rgba(255,255,255,.08);transform:translateY(-1px)}
 
@@ -117,7 +117,7 @@ button{cursor:pointer}
 .nav-logo img{height:95px!important;width:auto!important;max-height:none!important;object-fit:contain;object-position:left center;transition:opacity .25s}
 .nav-logo:hover img{opacity:.85}
 .nav-links{display:flex;list-style:none;font-family:var(--nav);font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;justify-content:center;gap:0}
-.nav-links a{color:rgba(255,255,255,.45);padding:0 14px;height:130px;display:flex;align-items:center;transition:color .25s,border-color .25s;border-bottom:3px solid transparent;white-space:nowrap;box-sizing:border-box}
+.nav-links a{color:rgba(255,255,255,.76);padding:0 14px;height:130px;display:flex;align-items:center;transition:color .25s,border-color .25s;border-bottom:3px solid transparent;white-space:nowrap;box-sizing:border-box}
 .nav-links a::after{display:none}
 
 /* ===== KEY CHANNEL NAV BOLD ===== */
@@ -148,7 +148,7 @@ button{cursor:pointer}
 /* ===== MOBILE MENU ===== */
 .mob-menu{display:none;position:fixed;inset:0;background:var(--dark);z-index:499;padding:100px 40px 40px;overflow-y:auto;transition:opacity .3s}
 .mob-menu.open{display:block}
-.mob-menu a{display:block;font-family:var(--nav);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.5);padding:16px 0;border-bottom:1px solid rgba(255,255,255,.06);transition:color .25s,padding-left .25s}
+.mob-menu a{display:block;font-family:var(--nav);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.78);padding:16px 0;border-bottom:1px solid rgba(255,255,255,.06);transition:color .25s,padding-left .25s}
 .mob-menu a:hover{color:#fff;padding-left:8px}
 .mob-close{position:absolute;top:30px;right:32px;background:none;border:none;color:#fff;font-size:26px}
 
@@ -171,12 +171,12 @@ button{cursor:pointer}
 .hero-lead{font-size:14px;color:rgba(255,255,255,.85);line-height:1.8;max-width:520px;margin:0 auto 30px;animation:fadeUp .8s .6s both;text-shadow:0 1px 12px rgba(0,0,0,.5)}
 .hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:fadeUp .8s .8s both}
 .hero-ctas .btn-g{font-size:12px;padding:14px 30px}
-.hero-ctas .btn-og{font-size:12px;padding:13px 30px;color:#fff;border-color:rgba(255,255,255,.4)}
+.hero-ctas .btn-og{font-size:12px;padding:13px 30px;color:#fff;border-color:rgba(255,255,255,.74)}
 .hero-ctas .btn-og:hover{background:#fff;color:var(--dark)}
 .dots{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:3}
 .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.3);border:none;transition:background .3s,transform .3s}
 .dot.on{background:#fff;transform:scale(1.3)}
-.hero-scroll{position:absolute;bottom:60px;right:40px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.4);font-family:var(--nav);font-size:9px;letter-spacing:2px;text-transform:uppercase}
+.hero-scroll{position:absolute;bottom:60px;right:40px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.74);font-family:var(--nav);font-size:9px;letter-spacing:2px;text-transform:uppercase}
 .hero-scroll-line{width:1px;height:48px;background:rgba(255,255,255,.25);animation:float 2s ease-in-out infinite}
 
 /* ===== LAYOUT ===== */
@@ -197,9 +197,9 @@ button{cursor:pointer}
 .sh h2::after{content:'';display:block;width:90px;height:2px;background:rgba(255,255,255,.2);margin-top:16px}
 .sh.center h2::after{margin-left:auto;margin-right:auto}
 .sh h2.white::after{background:var(--green)}
-.lead{font-size:16px;color:rgba(255,255,255,.6);line-height:1.9;max-width:720px}
+.lead{font-size:16px;color:rgba(255,255,255,.82);line-height:1.9;max-width:720px}
 .sh.center .lead{margin:0 auto}
-.lead.white{color:rgba(255,255,255,.6)}
+.lead.white{color:rgba(255,255,255,.82)}
 
 /* ===== STATS BAND ===== */
 .stats-band{background:var(--dark);padding:48px 0}
@@ -212,7 +212,7 @@ button{cursor:pointer}
 .stats-grid .stat-item:nth-child(2) .stat-num{transition-delay:.15s}
 .stats-grid .stat-item:nth-child(3) .stat-num{transition-delay:.3s}
 .stats-grid .stat-item:nth-child(4) .stat-num{transition-delay:.45s}
-.stat-label{font-family:var(--nav);font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.stat-label{font-family:var(--nav);font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.74)}
 
 /* ===== DIV PHOTO CARDS ===== */
 .div-grid{display:grid;grid-template-columns:repeat(3,1fr)}
@@ -231,7 +231,7 @@ button{cursor:pointer}
 .div-card.i:hover .div-tag{background:#ffb347;color:#000}
 .div-card.p:hover .div-tag{background:#6bb3ff;color:#000}
 .div-body h3{font-family:var(--font);font-size:26px;color:#fff;text-transform:uppercase;margin-bottom:8px;line-height:1}
-.div-body p{font-size:13px;color:rgba(255,255,255,.65);line-height:1.65;margin-bottom:14px}
+.div-body p{font-size:13px;color:rgba(255,255,255,.85);line-height:1.65;margin-bottom:14px}
 .div-link{font-family:var(--nav);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#fff;display:inline-flex;align-items:center;gap:6px;transition:gap .3s}
 .div-card:hover .div-link{gap:12px}
 
@@ -266,7 +266,7 @@ button{cursor:pointer}
 .feat:hover{transform:translateX(6px);border-color:var(--green-light)}
 .feat h3{font-family:var(--nav);font-size:14px;font-weight:700;color:#fff;margin-bottom:9px;line-height:1.35}
 .feat h3 b{color:var(--green)}
-.feat p{font-size:13px;color:rgba(255,255,255,.55);line-height:1.8}
+.feat p{font-size:13px;color:rgba(255,255,255,.8);line-height:1.8}
 
 /* ===== SPLIT ===== */
 .split{display:grid;grid-template-columns:1fr 1fr;align-items:center;background:#0f0f0f}
@@ -274,7 +274,7 @@ button{cursor:pointer}
 .split-img{height:560px;width:100%;object-fit:cover;display:block;transition:transform .6s var(--ease)}
 .split:hover .split-img{transform:scale(1.02)}
 .split-body{padding:80px 60px;background:#0f0f0f}
-.split-body p{font-size:14px;color:rgba(255,255,255,.55);line-height:1.85;margin-bottom:22px}
+.split-body p{font-size:14px;color:rgba(255,255,255,.8);line-height:1.85;margin-bottom:22px}
 .split-btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:4px}
 
 /* ===== TOXICITY GRID ===== */
@@ -306,7 +306,7 @@ button{cursor:pointer}
 .ct-wrap{overflow-x:auto;border-radius:2px;box-shadow:0 4px 24px rgba(0,0,0,.4)}
 .ct{width:100%;border-collapse:collapse;font-size:13.5px}
 .ct thead{background:var(--dark)}
-.ct thead th{font-family:var(--nav);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.6);padding:16px 20px;text-align:left;white-space:nowrap}
+.ct thead th{font-family:var(--nav);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.82);padding:16px 20px;text-align:left;white-space:nowrap}
 .ct thead th:nth-child(2){color:var(--green)}
 .ct tbody tr{border-bottom:1px solid rgba(255,255,255,.06);transition:background .2s}
 .ct tbody tr:hover{background:rgba(0,0,0,.15)}
@@ -320,15 +320,15 @@ button{cursor:pointer}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
 .contact-sec h2{font-family:var(--font);font-size:clamp(24px,3vw,38px);color:#fff;text-transform:uppercase;margin-bottom:16px}
 .contact-sec h2::after{content:'';display:block;width:90px;height:2px;background:var(--green);margin-top:14px}
-.contact-sec p{color:rgba(255,255,255,.5);font-size:14px;line-height:1.85;margin-bottom:22px}
+.contact-sec p{color:rgba(255,255,255,.78);font-size:14px;line-height:1.85;margin-bottom:22px}
 .c-info{display:flex;flex-direction:column;gap:14px;margin-bottom:28px}
-.c-row{font-size:14px;color:rgba(255,255,255,.45)}.c-row strong{color:#fff}
+.c-row{font-size:14px;color:rgba(255,255,255,.76)}.c-row strong{color:#fff}
 .form{display:flex;flex-direction:column;gap:13px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-.fg label{display:block;font-family:var(--nav);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:5px}
+.fg label{display:block;font-family:var(--nav);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:5px}
 .fg input,.fg textarea,.fg select{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:#fff;font-family:var(--body);font-size:14px;padding:12px 15px;outline:none;transition:border-color .25s,background .25s;resize:vertical}
 .fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--green);background:rgba(0,0,0,.15)}
-.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.2)}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.62)}
 .fg textarea{min-height:110px}
 .fg select option{background:var(--dark);color:#fff}
 .btn-sub{background:var(--green);color:#0E0E0E;font-family:var(--nav);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;padding:15px;border:none;cursor:pointer;transition:all .3s;width:100%;position:relative;overflow:hidden}
@@ -341,19 +341,19 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .f-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:48px;margin-bottom:56px}
 .f-logo img{height:100px;width:auto;margin-bottom:16px;transition:opacity .25s}
 .f-logo:hover img{opacity:.8}
-.f-tag{font-size:13px;color:rgba(255,255,255,.28);line-height:1.8;max-width:240px;margin-bottom:22px}
+.f-tag{font-size:13px;color:rgba(255,255,255,.68);line-height:1.8;max-width:240px;margin-bottom:22px}
 .f-soc{display:flex;gap:9px}
-.soc{width:34px;height:34px;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.35);transition:all .3s}
+.soc{width:34px;height:34px;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.72);transition:all .3s}
 .soc:hover{border-color:var(--green);background:var(--green);color:#0E0E0E;transform:translateY(-3px)}
-.f-col-title{font-family:var(--nav);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.35);margin-bottom:18px}
+.f-col-title{font-family:var(--nav);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.72);margin-bottom:18px}
 .f-links{list-style:none}
 .f-links li{margin-bottom:10px}
-.f-links a{font-size:13px;color:rgba(255,255,255,.45);transition:color .25s,padding-left .25s;display:block}
+.f-links a{font-size:13px;color:rgba(255,255,255,.76);transition:color .25s,padding-left .25s;display:block}
 .f-links a:hover{color:#fff;padding-left:4px}
 .f-bottom{border-top:1px solid rgba(255,255,255,.07);padding:24px 0;display:flex;justify-content:space-between;align-items:center}
-.f-copy{font-size:12px;color:rgba(255,255,255,.25)}
+.f-copy{font-size:12px;color:rgba(255,255,255,.66)}
 .f-legal{display:flex;gap:20px}
-.f-legal a{font-size:12px;color:rgba(255,255,255,.25);transition:color .25s}.f-legal a:hover{color:#fff}
+.f-legal a{font-size:12px;color:rgba(255,255,255,.66);transition:color .25s}.f-legal a:hover{color:#fff}
 
 /* ===== PAGE HERO ===== */
 .ph{position:relative;height:65vh;min-height:460px;overflow:hidden;margin-top:170px}
@@ -389,7 +389,7 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .prod-body{padding:28px 24px}
 .prod-label{font-family:var(--nav);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);display:block;margin-bottom:8px}
 .prod-body h3{font-family:var(--font);font-size:22px;color:#fff;text-transform:uppercase;margin-bottom:10px;line-height:1}
-.prod-body p{font-size:13px;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:14px}
+.prod-body p{font-size:13px;color:rgba(255,255,255,.8);line-height:1.75;margin-bottom:14px}
 .prod-sz{font-family:var(--nav);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--lt);margin-bottom:16px}
 
 /* ===== HOW TO USE STEPS ===== */
@@ -402,7 +402,7 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .step-num{font-family:var(--font);font-size:72px;color:rgba(255,255,255,.06);line-height:1;margin-bottom:16px;transition:color .35s}
 .step:hover .step-num{color:rgba(0,0,0,.15)}
 .step h3{font-family:var(--font);font-size:20px;color:#fff;text-transform:uppercase;margin-bottom:12px}
-.step p{font-size:13px;color:rgba(255,255,255,.55);line-height:1.8}
+.step p{font-size:13px;color:rgba(255,255,255,.8);line-height:1.8}
 
 /* ===== REVIEWS ===== */
 .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px}
@@ -432,7 +432,7 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .vs-body h2{font-family:var(--font);font-size:clamp(22px,3vw,36px);color:#fff;text-transform:uppercase;line-height:1.2;margin-bottom:24px}
 .vs-body h2 em{color:var(--green);font-style:normal}
 .check-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
-.check-list li{font-size:14px;color:rgba(255,255,255,.65);display:flex;gap:12px;align-items:flex-start}
+.check-list li{font-size:14px;color:rgba(255,255,255,.85);display:flex;gap:12px;align-items:flex-start}
 .check-list li span:first-child{color:var(--green);font-weight:700;flex-shrink:0;font-size:16px}
 
 /* ===== INDUSTRIAL PAGE ===== */
@@ -444,7 +444,7 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .stat-callout{display:flex;gap:24px;margin:24px 0;flex-wrap:wrap}
 .stat-call{background:var(--dark);color:#fff;padding:20px 24px;flex:1;min-width:140px}
 .stat-call-num{font-family:var(--font);font-size:32px;color:var(--green);line-height:1}
-.stat-call-txt{font-size:11px;color:rgba(255,255,255,.45);font-family:var(--nav);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
+.stat-call-txt{font-size:11px;color:rgba(255,255,255,.76);font-family:var(--nav);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
 
 /* ===== CHART BAR ===== */
 .chart-section{margin:60px 0}
@@ -459,7 +459,7 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .bar-fill.amber{background:#f5a623}
 .bar-fill.blue{background:#4a90d9}
 .bar-fill::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.12) 50%,transparent 100%)}
-.bar-val{font-size:11px;font-family:var(--nav);font-weight:700;color:rgba(255,255,255,.5);width:36px;flex-shrink:0}
+.bar-val{font-size:11px;font-family:var(--nav);font-weight:700;color:rgba(255,255,255,.78);width:36px;flex-shrink:0}
 
 /* ===== PROFESSIONAL PAGE ===== */
 .pro-split{display:grid;grid-template-columns:1fr 1fr;gap:0}
@@ -470,7 +470,7 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .pro-content{position:absolute;bottom:0;left:0;right:0;padding:40px 36px;z-index:2}
 .pro-tag{font-family:var(--nav);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);border:1px solid var(--green);padding:4px 12px;display:inline-block;margin-bottom:12px}
 .pro-content h3{font-family:var(--font);font-size:28px;color:#fff;text-transform:uppercase;margin-bottom:10px;line-height:1}
-.pro-content p{font-size:13px;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:16px}
+.pro-content p{font-size:13px;color:rgba(255,255,255,.82);line-height:1.7;margin-bottom:16px}
 
 /* ===== TRADE GRID ===== */
 .trade-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06)}
@@ -480,9 +480,9 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .trade-icon svg{width:22px;height:22px;fill:currentColor}
 .trade-card:hover .trade-icon{opacity:1}
 .trade-card h3{font-family:var(--nav);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#fff;margin-bottom:8px;transition:color .3s}
-.trade-card p{font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.7;transition:color .3s}
+.trade-card p{font-size:12.5px;color:rgba(255,255,255,.76);line-height:1.7;transition:color .3s}
 .trade-card:hover h3{color:var(--green)}
-.trade-card:hover p{color:rgba(255,255,255,.65)}
+.trade-card:hover p{color:rgba(255,255,255,.85)}
 
 /* ===== SCIENCE PAGE ===== */
 .fire-triangle{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:64px 0}
@@ -497,13 +497,13 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .ft-card:nth-child(2) .ft-icon{animation-delay:.5s}
 .ft-card:nth-child(3) .ft-icon{animation-delay:1s}
 .ft-card h3{font-family:var(--font);font-size:28px;text-transform:uppercase;margin-bottom:14px;color:#fff}
-.ft-card p{font-size:13px;color:rgba(255,255,255,.55);line-height:1.8}
+.ft-card p{font-size:13px;color:rgba(255,255,255,.8);line-height:1.8}
 .ft-card .halt-badge{display:inline-block;margin-top:18px;font-family:var(--nav);font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border:1px solid var(--green);color:var(--green)}
 
 /* ===== SCIENCE CHART ===== */
 .chem-chart{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;margin:60px 0;align-items:center}
 .chem-vis{background:var(--dark);padding:40px;border-radius:2px}
-.chem-vis-title{font-family:var(--nav);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:28px}
+.chem-vis-title{font-family:var(--nav);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:28px}
 .radial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .radial-item{text-align:center}
 .radial-ring{width:80px;height:80px;border-radius:50%;margin:0 auto 10px;position:relative;display:flex;align-items:center;justify-content:center}
@@ -511,7 +511,7 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .radial-ring svg{position:absolute;inset:0;transform:rotate(-90deg)}
 .radial-ring circle{fill:none;stroke-width:3;stroke-linecap:round;transition:stroke-dasharray 2s var(--ease)}
 .radial-val{font-family:var(--font);font-size:18px;color:#fff;position:relative;z-index:1}
-.radial-label{font-size:11px;font-family:var(--nav);color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px}
+.radial-label{font-size:11px;font-family:var(--nav);color:rgba(255,255,255,.74);text-transform:uppercase;letter-spacing:1px}
 
 /* ===== CERTS ===== */
 .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
@@ -519,7 +519,7 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .cert-card:hover{border-color:var(--green);transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.15)}
 .cert-icon{font-size:36px;margin-bottom:14px;display:block}
 .cert-card h4{font-family:var(--nav);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#fff;margin-bottom:8px}
-.cert-card p{font-size:12px;color:rgba(255,255,255,.5);line-height:1.7}
+.cert-card p{font-size:12px;color:rgba(255,255,255,.78);line-height:1.7}
 
 /* ===== NEWS PAGE ===== */
 .news-feat{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:80px}
@@ -529,8 +529,8 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .news-feat-body{background:var(--dark);padding:64px 52px;display:flex;flex-direction:column;justify-content:center}
 .news-feat-body .eyebrow{margin-bottom:12px}
 .news-feat-body h2{font-family:var(--font);font-size:clamp(22px,2.8vw,34px);color:#fff;text-transform:uppercase;line-height:1.2;margin-bottom:22px}
-.news-feat-body p{font-size:14px;color:rgba(255,255,255,.5);line-height:1.85;margin-bottom:24px}
-.news-meta{font-family:var(--nav);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:28px}
+.news-feat-body p{font-size:14px;color:rgba(255,255,255,.78);line-height:1.85;margin-bottom:24px}
+.news-meta{font-family:var(--nav);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.66);margin-bottom:28px}
 .press-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px}
 .press-card{background:#1a1a1a;padding:32px;transition:all .35s;position:relative;overflow:hidden}
 .press-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--green);transform:scaleX(0);transition:transform .35s var(--ease)}
@@ -538,14 +538,14 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .press-card:hover::before{transform:scaleX(1)}
 .press-outlet{font-family:var(--nav);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:10px;display:block}
 .press-card h3{font-family:var(--nav);font-size:14px;font-weight:700;color:#fff;line-height:1.5;margin-bottom:10px}
-.press-card p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.7;margin-bottom:16px}
+.press-card p{font-size:13px;color:rgba(255,255,255,.78);line-height:1.7;margin-bottom:16px}
 .press-date{font-size:11px;color:var(--lt);font-family:var(--nav)}
 .media-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:var(--dark);margin:60px 0}
 .media-stat{padding:40px;text-align:center;border-right:1px solid rgba(255,255,255,.06);transition:background .3s}
 .media-stat:last-child{border:none}
 .media-stat:hover{background:rgba(255,255,255,.03)}
 .media-stat-num{font-family:var(--font);font-size:52px;color:var(--green);line-height:1;margin-bottom:8px}
-.media-stat-label{font-family:var(--nav);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35)}
+.media-stat-label{font-family:var(--nav);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.72)}
 
 /* ===== ABOUT PAGE ===== */
 .mission-split{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;gap:0}
@@ -556,7 +556,7 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .mission-body h2{font-family:var(--font);font-size:clamp(22px,3vw,38px);color:#fff;text-transform:uppercase;margin-bottom:20px;line-height:1.2}
 .mission-body h2 em{color:var(--green);font-style:normal}
 .mission-body h2::after{content:'';display:block;width:90px;height:2px;background:var(--green);margin-top:14px;margin-bottom:24px}
-.mission-body p{font-size:14px;color:rgba(255,255,255,.5);line-height:1.85;margin-bottom:18px}
+.mission-body p{font-size:14px;color:rgba(255,255,255,.78);line-height:1.85;margin-bottom:18px}
 
 /* ===== TIMELINE ===== */
 .timeline{position:relative;margin:60px 0;padding:0 0 0 0}
@@ -581,7 +581,7 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .tl-item:nth-child(6) .tl-flame{animation-delay:1.75s}
 .tl-item:nth-child(7) .tl-flame{animation-delay:2.1s}
 .tl-content h3{font-family:var(--nav);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#fff;margin-bottom:8px}
-.tl-content p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.8}
+.tl-content p{font-size:13px;color:rgba(255,255,255,.78);line-height:1.8}
 
 /* ===== LEADERSHIP ===== */
 .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:56px}
@@ -593,7 +593,7 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .team-card:hover .team-avatar:not(:has(img)){background:var(--green)}.team-avatar img{filter:grayscale(100%)}.team-card:hover .team-avatar img{filter:grayscale(0%)}
 .team-name{font-family:var(--nav);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#fff;margin-bottom:4px}
 .team-title{font-size:12px;color:var(--green);font-family:var(--nav);font-weight:600;margin-bottom:10px}
-.team-bio{font-size:12px;color:rgba(255,255,255,.5);line-height:1.7}
+.team-bio{font-size:12px;color:rgba(255,255,255,.78);line-height:1.7}
 
 /* ===== RETAILERS PAGE ===== */
 .retail-why{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px}
@@ -604,7 +604,7 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .rw-icon{font-size:40px;margin-bottom:18px;display:block;transition:transform .35s}
 .rw-card:hover .rw-icon{transform:scale(1.15)}
 .rw-card h3{font-family:var(--nav);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#fff;margin-bottom:10px}
-.rw-card p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.8}
+.rw-card p{font-size:13px;color:rgba(255,255,255,.78);line-height:1.8}
 .retail-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--green);margin:0}
 .rs-item{padding:40px 20px;text-align:center;border-right:1px solid rgba(255,255,255,.2);transition:background .3s}
 .rs-item:last-child{border:none}
@@ -615,7 +615,7 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .ch-card{background:#1a1a1a;border:1px solid rgba(255,255,255,.08);padding:36px;transition:all .35s}
 .ch-card:hover{border-color:var(--green);transform:translateX(6px);box-shadow:0 8px 32px rgba(0,0,0,.15)}
 .ch-card h3{font-family:var(--font);font-size:22px;color:#fff;text-transform:uppercase;margin-bottom:12px}
-.ch-card p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:16px}
+.ch-card p{font-size:13px;color:rgba(255,255,255,.78);line-height:1.8;margin-bottom:16px}
 
 /* ===== CONTACT PAGE ===== */
 .contact-channels{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:80px}
@@ -655,9 +655,9 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .doc-card:hover::before{transform:scaleX(1)}
 .doc-type{font-family:var(--nav);font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);border:1px solid rgba(0,0,0,.15);padding:3px 10px;display:inline-block;margin-bottom:14px}
 .doc-card h3{font-family:var(--font);font-size:20px;color:#fff;text-transform:uppercase;margin-bottom:10px;line-height:1.1}
-.doc-card p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.75;margin-bottom:20px}
+.doc-card p{font-size:13px;color:rgba(255,255,255,.76);line-height:1.75;margin-bottom:20px}
 .doc-links{display:flex;flex-direction:column;gap:8px}
-.doc-dl{display:flex;align-items:center;gap:10px;font-family:var(--nav);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.5);transition:color .25s,gap .25s;text-decoration:none}
+.doc-dl{display:flex;align-items:center;gap:10px;font-family:var(--nav);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.78);transition:color .25s,gap .25s;text-decoration:none}
 .doc-dl:hover{color:#fff;gap:14px}
 .doc-dl svg{flex-shrink:0;transition:transform .25s}
 .doc-dl:hover svg{transform:translateY(2px)}
@@ -668,7 +668,7 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .info-tile{background:#1a1a1a;padding:40px 28px;text-align:center;transition:background .3s}
 .info-tile:hover{background:#222}
 .info-tile-num{font-family:var(--font);font-size:48px;color:var(--green);line-height:1;margin-bottom:8px}
-.info-tile-label{font-family:var(--nav);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.info-tile-label{font-family:var(--nav);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.78)}
 
 /* ===== WILDLAND EXTRA SECTION ===== */
 .spec-table{width:100%;border-collapse:collapse;margin-top:32px;font-size:13px}
@@ -713,7 +713,7 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .fd-stat-row{display:flex;gap:32px;margin:28px 0;flex-wrap:wrap}
 .fd-stat{flex:1;min-width:120px}
 .fd-stat-num{font-family:var(--font);font-size:38px;color:var(--green);line-height:1;margin-bottom:4px}
-.fd-stat-lbl{font-family:var(--nav);font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.fd-stat-lbl{font-family:var(--nav);font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.74)}
 @media(max-width:768px){.fd-split,.fd-col{grid-template-columns:1fr}.fd-col{padding:48px 28px}}
 
 /* ===== RESPONSIVE ===== */
@@ -962,7 +962,7 @@ customerservice@haltfire.com
 </div>
 <div style="padding:32px">
 <h3 class="cm-title" style="font-family:var(--font);font-size:22px;color:#fff;text-transform:uppercase;margin-bottom:12px"></h3>
-<p class="cm-body" style="font-size:14px;color:rgba(255,255,255,.65);line-height:1.8;margin-bottom:24px"></p>
+<p class="cm-body" style="font-size:14px;color:rgba(255,255,255,.85);line-height:1.8;margin-bottom:24px"></p>
 <a class="cm-link" href="#" target="_blank" rel="noopener" class="btn-g" style="font-size:12px;padding:12px 24px">Learn More &rarr;</a>
 </div>
 </div>
@@ -979,7 +979,7 @@ customerservice@haltfire.com
 <p>Partner with the only NSF-certified, PFAS-free, Made-in-USA fire safety brand with proven retail velocity. High category margins. 13+ aisle placements. A product customers genuinely need, and come back to buy again.</p>
 <div class="ph-ctas">
 <a href="#r-form" class="btn-g">Apply to Carry HALT</a>
-<a href="#r-displays" class="btn-og" style="color:#fff;border-color:rgba(255,255,255,.4)">View Display Options</a>
+<a href="#r-displays" class="btn-og" style="color:#fff;border-color:rgba(255,255,255,.74)">View Display Options</a>
 </div>
 </div></div>
 </div>
@@ -1008,7 +1008,7 @@ customerservice@haltfire.com
 <div style="width:28px;height:28px;background:var(--green);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;font-weight:900;color:#000">✓</div>
 <h4 style="font-family:var(--font);font-size:20px;color:#fff;text-transform:uppercase;margin:0">Television Networks</h4>
 </div>
-<p style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.7">National and local TV spots demonstrate HALT's effectiveness and ease of use, reaching millions directly in their homes on FOX, CBS, NBC, ABC, BET, and Inside Edition.</p>
+<p style="font-size:14px;color:rgba(255,255,255,.78);line-height:1.7">National and local TV spots demonstrate HALT's effectiveness and ease of use, reaching millions directly in their homes on FOX, CBS, NBC, ABC, BET, and Inside Edition.</p>
 </div>
 </div>
 <div style="background:#111;overflow:hidden">
@@ -1018,7 +1018,7 @@ customerservice@haltfire.com
 <div style="width:28px;height:28px;background:var(--green);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;font-weight:900;color:#000">✓</div>
 <h4 style="font-family:var(--font);font-size:20px;color:#fff;text-transform:uppercase;margin:0">Digital &amp; Social Media</h4>
 </div>
-<p style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.7">Targeted ads and educational content on Facebook, Instagram, TikTok, and YouTube, enhancing fire safety knowledge and driving direct-to-shelf consumer pull.</p>
+<p style="font-size:14px;color:rgba(255,255,255,.78);line-height:1.7">Targeted ads and educational content on Facebook, Instagram, TikTok, and YouTube, enhancing fire safety knowledge and driving direct-to-shelf consumer pull.</p>
 </div>
 </div>
 <div style="background:#111;overflow:hidden">
@@ -1028,7 +1028,7 @@ customerservice@haltfire.com
 <div style="width:28px;height:28px;background:var(--green);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;font-weight:900;color:#000">✓</div>
 <h4 style="font-family:var(--font);font-size:20px;color:#fff;text-transform:uppercase;margin:0">Billboards &amp; Visual Stands</h4>
 </div>
-<p style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.7">Strategically placed out-of-home advertising drives top-of-mind awareness and category demand, capturing the public's attention and creating urgency around home fire safety.</p>
+<p style="font-size:14px;color:rgba(255,255,255,.78);line-height:1.7">Strategically placed out-of-home advertising drives top-of-mind awareness and category demand, capturing the public's attention and creating urgency around home fire safety.</p>
 </div>
 </div>
 <div style="background:#111;overflow:hidden">
@@ -1038,7 +1038,7 @@ customerservice@haltfire.com
 <div style="width:28px;height:28px;background:var(--green);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;font-weight:900;color:#000">✓</div>
 <h4 style="font-family:var(--font);font-size:20px;color:#fff;text-transform:uppercase;margin:0">Public Relations</h4>
 </div>
-<p style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.7">Collaborating with fire safety experts, influencers, and media to promote fire prevention education and product demonstrations across national outlets.</p>
+<p style="font-size:14px;color:rgba(255,255,255,.78);line-height:1.7">Collaborating with fire safety experts, influencers, and media to promote fire prevention education and product demonstrations across national outlets.</p>
 </div>
 </div>
 </div>
@@ -1079,11 +1079,11 @@ customerservice@haltfire.com
 <img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/dd0a068c-9082-683c-121c-7dc60955c460.png" style="width:100%;height:400px;object-fit:contain;object-position:center;display:block;background:#fff" alt="HALT Counter Displays">
 </div>
 <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px">
-<div style="background:var(--dark2);padding:20px 16px;text-align:center;border-top:2px solid var(--green)"><div style="font-family:var(--font);font-size:28px;color:var(--green);line-height:1;margin-bottom:6px">6 CT</div><div style="font-size:11px;color:rgba(255,255,255,.5);line-height:1.5">10oz Multi-Use<br>Aerosol Fire Spray</div></div>
-<div style="background:var(--dark2);padding:20px 16px;text-align:center;border-top:2px solid var(--green)"><div style="font-family:var(--font);font-size:28px;color:var(--green);line-height:1;margin-bottom:6px">6 CT</div><div style="font-size:11px;color:rgba(255,255,255,.5);line-height:1.5">10oz Grilling<br>Aerosol Fire Spray</div></div>
-<div style="background:var(--dark2);padding:20px 16px;text-align:center;border-top:2px solid var(--green)"><div style="font-family:var(--font);font-size:28px;color:var(--green);line-height:1;margin-bottom:6px">6 CT</div><div style="font-size:11px;color:rgba(255,255,255,.5);line-height:1.5">10oz Lithium-Ion<br>Aerosol Fire Spray</div></div>
-<div style="background:var(--dark2);padding:20px 16px;text-align:center;border-top:2px solid var(--green)"><div style="font-family:var(--font);font-size:28px;color:var(--green);line-height:1;margin-bottom:6px">12 CT</div><div style="font-size:11px;color:rgba(255,255,255,.5);line-height:1.5">3.5oz Multi-Use<br>Aerosol Fire Spray</div></div>
-<div style="background:var(--dark2);padding:20px 16px;text-align:center;border-top:2px solid var(--green)"><div style="font-family:var(--font);font-size:28px;color:var(--green);line-height:1;margin-bottom:6px">6 CT</div><div style="font-size:11px;color:rgba(255,255,255,.5);line-height:1.5">Emergency<br>Fire Blanket</div></div>
+<div style="background:var(--dark2);padding:20px 16px;text-align:center;border-top:2px solid var(--green)"><div style="font-family:var(--font);font-size:28px;color:var(--green);line-height:1;margin-bottom:6px">6 CT</div><div style="font-size:11px;color:rgba(255,255,255,.78);line-height:1.5">10oz Multi-Use<br>Aerosol Fire Spray</div></div>
+<div style="background:var(--dark2);padding:20px 16px;text-align:center;border-top:2px solid var(--green)"><div style="font-family:var(--font);font-size:28px;color:var(--green);line-height:1;margin-bottom:6px">6 CT</div><div style="font-size:11px;color:rgba(255,255,255,.78);line-height:1.5">10oz Grilling<br>Aerosol Fire Spray</div></div>
+<div style="background:var(--dark2);padding:20px 16px;text-align:center;border-top:2px solid var(--green)"><div style="font-family:var(--font);font-size:28px;color:var(--green);line-height:1;margin-bottom:6px">6 CT</div><div style="font-size:11px;color:rgba(255,255,255,.78);line-height:1.5">10oz Lithium-Ion<br>Aerosol Fire Spray</div></div>
+<div style="background:var(--dark2);padding:20px 16px;text-align:center;border-top:2px solid var(--green)"><div style="font-family:var(--font);font-size:28px;color:var(--green);line-height:1;margin-bottom:6px">12 CT</div><div style="font-size:11px;color:rgba(255,255,255,.78);line-height:1.5">3.5oz Multi-Use<br>Aerosol Fire Spray</div></div>
+<div style="background:var(--dark2);padding:20px 16px;text-align:center;border-top:2px solid var(--green)"><div style="font-family:var(--font);font-size:28px;color:var(--green);line-height:1;margin-bottom:6px">6 CT</div><div style="font-size:11px;color:rgba(255,255,255,.78);line-height:1.5">Emergency<br>Fire Blanket</div></div>
 </div>
 </div>
 
@@ -1097,9 +1097,9 @@ customerservice@haltfire.com
 <img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/0fa5671d-8d2e-81dc-140b-6ad529f6e662.png" style="width:100%;height:400px;object-fit:contain;object-position:center;display:block;background:#fff" alt="HALT Display Shippers">
 </div>
 <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px">
-<div style="background:var(--dark2);padding:28px;border-top:2px solid var(--green)"><h4 style="font-family:var(--font);font-size:20px;color:#fff;text-transform:uppercase;margin-bottom:8px">Floor Stand</h4><p style="font-size:13px;color:rgba(255,255,255,.45);line-height:1.65">40 cans or 20 cans &amp; 12 blankets. Maximum visibility for high-traffic areas.</p></div>
-<div style="background:var(--dark2);padding:28px;border-top:2px solid var(--green)"><h4 style="font-family:var(--font);font-size:20px;color:#fff;text-transform:uppercase;margin-bottom:8px">Full Side Kicks</h4><p style="font-size:13px;color:rgba(255,255,255,.45);line-height:1.65">All cans or combo with blankets. End-cap aisle placement for maximum exposure.</p></div>
-<div style="background:var(--dark2);padding:28px;border-top:2px solid var(--green)"><h4 style="font-family:var(--font);font-size:20px;color:#fff;text-transform:uppercase;margin-bottom:8px">Half Side Kicks</h4><p style="font-size:13px;color:rgba(255,255,255,.45);line-height:1.65">Cans or blankets. Compact option for tighter shelf and end-cap spaces.</p></div>
+<div style="background:var(--dark2);padding:28px;border-top:2px solid var(--green)"><h4 style="font-family:var(--font);font-size:20px;color:#fff;text-transform:uppercase;margin-bottom:8px">Floor Stand</h4><p style="font-size:13px;color:rgba(255,255,255,.76);line-height:1.65">40 cans or 20 cans &amp; 12 blankets. Maximum visibility for high-traffic areas.</p></div>
+<div style="background:var(--dark2);padding:28px;border-top:2px solid var(--green)"><h4 style="font-family:var(--font);font-size:20px;color:#fff;text-transform:uppercase;margin-bottom:8px">Full Side Kicks</h4><p style="font-size:13px;color:rgba(255,255,255,.76);line-height:1.65">All cans or combo with blankets. End-cap aisle placement for maximum exposure.</p></div>
+<div style="background:var(--dark2);padding:28px;border-top:2px solid var(--green)"><h4 style="font-family:var(--font);font-size:20px;color:#fff;text-transform:uppercase;margin-bottom:8px">Half Side Kicks</h4><p style="font-size:13px;color:rgba(255,255,255,.76);line-height:1.65">Cans or blankets. Compact option for tighter shelf and end-cap spaces.</p></div>
 </div>
 </div>
 </div>
@@ -1147,7 +1147,7 @@ customerservice@haltfire.com
 <div class="con" style="text-align:center">
 <span class="eyebrow" style="display:block;margin-bottom:12px">National Media</span>
 <h2 style="font-family:var(--font);font-size:clamp(28px,3.5vw,44px);color:#fff;text-transform:uppercase;margin-bottom:12px;line-height:1.1">As Seen <em>On</em></h2>
-<p style="font-size:14px;color:rgba(255,255,255,.4);max-width:480px;margin:0 auto 48px;line-height:1.7">HALT has been featured nationally across broadcast, print, and digital media, driving brand awareness and consumer pull directly into your store.</p>
+<p style="font-size:14px;color:rgba(255,255,255,.74);max-width:480px;margin:0 auto 48px;line-height:1.7">HALT has been featured nationally across broadcast, print, and digital media, driving brand awareness and consumer pull directly into your store.</p>
 <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;max-width:980px;margin:0 auto">
 <div style="background:#fff;height:76px;display:flex;align-items:center;justify-content:center;padding:12px 16px"><img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/1934fabc-3274-3e07-e1a9-894e1766c10f.png" alt="FOX News" style="max-width:100%;max-height:46px;object-fit:contain"></div>
 <div style="background:#fff;height:76px;display:flex;align-items:center;justify-content:center;padding:12px 16px"><img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/9a1157c4-ae77-930e-b45f-ed4b117f11ca.png" alt="CBS" style="max-width:100%;max-height:46px;object-fit:contain"></div>
@@ -1291,7 +1291,7 @@ customerservice@haltfire.com
 <div class="f-copy">&copy; 2026 Prime Safety US Inc. &amp; HALT Industrial. All rights reserved. HALT Fire&reg; is a registered trademark. PFAS-free. Made in USA.</div>
 <div class="f-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div>
 </div>
-<div class="f-attrib" style="text-align:center;padding-top:16px;font-size:12px;color:rgba(255,255,255,.25)">Digital by <a href="https://syntrexio.com" style="color:rgba(255,255,255,.25);text-decoration:none">Syntrex</a></div>
+<div class="f-attrib" style="text-align:center;padding-top:16px;font-size:12px;color:rgba(255,255,255,.66)">Digital by <a href="https://syntrexio.com" style="color:rgba(255,255,255,.66);text-decoration:none">Syntrex</a></div>
 </div>
 </footer>
 <script>
