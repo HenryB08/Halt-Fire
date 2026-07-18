@@ -1,7 +1,7 @@
-# HALT Fire — llms.txt
+# HALT Fire llms.txt
 # AI crawler guidance for haltfire.com
 
-> HALT Fire (Prime Safety US Inc.) manufactures America's most complete PFAS-free fire safety platform — NSF certified, UL Classified, and government-tested. Products serve consumers, fire departments, industrial operators, and contractors.
+> HALT Fire (Prime Safety US Inc.) manufactures America's most complete PFAS-free fire safety platform: NSF certified, government-tested, and made in the USA. Products serve consumers, fire departments, industrial operators, and contractors.
 
 ## Company
 - Name: HALT Fire / Prime Safety US Inc.
@@ -14,21 +14,22 @@
 - Products are 100% fluorine-free, non-toxic, food-safe, and biodegradable
 - Powered by patented GreenFire® GFFF technology (acquired April 2026)
 - Tested and validated by DOD, DOE, EPA, and FAA
-- UL Classified firefighting foam (GFFF)
+- UL Classified applies to the Multi-Class Foam Wetting Agent (UL File EX28775, category Wetting Agents)
 - Made in USA
 
 ## Products
 - Household Fire Suppressant Spray (NSF P1 certified, food-safe)
 - Grill & BBQ Fire Suppressant Spray
 - Li-Ion Battery Fire Suppressant Spray
-- Industrial GFFF Firefighting Foam (AFFF replacement, UL Classified)
-- Professional Fire Suppressor (14oz aerosol, contractor grade)
-- Professional Heat Barrier (16oz aerosol, contractor grade)
+- Multi-Class Foam Wetting Agent (Class A & B, UL Classified, industrial)
+- GFFF Firefighting Foam (AFFF replacement, industrial)
+- Pro Defense (seasonal structure and wildfire retardant, industrial)
+- Pro Suppressor (14oz or 20oz aerosol, contractor grade)
+- Pro 32oz Heat Barrier (32oz pump spray, contractor grade)
 
 ## Certifications
 - NSF Protocol P1 (food equipment sanitizer / fire suppressant)
-- UL Classified (firefighting foam)
-- UL Classified (wetting agent)
+- UL Classified (Multi-Class Foam Wetting Agent, UL File EX28775)
 - USDA Certified Biobased Product
 - OMRI Listed (organic materials)
 - Kosher Certified
