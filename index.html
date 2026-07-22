@@ -294,6 +294,17 @@ button{cursor:pointer}
 .plcard h3{font-family:var(--font);font-size:22px;color:#fff;text-transform:uppercase;line-height:1;margin-bottom:8px}
 .plcard p{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:10px}
 .plcard-sz{font-family:var(--nav);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--lt)}
+/* consumer product cards (homepage) - vertical cards so full lifestyle images show */
+.cons-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.cons-card{background:#1a1a1a;border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;overflow:hidden;transition:border-color .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease)}
+.cons-card:hover{border-color:var(--green);transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,.28)}
+.cons-card-img{background:#111;border-bottom:1px solid rgba(255,255,255,.06);padding:22px;height:250px;display:flex;align-items:center;justify-content:center}
+.cons-card-img img{width:100%;height:100%;object-fit:contain;object-position:center;display:block}
+.cons-card-body{padding:26px 26px 30px;display:flex;flex-direction:column;flex:1}
+.cons-card h3{font-family:var(--font);font-size:22px;color:#fff;text-transform:uppercase;line-height:1;margin-bottom:8px}
+.cons-card p{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:10px}
+.cons-shop{font-family:var(--nav);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--green);display:inline-block;margin-top:auto;padding-top:14px}
+@media(max-width:820px){.cons-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}}
 
 /* ===== DUAL PANEL ===== */
 .dual{display:grid;grid-template-columns:1fr 1fr}
@@ -1094,30 +1105,36 @@ NEXT
 <h2 id="cons-prod-heading">Fire Protection for <em>Every Room</em></h2>
 <p class="lead">HALT consumer sprays cover kitchen fires, grill flare-ups, and lithium-ion battery emergencies. Compact, easy to store, easy to find.</p>
 </div>
-<div class="stagger" style="max-width:760px;margin:0 auto">
-<div class="plcard" style="position:relative;overflow:hidden;padding-right:170px">
-<img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/20229163-fe35-bac1-02b4-6c9e3667b0ff.png" alt="HALT! Household fire suppression spray" style="position:absolute;right:0;top:0;bottom:0;height:100%;width:160px;object-fit:contain;object-position:center right;pointer-events:none;display:block">
+<div class="cons-grid stagger">
+<div class="cons-card">
+<div class="cons-card-img"><img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/20229163-fe35-bac1-02b4-6c9e3667b0ff.png" alt="HALT! Household fire suppression spray"></div>
+<div class="cons-card-body">
 <span class="plcard-label">Household Fires</span>
 <h3>HALT! Household</h3>
 <p>The original HALT fire spray for kitchens, living rooms, garages, and vehicles. Aim, squeeze, sweep, fire out. Safe around children, pets, and food.</p>
 <div class="plcard-sz">Available: 10oz &middot; 4-Pack &middot; 8-Pack</div>
-<a href="https://get.haltfire.com" target="_blank" rel="noopener" style="font-family:var(--nav);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--green);display:inline-block;margin-top:12px">Shop Now &rarr;</a>
+<a href="https://get.haltfire.com" target="_blank" rel="noopener" class="cons-shop">Shop Now &rarr;</a>
 </div>
-<div class="plcard" style="position:relative;overflow:hidden;padding-right:170px">
-<img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/b11375d1-f8e9-d4eb-03d3-9a4ea0549139.png" alt="HALT! Grill fire suppression spray" style="position:absolute;right:0;top:0;bottom:0;height:100%;width:160px;object-fit:contain;object-position:center right;pointer-events:none;display:block">
+</div>
+<div class="cons-card">
+<div class="cons-card-img"><img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/b11375d1-f8e9-d4eb-03d3-9a4ea0549139.png" alt="HALT! Grill fire suppression spray"></div>
+<div class="cons-card-body">
 <span class="plcard-label">Grill Fires</span>
 <h3>HALT! Grill</h3>
 <p>Engineered for outdoor cooking, grease flare-ups, fat fires, and charcoal emergencies. NSF certified food-safe formula. No residue on your food or grill.</p>
 <div class="plcard-sz">Available: 10oz &middot; 2-Pack</div>
-<a href="https://get.haltfire.com" target="_blank" rel="noopener" style="font-family:var(--nav);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--green);display:inline-block;margin-top:12px">Shop Now &rarr;</a>
+<a href="https://get.haltfire.com" target="_blank" rel="noopener" class="cons-shop">Shop Now &rarr;</a>
 </div>
-<div class="plcard" style="position:relative;overflow:hidden;padding-right:170px">
-<img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/27e01652-61e0-80d4-c885-9484f7ec5f6e.png" alt="HALT! Li-Ion battery fire suppression spray" style="position:absolute;right:0;top:0;bottom:0;height:100%;width:160px;object-fit:contain;object-position:center right;pointer-events:none;display:block">
+</div>
+<div class="cons-card">
+<div class="cons-card-img"><img loading="lazy" decoding="async" src="https://mcusercontent.com/d9f0645acdcd85eb1ee1a8067/images/27e01652-61e0-80d4-c885-9484f7ec5f6e.png" alt="HALT! Li-Ion battery fire suppression spray"></div>
+<div class="cons-card-body">
 <span class="plcard-label">Lithium-Ion Fires</span>
 <h3>HALT! Li-Ion</h3>
 <p>Purpose-built for lithium-ion battery fires, laptops, e-bikes, power tools, and electric vehicles. Stops thermal runaway in its tracks. The only consumer product of its kind.</p>
 <div class="plcard-sz">Available: 10oz &middot; 2-Pack</div>
-<a href="https://get.haltfire.com" target="_blank" rel="noopener" style="font-family:var(--nav);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--green);display:inline-block;margin-top:12px">Shop Now &rarr;</a>
+<a href="https://get.haltfire.com" target="_blank" rel="noopener" class="cons-shop">Shop Now &rarr;</a>
+</div>
 </div>
 </div>
 <div style="text-align:center;margin-top:36px">
