@@ -744,7 +744,7 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 }
 @media(max-width:768px){
 .topbar-left{display:none}
-.ph{margin-top:150px;height:55vh}
+.ph{margin-top:110px;height:auto;min-height:55vh}
 .split,.tox-grid,.contact-grid,.dual,.news-feat,.mission-split,.vs-split,.fire-triangle,.chem-chart,.cert-grid,.press-grid,.rev-grid,.steps-grid,.retail-why,.contact-channels,.channels-grid,.ql-grid{grid-template-columns:1fr}
 .split.rev{direction:ltr}
 .div-grid{grid-template-columns:1fr}
@@ -765,8 +765,10 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 .vs-split,.news-feat{grid-template-columns:1fr}
 .nav-inner{padding:0 20px;height:76px}
 .nav-logo img{height:auto;width:160px;max-height:68px}
-.ph{margin-top:150px}
-.hero-content{padding-top:90px}
+.ph{margin-top:110px}
+.hero{height:auto;min-height:100vh}
+.hero-content{position:relative;inset:auto;z-index:2;align-items:flex-start;padding-top:130px;padding-bottom:60px}
+.phc{position:relative;inset:auto;z-index:2;align-items:flex-start;padding-top:40px;padding-bottom:56px}
 .sec{padding:80px 0}
 .docs-grid,.info-tiles{grid-template-columns:1fr!important}
 .spec-table td:first-child{width:140px}
@@ -833,7 +835,7 @@ footer{background:#050505;padding:72px 0 0;color:#fff}
 @media(max-width:768px){
 .nav-inner{grid-template-columns:1fr auto;height:70px;padding:0 16px}
 .nav-logo img{height:56px!important}
-.ph{margin-top:150px}
+.ph{margin-top:110px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}}
 /* ===== MOBILE POLISH (appended, mobile-only overrides) ===== */
