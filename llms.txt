@@ -27,6 +27,11 @@
 - Pro Suppressor (14oz or 20oz aerosol, contractor grade)
 - Pro 32oz Heat Barrier (32oz pump spray, contractor grade)
 
+## Documentation
+- Safety Data Sheets (SDS), product brochures, and cut sheets are collected at https://haltfire.com/sds.html
+- Documents currently carry GreenFire® branding; HALT-branded revisions are in progress
+- SDS requests and documents not available for download: Sales@haltfire.com
+
 ## Certifications
 - NSF Protocol P1 (food equipment sanitizer / fire suppressant)
 - UL Classified (Multi-Class Foam Wetting Agent, UL File EX28775)
@@ -40,6 +45,7 @@
 - Home Use: https://haltfire.com/consumer.html
 - Industrial: https://haltfire.com/industrial.html
 - Contractors: https://haltfire.com/professional.html
+- SDS & Technical Documents: https://haltfire.com/sds.html
 - The Science: https://haltfire.com/science.html
 - About: https://haltfire.com/about.html
 - Retailers: https://haltfire.com/retailers.html
