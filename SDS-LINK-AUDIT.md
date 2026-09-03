@@ -12,7 +12,7 @@ These files were opened and their Section 1 Product Identifier read by R&D. Trea
 
 | Product | Canonical SDS URL | Product Identifier printed inside | Revision |
 |---|---|---|---|
-| Multi-Class Foam Wetting Agent | `https://haltfire.com/MFWA-SDS-2026.pdf` | unverified — see OUTSTANDING | 2026 |
+| Multi-Class Foam Wetting Agent | `https://haltfire.com/MFWA-SDS-2026.pdf` | **GreenFire® Multiclass Foam Wetting Agent – Standard Usage** (manually verified — see status section) | January 2026 |
 | GFFF Firefighting Foam | `…/2026/01/GFFF-StandardUsage-SDS.pdf` | GreenFire® Firefighting Foam (GFFF) – Standard Usage | January 2026 |
 | Pro Defense | `…/2024/03/ProDefense-SDS.pdf` | GreenFire® Pro Defense | February 2024 |
 | Pro Fire Suppressor | `…/2024/04/FireSuppressor-SDS.pdf` | GreenFire® Fire Suppressor | February 2024 |
@@ -136,15 +136,91 @@ Both product pages that carry an upper spec-card block **and** a lower doc-card 
 ## Orphans & coverage
 
 - **Repo-hosted PDFs, both linked:** `MFWA-SDS-2026.pdf` (industrial/firedept/sds), `SJFD-MCWA-Training-2026.pdf` (sds). No orphaned repo PDFs.
-- **Products with no SDS linked anywhere:** the three consumer sprays — **HALT! Household 10 oz, Grill 10 oz, Li-Ion 10 oz** — still show "SDS on request: Sales@haltfire.com" on sds.html. **No consumer SDS exists in the registry or repo.** Left untouched (per the hard constraint: do not invent a link). Flagged for R&D/marketing to supply.
+- **Products with no SDS linked anywhere:** the three consumer sprays — see the dedicated **PRODUCTS WITH NO SDS ON FILE** section below.
 
 ---
 
-## OUTSTANDING — manual check required (Task 5, egress-blocked)
+## Verification status of registry documents (updated — final pass 2026-09-03)
 
-The sandbox cannot reach these; a human must open them and confirm:
+Both former OUTSTANDING items are now closed. **Zero OUTSTANDING verification items remain.**
 
-1. **`https://haltfire.com/MFWA-SDS-2026.pdf`** — confirm the Section 1 Product Identifier reads as the Multi-Class Foam Wetting Agent (or legacy "GreenFire® Wetting Agent") and record the exact revision date. *(Currently labeled "Rev. 2026" from the registry; the identifier is the one field R&D marked unverified.)*
-2. **`https://gogreenfire.com/wp-content/uploads/2024/04/GFFF-SDS.pdf`** — confirm whether it resolves at all and what product it identifies as. *(This older GFFF SDS has been removed from the site in favor of the Jan 2026 revision; verification is only to close the loop on the legacy file — no site link depends on it any longer.)*
+| Document | Status | Detail |
+|---|---|---|
+| `https://haltfire.com/MFWA-SDS-2026.pdf` | ✅ **VERIFIED (manual)** | Opened and read by a human (not fetchable from this sandbox — egress blocked). Product Identifier: **GreenFire® Multiclass Foam Wetting Agent – Standard Usage**. Manufacturer: **Halt Industrial, Inc., 513 Main Street, Windermere, FL 34786**. Revision: **January 2026**. Branding: **HALT-branded** (HALT logo, haltfire.com footer) — this document has already been rebranded, unlike the GreenFire-branded documents. Hazard Statements: **None**. |
+| `https://gogreenfire.com/wp-content/uploads/2024/04/GFFF-SDS.pdf` | ⛔ **SUPERSEDED — NO LONGER REFERENCED** | Every reference was removed in the prior pass (replaced by the Jan 2026 GFFF SDS). Repo-wide grep confirms **0 references in any HTML page** (only mentions remaining are inside this report and the git history). No site link depends on it; no further verification needed. |
 
-Neither was marked verified. No link was pointed at an unverified/dead file.
+> **Note on MFWA-SDS-2026.pdf revision label:** the SDS prints its revision as **January 2026**. The on-page button label currently reads "Download SDS (PDF) — Rev. 2026". The label is a *year* and is not wrong, but a follow-up could tighten it to "Rev. January 2026" to match the document exactly. Not changed in this pass (label-only, no functional impact; noted for completeness).
+
+---
+
+## PRODUCTS WITH NO SDS ON FILE  *(report only — route to R&D)*
+
+The following products have **no Safety Data Sheet anywhere** — not in the repo, not on `haltfire.com`, and not on `gogreenfire.com`. They are sold through **retail and Amazon**.
+
+| Product | Division | SDS status |
+|---|---|---|
+| **HALT! Household (10 oz)** | Consumer | **No SDS on file.** None exists in the repo or on either domain. |
+| **HALT! Grill (10 oz)** | Consumer | **No SDS on file.** None exists in the repo or on either domain. |
+| **HALT! Li-Ion (10 oz)** | Consumer | **No SDS on file.** None exists in the repo or on either domain. |
+
+On `sds.html` these three show a plain-text **"SDS on request: Sales@haltfire.com"** — **no placeholder link, no substituted document**. Creating or substituting an SDS for these is out of scope and must not be done automatically; this is for a human to route to R&D so the correct consumer SDS documents can be produced and supplied.
+
+---
+
+## NAMING / SPEC DISCREPANCIES  *(report only — do NOT change; require R&D sign-off)*
+
+Nothing below was edited. Product names, spec values, and claim text were left exactly as-is.
+
+**1. "Multiclass" (one word, in the SDS) vs "Multi-Class" (hyphenated, on the site).**
+The verified SDS inside `MFWA-SDS-2026.pdf` prints the product name as **"GreenFire® Multiclass Foam Wetting Agent – Standard Usage"** — *Multiclass*, one word. The website uses **"Multi-Class Foam Wetting Agent"** (hyphenated) throughout (industrial.html, firedept.html, sds.html, index.html, llms.txt, etc.). The document and the site disagree on the product's own name. R&D to decide the canonical spelling.
+
+**2. pH value — the SDS single value vs the on-site ranges, which also disagree with each other.**
+The verified SDS lists pH as a **single value of 6.8**. The site states a *range* for the same product (Multi-Class Foam Wetting Agent), and the two product pages do **not** agree:
+
+| Page | Product | pH stated on page |
+|---|---|---|
+| `firedept.html` (line 1175) | Multi-Class Foam Wetting Agent | **6.8 – 7.4** |
+| `industrial.html` (line 1304) | Multi-Class Foam Wetting Agent | **6.8 – 7.6** |
+| `MFWA-SDS-2026.pdf` (SDS) | Multiclass Foam Wetting Agent | **6.8** (single value) |
+
+So there are **three different pH representations** for this one product. *(For reference, GFFF's pH is a consistent 6.8 – 7.6 on both industrial.html:1355 and firedept.html:1199 — not part of this discrepancy.)* R&D to reconcile the MCFWA pH across the SDS and both pages. **No spec value was changed.**
+
+---
+
+## FINAL STATUS (final pass)
+
+| Item | Status | Notes |
+|---|---|---|
+| All SDS links resolve to the correct product | ✅ **COMPLETE** | Per the R&D-verified registry; each of the 5 products maps to exactly one SDS URL site-wide. |
+| All SDS links return HTTP 200 | ⛔ **BLOCKED** | Cannot be verified — sandbox egress to `haltfire.com`/`gogreenfire.com` is blocked (403 / HTTP 000), re-tested this pass. No HTTP 200 was observed for any external URL; none is claimed. Requires a human on an open network (Task 4). |
+| All documents self-hosted, zero gogreenfire.com dependencies | ⛔ **BLOCKED** | Migration (Task 2) requires downloading the files, which egress blocks. **41 gogreenfire.com assets remain hot-linked** (11 PDFs + 30 images — full list below). Not attempted; nothing rewritten to a local path that could not be downloaded. |
+| Zero OUTSTANDING verification items | ✅ **COMPLETE** | MFWA-SDS-2026.pdf verified (manual); 2024/04/GFFF-SDS.pdf reclassified SUPERSEDED — no longer referenced. |
+| Consumer SDS gap documented | ✅ **COMPLETE** | See *PRODUCTS WITH NO SDS ON FILE* above. |
+| Naming discrepancies documented | ✅ **FLAGGED FOR R&D** | "Multiclass" vs "Multi-Class"; MCFWA pH (SDS 6.8 vs firedept 6.8–7.4 vs industrial 6.8–7.6). |
+
+---
+
+## TASK 2 (BLOCKED) — gogreenfire.com asset migration inventory
+
+**Not performed — sandbox egress is blocked.** The files cannot be downloaded, so none could be verified (HTTP 200 + magic-byte check) or committed to `/docs//img`, and no reference was rewritten (rewriting to a local path for a file that could not be downloaded would create a broken link). This is the largest outstanding risk: one file on this third-party host (`WettingAgent-SDS.pdf`) was already deleted out from under the site, causing three dead buttons; any of the below can vanish the same way.
+
+Complete inventory to migrate once run from an environment with outbound access to `gogreenfire.com` (preserve original filenames; PDFs → `/docs/`, images → `/img/`):
+
+**PDFs (11):**
+- `2021/04/UTILITY-CONTRACTOR-INFORMATION.pdf`
+- `2022/08/GFFF-Brochure-1-07.pdf`
+- `2022/08/ProDefense-Brochure-FINAL.July-2022.pdf`
+- `2022/08/WettingAgent-Brochure-1-07.pdf`
+- `2022/08/WettingAgent-Brochure-Onepage-1-07-1.pdf`
+- `2023/04/GF_FireSuppressor_bro_final.pdf`
+- `2023/04/GF_HeatBarrier_bro_final.pdf`
+- `2024/03/HeatBarrier-SDS.pdf`
+- `2024/03/ProDefense-SDS.pdf`
+- `2024/04/FireSuppressor-SDS.pdf`
+- `2026/01/GFFF-StandardUsage-SDS.pdf`
+
+**Images (30):** product/hazard-icon and certification-logo assets plus hero/section photography — `non-toxic.png`, `non-carcinogenic.png`, `eco.png`, `easy-clean.png`, `non-corrosive.png`, `surface-angle.png`, `not-evaporate.png`, `food-safe.png`, `forest-1500x843.jpg`, `FD-ENGINE-920x400-1-1500x843.jpg`, `helmuts-1500x843.png`, `9623-…-1500x843.jpg`, `Picture6-1500x843.png`, `UTILITY-2-1500x843.jpeg`, `firefighter-fire-firefighting-A5P7EBD-1500x843.jpg`, `AdobeStock_223068772-1500x843.jpeg`, `AdobeStock_392851313-…-1300x867.jpeg`, `Crib-Fire-Test-1500x844.jpg`, `earrth-dewdrop-…-1500x1250.jpeg`, `Fire-Fighting-Foam-Toxicity-1500x1250.png`, `GReenFire-Fire-Supression-truck-1.jpeg`, `GreenFire-Fire-Prevention-Slider-1.jpeg`, `GreenFire-Fire-Prevention-Slider-utility-1.jpeg`, `GreenFire-Fire-Supression-Slider1-1.jpeg`, `omri-listed-logo.jpg`, `greenscreen-certified-logo_400_400_s-…950.png`, `DM-REV-1-NSF-LOGO-P1-…397.png`, `USA.png`, `GreenFire_UL_Classified.jpeg`, `NFPA-Badge.png`.
+
+**Zero non-asset gogreenfire.com links** exist in the repo — i.e. there is no legitimate "link to the old site" to preserve; every gogreenfire.com reference is an asset that should be migrated.
+
+*(Also worth migrating in the same pass, though outside the strict gogreenfire scope: 38 `mcusercontent.com` and 11 `cdn.prod.website-files.com` asset references — logos, favicons, and icons on third-party CDNs.)*

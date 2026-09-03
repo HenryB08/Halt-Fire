@@ -61,21 +61,17 @@ Desktop nav was intentionally **not** modified (8 items already; adding a 9th wo
 
 ## PRIORITY 2 — Asset migration ⛔ Blocked (not done)
 
-**Not executed** — egress is blocked, so no `gogreenfire.com` PDF or image could be downloaded, verified, or committed. No reference rewrites were made (rewriting to local paths without the files would create broken links).
+**Still not executed — re-confirmed BLOCKED on the final pass (2026-09-03).** Egress to `gogreenfire.com`/`haltfire.com` is blocked (403 CONNECT / HTTP 000), re-tested with `curl -sSI` this pass. No `gogreenfire.com` PDF or image could be downloaded, so none could be verified (HTTP 200 + magic-byte check) or committed, and no reference was rewritten (rewriting to a local path for a file that could not be downloaded would create a broken link). This remains the single largest release risk — one file on that third-party host (`WettingAgent-SDS.pdf`) was already deleted out from under the live site.
 
-**Inventory prepared for a follow-up run in an egress-enabled environment.** Every unique off-repo asset host currently referenced:
+**Complete migration inventory: 41 assets (11 PDFs + 30 images).** Full enumerated list is in **SDS-LINK-AUDIT.md → TASK 2 (BLOCKED)**. **Zero non-asset gogreenfire.com links** exist — there is no legitimate "link to the old site" to preserve; every reference is a migratable asset. Convention for the follow-up run: PDFs → `/docs/`, images → `/img/`, preserve original filenames.
 
 | Host | Refs | Notes |
 |---|---|---|
-| `gogreenfire.com` | 40 | **Migration target** — legacy PDFs + product images. |
-| `mcusercontent.com` | 38 | Mailchimp CDN — logo & favicons. Consider migrating too. |
+| `gogreenfire.com` | 41 unique assets (11 PDF + 30 img) | **Migration target** — blocked by egress. |
+| `mcusercontent.com` | 38 | Mailchimp CDN — logo & favicons. Migrate in the same pass. |
 | `cdn.prod.website-files.com` | 11 | Webflow CDN — icon SVGs. |
-| `haltfire.com` | 14 | Self-references + 2 already-self-hosted PDFs (the intended end-state pattern). |
-| `get.haltfire.com` | 3 | Shopify storefront (out of scope). |
-
-Unique `gogreenfire.com` **PDF** URLs to migrate (15 total incl. 2 already self-hosted on haltfire.com) are enumerated in SDS-LINK-AUDIT.md §1. **Their HTTP status is UNVERIFIED.**
-
-**Recommendation:** run the crawl/download/verify/commit/rewrite step from an environment with outbound access to `gogreenfire.com`; keep the established convention (self-host under `haltfire.com/` root, as `MFWA-SDS-2026.pdf` already demonstrates).
+| `haltfire.com` | self-refs + 2 self-hosted PDFs | The intended end-state pattern (`MFWA-SDS-2026.pdf`, `SJFD-MCWA-Training-2026.pdf`). |
+| `get.haltfire.com` | 3 | Shopify storefront — **out of scope, not touched.** |
 
 ---
 
@@ -171,4 +167,19 @@ Method: static parse of all 14 HTML files — every internal `href`, every `#anc
 ---
 
 ## Companion deliverable
-- **SDS-LINK-AUDIT.md** — per-link table (page, product heading, link text, URL, printed identifier [UNVERIFIABLE — egress], revision date [UNVERIFIABLE — egress], filename-vs-heading signal), cross-page consistency, products with no SDS, unlinked repo PDFs. **Report only — no links changed.**
+- **SDS-LINK-AUDIT.md** — the authoritative SDS document report: R&D-verified registry, before/after of every link corrected, full post-correction inventory, cross-page consistency (now all single-URL per product), the *PRODUCTS WITH NO SDS ON FILE* section, the naming/pH discrepancies for R&D, and the blocked Task 2 migration inventory.
+
+---
+
+## FINAL STATUS (final pass, 2026-09-03)
+
+| Item | Status | Notes |
+|---|---|---|
+| All SDS links resolve to the correct product | ✅ **COMPLETE** | Per R&D-verified registry; 5 products → exactly one SDS URL each, site-wide. |
+| All SDS links return HTTP 200 | ⛔ **BLOCKED** | Sandbox egress blocked (403 / HTTP 000), re-tested this pass. No external HTTP 200 observed; none claimed. Needs a human on an open network. |
+| All documents self-hosted, zero gogreenfire.com dependencies | ⛔ **BLOCKED** | 41 gogreenfire.com assets (11 PDF + 30 img) still hot-linked; migration needs egress. Inventory in SDS-LINK-AUDIT.md. |
+| Zero OUTSTANDING verification items | ✅ **COMPLETE** | `MFWA-SDS-2026.pdf` verified (manual, HALT-branded, Rev. January 2026); `2024/04/GFFF-SDS.pdf` reclassified SUPERSEDED — no references remain (grep-confirmed). |
+| Consumer SDS gap documented | ✅ **COMPLETE** | Household / Grill / Li-Ion 10 oz — no SDS on file; sold via retail & Amazon; routed to R&D. No placeholder created. |
+| Naming discrepancies documented | ✅ **FLAGGED FOR R&D** | "Multiclass" (SDS) vs "Multi-Class" (site); MCFWA pH — SDS **6.8**, firedept.html **6.8–7.4**, industrial.html **6.8–7.6**. No text changed. |
+
+**Constraints honored this pass:** no product / certification / performance / hazard / spec text altered (URLs and file locations only); no document link invented, substituted, or guessed; GreenFire branding left intact (and `MFWA-SDS-2026.pdf`'s HALT branding left intact — both correct); "UL Classified" / "NSF White Book" / "GreenFire" wording untouched; `get.haltfire.com` not touched; work pushed to the PR #85 branch, **not merged**.
