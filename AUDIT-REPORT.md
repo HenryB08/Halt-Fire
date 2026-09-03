@@ -42,7 +42,7 @@ Everything internal to the repo **was** verified.
 - **Intro** notes documents currently carry **GreenFire®** branding (one word, ® on first use) and that HALT-branded revisions are in progress.
 - **Plain-text contact line** to `Sales@haltfire.com` for documents not available for download.
 - **Meta:** self-referencing canonical, full OG (`og:url`, `og:image`, `og:site_name`, `og:locale`) and Twitter tags, unique title + description. JSON-LD (`WebPage` + `BreadcrumbList`) parses valid.
-- **Honest omissions:** Pro Defense SDS and all consumer SDS are shown as "SDS on request" rather than linked, because the correct Pro Defense SDS is unresolved (three conflicting URLs) and no consumer SDS exists in the repo. See SDS-LINK-AUDIT.md.
+- **Document links (second pass):** Following R&D's verified registry, the **Pro Defense SDS is now linked** on sds.html (`2024/03/ProDefense-SDS.pdf`, Feb 2024) and every SDS entry shows its revision date as visible text (e.g. "Download SDS (PDF) — Rev. February 2024"). The three **consumer** products still show "SDS on request: Sales@haltfire.com" because no consumer SDS exists in the registry or repo. See SDS-LINK-AUDIT.md for the full corrected mapping.
 
 ### Wired into the site
 | Wiring task | Status |
@@ -79,13 +79,21 @@ Unique `gogreenfire.com` **PDF** URLs to migrate (15 total incl. 2 already self-
 
 ---
 
-## PRIORITY 3 — Link discrepancies (flag, do not resolve)
+## PRIORITY 3 — Link discrepancies
+
+> **Update (2026-09-03, second pass):** The Pro Defense and GFFF discrepancies below were originally *flagged* pending R&D. R&D (Brandon Miller) has since supplied a verified document registry, and the corrections have now been **applied** in this same PR. See **SDS-LINK-AUDIT.md** for the authoritative registry and the full before/after.
 
 | # | Discrepancy | Status |
 |---|---|---|
-| **1** | **Pro Defense SDS linked ≥3 ways** — `industrial.html` doc-card → `2024/03/HeatBarrier-SDS.pdf`; `industrial.html` spec table → `2024/04/WettingAgent-SDS.pdf`; `professional.html` → `2024/03/ProDefense-SDS.pdf`. | **FLAGGED** — not resolved. Full detail in SDS-LINK-AUDIT.md §2. |
-| **2** | **GFFF SDS two revisions** — `industrial.html` links both `2026/01/GFFF-StandardUsage-SDS.pdf` (doc-card) and `2024/04/GFFF-SDS.pdf` (spec table); `firedept.html` uses 2026. | **FLAGGED** — not resolved. |
-| **3** | **Use Concentration values** on `industrial.html` (you authorized a fix). Confirmed values: **MCFWA 0.1%–3%**, **GFFF 1%–3%**. | ✅ **Already correct** in the current file (industrial.html + firedept.html). No change needed — verified in place. |
+| **1** | **Pro Defense SDS linked ≥3 ways** — doc-card → `HeatBarrier-SDS.pdf`; spec table → `WettingAgent-SDS.pdf` (404); professional → `ProDefense-SDS.pdf`. | ✅ **RESOLVED** — all Pro Defense SDS links now point to the verified `2024/03/ProDefense-SDS.pdf` (Feb 2024, "GreenFire® Pro Defense"). One canonical URL site-wide. |
+| **2** | **GFFF SDS two revisions** — `industrial.html` linked both `2026/01/GFFF-StandardUsage-SDS.pdf` and `2024/04/GFFF-SDS.pdf`. | ✅ **RESOLVED** — standardized on `2026/01/GFFF-StandardUsage-SDS.pdf` (Jan 2026) everywhere; the 2024 reference removed. |
+| **3** | **Use Concentration values** — MCFWA 0.1%–3%, GFFF 1%–3%. | ✅ **Already correct** (industrial + firedept). Verified in place, no change. |
+| **+** | **Dead 404 SDS button** — `2024/04/WettingAgent-SDS.pdf` was the target of three "Download SDS Sheet" buttons (broken on the live site). | ✅ **RESOLVED** — re-pointed to the correct per-product SDS (Pro Defense / Fire Suppressor / Heat Barrier). Zero `WettingAgent-SDS` references remain. |
+| **+** | **Wrong-product links** — Pro Defense card served the Heat Barrier SDS; Heat Barrier spec card served the Fire Suppressor brochure. | ✅ **RESOLVED** per registry. |
+| **+** | **One Pro Defense product** — legacy "homeowner"/"professional" dual-label. | ✅ **RESOLVED** — "homeowner" wording removed from `professional.html`; consumer.html audience descriptor reviewed and kept (single-SKU, not a variant). |
+| **+** | **SDS button label findability** — labels varied ("Download SDS Sheet" / "Safety Data Sheet (PDF)"). | ✅ **RESOLVED** — standardized to `Download SDS (PDF) — Rev. <Month Year>` site-wide (literal "SDS" + visible revision date). |
+
+**OUTSTANDING (egress-blocked, manual check):** `haltfire.com/MFWA-SDS-2026.pdf` (confirm identifier) and `2024/04/GFFF-SDS.pdf` (confirm it resolves / what it is). Neither blocks the site; both listed in SDS-LINK-AUDIT.md.
 
 ---
 

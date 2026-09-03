@@ -1,146 +1,150 @@
-# SDS / Document Link Audit — HALT Fire
+# SDS / Document Link Audit — HALT Fire (Corrected)
 
 **Date:** 2026-09-03
-**Scope:** Every SDS, brochure, and cut-sheet (PDF) link on the site, verified against the product it is presented under.
-**Standing instruction honored:** This is a **report only**. No document link was swapped, removed, re-pointed, or "fixed." Every discrepancy below is flagged for **R&D sign-off**.
+**Supersedes:** the PR #85 version of this file (which flagged the mismatches; this version records the corrections applied against the R&D-verified registry).
+**Nature of changes:** Document **URLs** and **link labels** only. No product, certification, performance, or hazard-claim text was altered (except the single Pro Defense "homeowner" wording in Task 3).
 
 ---
 
-## ⚠️ Method limitation — PDF content could not be read
+## Verified Document Registry (authoritative — supplied by R&D, Brandon Miller)
 
-The requested method was: download each linked PDF, read **Section 1 (Identification)**, extract the printed **Product Identifier**, and compare it to the page heading.
+These files were opened and their Section 1 Product Identifier read by R&D. Treated as authoritative; **not** re-derived from filenames.
 
-**This step is physically impossible from the build sandbox.** Outbound network egress is blocked by policy for both document hosts:
-
-- `gogreenfire.com` → `EGRESS_BLOCKED` (WebFetch) / `403 CONNECT tunnel failed` (curl)
-- `haltfire.com` → `403 CONNECT tunnel failed` (curl)
-
-Re-confirmed at audit time against the live proxy (`gateway answered 403 to CONNECT — policy denial`). Both the CLI (`curl`) and the fetch tool (`WebFetch`) fail identically.
-
-**Consequence:** The **"Product Identifier inside PDF"** and **"Printed revision date"** columns cannot be filled — they are marked `UNVERIFIABLE (egress blocked)` for every row. No verdict in this report asserts a MATCH or MISMATCH on PDF *content*, because that content was never read. Fabricating those values was not an option.
-
-**What this audit *can* and *does* verify deterministically** (from the static HTML, no network needed):
-1. Full inventory of every document link (page, section, product heading, link text, target URL).
-2. **Filename-vs-heading signal** — whether the target filename is consistent with the product it sits under (filenames are known to be unreliable, so this is a *signal*, not a verdict).
-3. **Cross-page / cross-section consistency** — whether the same product links to the same document everywhere it appears.
-4. Products with **no SDS linked anywhere**.
-5. Repo-hosted PDFs **not linked from any page**.
-
-The "Filename Signal" column is the actionable output: rows marked **MISMATCH-SUSPECT** are the ones R&D should open and read first. All rows still require a human to open the PDF and confirm Section 1 before any link is changed.
-
----
-
-## 1. Full document-link inventory
-
-Verdict legend: **CONTENT = UNVERIFIABLE** on every row (egress blocked — see above). **Filename Signal** = OK (filename consistent with heading) / **MISMATCH-SUSPECT** (filename names a different product than the heading).
-
-### industrial.html
-
-| # | Product heading | Section | Link text | Target file | Printed identifier | Printed rev. date | Filename signal |
-|---|---|---|---|---|---|---|---|
-| 1 | Multi-Class Foam Wetting Agent | Technical Resources (doc-card) | Product Brochure | `2022/08/WettingAgent-Brochure-1-07.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 2 | Multi-Class Foam Wetting Agent | Technical Resources (doc-card) | One-Page Cut Sheet | `2022/08/WettingAgent-Brochure-Onepage-1-07-1.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 3 | Multi-Class Foam Wetting Agent | Technical Resources (doc-card) | Safety Data Sheet, 2026 | `haltfire.com/MFWA-SDS-2026.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK (self-hosted) |
-| 4 | Pro Defense | Technical Resources (doc-card) | Product Brochure | `2022/08/ProDefense-Brochure-FINAL.July-2022.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 5 | **Pro Defense** | Technical Resources (doc-card) | **Safety Data Sheet** | **`2024/03/HeatBarrier-SDS.pdf`** | UNVERIFIABLE | UNVERIFIABLE | **MISMATCH-SUSPECT** — filename names *Heat Barrier* (a 32 oz consumer spray), not Pro Defense |
-| 6 | Pro Defense | Technical Resources (doc-card) | Utility Contractor Info Sheet | `2021/04/UTILITY-CONTRACTOR-INFORMATION.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 7 | GFFF Firefighting Foam | Technical Resources (doc-card) | Product Brochure | `2022/08/GFFF-Brochure-1-07.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 8 | GFFF Firefighting Foam | Technical Resources (doc-card) | Safety Data Sheet, 2026 | `2026/01/GFFF-StandardUsage-SDS.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 9 | Multi-Class Foam Wetting Agent | Tech Specs table | Download …Brochure | `2022/08/WettingAgent-Brochure-1-07.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 10 | Multi-Class Foam Wetting Agent | Tech Specs table | Download SDS Sheet | `haltfire.com/MFWA-SDS-2026.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 11 | Pro Defense | Tech Specs table | Download Pro Defense Brochure | `2022/08/ProDefense-Brochure-FINAL.July-2022.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 12 | **Pro Defense** | Tech Specs table | **Download SDS Sheet** | **`2024/04/WettingAgent-SDS.pdf`** | UNVERIFIABLE | UNVERIFIABLE | **MISMATCH-SUSPECT** — filename names *Wetting Agent* (MCFWA), not Pro Defense. Also ≠ the Pro Defense SDS in row 5. |
-| 13 | GFFF Firefighting Foam | Tech Specs table | Download GFFF Brochure | `2022/08/GFFF-Brochure-1-07.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 14 | **GFFF Firefighting Foam** | Tech Specs table | **Download SDS Sheet** | **`2024/04/GFFF-SDS.pdf`** | UNVERIFIABLE | UNVERIFIABLE | Filename OK, but **REVISION CONFLICT** — 2024/04 here vs 2026/01 in row 8 on the same page. |
-
-### firedept.html
-
-| # | Product heading | Section | Link text | Target file | Printed identifier | Printed rev. date | Filename signal |
-|---|---|---|---|---|---|---|---|
-| 15 | Multi-Class Foam Wetting Agent | Specs & Downloads | Download …Brochure | `2022/08/WettingAgent-Brochure-1-07.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 16 | Multi-Class Foam Wetting Agent | Specs & Downloads | Safety Data Sheet 2026 | `haltfire.com/MFWA-SDS-2026.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 17 | GFFF Firefighting Foam | Specs & Downloads | Download GFFF Brochure | `2022/08/GFFF-Brochure-1-07.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 18 | GFFF Firefighting Foam | Specs & Downloads | Safety Data Sheet 2026 | `2026/01/GFFF-StandardUsage-SDS.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-
-### professional.html
-
-| # | Product heading | Section | Link text | Target file | Printed identifier | Printed rev. date | Filename signal |
-|---|---|---|---|---|---|---|---|
-| 19 | Pro Suppressor | Upper "Product Specs & Downloads" spec card | Download Product Brochure | `2023/04/GF_FireSuppressor_bro_final.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 20 | **Pro Suppressor** | Upper spec card | **Download SDS Sheet** | **`2024/04/WettingAgent-SDS.pdf`** | UNVERIFIABLE | UNVERIFIABLE | **MISMATCH-SUSPECT** — filename names *Wetting Agent* (MCFWA), not the Pro Suppressor aerosol. Also ≠ row 24 (`FireSuppressor-SDS.pdf`) for the same product on this same page. |
-| 21 | **Pro 32oz Heat Barrier** | Upper spec card | **Download Product Brochure** | **`2023/04/GF_FireSuppressor_bro_final.pdf`** | UNVERIFIABLE | UNVERIFIABLE | **MISMATCH-SUSPECT** — this is the *Fire Suppressor* brochure, under a Heat Barrier heading. Also ≠ row 25 (`GF_HeatBarrier_bro_final.pdf`). |
-| 22 | **Pro 32oz Heat Barrier** | Upper spec card | **Download SDS Sheet** | **`2024/04/WettingAgent-SDS.pdf`** | UNVERIFIABLE | UNVERIFIABLE | **MISMATCH-SUSPECT** — filename names *Wetting Agent* (MCFWA), not Heat Barrier. Also ≠ row 26 (`HeatBarrier-SDS.pdf`). |
-| 23 | HALT Pro Fire Suppressor | Lower "Pro Docs" doc-card | Product Brochure | `2023/04/GF_FireSuppressor_bro_final.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 24 | HALT Pro Fire Suppressor | Lower doc-card | Safety Data Sheet | `2024/04/FireSuppressor-SDS.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 25 | HALT Pro Heat Barrier | Lower doc-card | Product Brochure | `2023/04/GF_HeatBarrier_bro_final.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 26 | HALT Pro Heat Barrier | Lower doc-card | Safety Data Sheet | `2024/03/HeatBarrier-SDS.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 27 | Pro Defense (trailing "Need Pro Defense documentation?" block) | Lower doc-card footer | Pro Defense Brochure | `2022/08/ProDefense-Brochure-FINAL.July-2022.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK (block is Pro Defense, not Heat Barrier — heading proximity only) |
-| 28 | **Pro Defense** (trailing block) | Lower doc-card footer | **Pro Defense SDS** | **`2024/03/ProDefense-SDS.pdf`** | UNVERIFIABLE | UNVERIFIABLE | Filename OK — **but this is a THIRD, different Pro Defense SDS URL** vs rows 5 and 12. |
-
-### sds.html (new page — built this PR)
-
-| # | Product heading | Section | Link text | Target file | Printed identifier | Printed rev. date | Filename signal |
-|---|---|---|---|---|---|---|---|
-| 29 | Multi-Class Foam Wetting Agent | #industrial | Safety Data Sheet, 2026 | `haltfire.com/MFWA-SDS-2026.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 30 | Multi-Class Foam Wetting Agent | #industrial | Product Brochure | `2022/08/WettingAgent-Brochure-1-07.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 31 | Multi-Class Foam Wetting Agent | #industrial | One-Page Cut Sheet | `2022/08/WettingAgent-Brochure-Onepage-1-07-1.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 32 | Multi-Class Foam Wetting Agent | #industrial | SJFD Training Reference, 2026 | `haltfire.com/SJFD-MCWA-Training-2026.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 33 | GFFF Firefighting Foam | #industrial | Safety Data Sheet, 2026 | `2026/01/GFFF-StandardUsage-SDS.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK (2026 revision chosen — see note) |
-| 34 | GFFF Firefighting Foam | #industrial | Product Brochure | `2022/08/GFFF-Brochure-1-07.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 35 | Pro Defense | #industrial | Product Brochure | `2022/08/ProDefense-Brochure-FINAL.July-2022.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 36 | Pro Defense | #industrial | Utility / Contractor Info Sheet | `2021/04/UTILITY-CONTRACTOR-INFORMATION.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 37 | Pro Suppressor (14oz / 20oz) | #professional | Product Brochure | `2023/04/GF_FireSuppressor_bro_final.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 38 | Pro Suppressor (14oz / 20oz) | #professional | Safety Data Sheet | `2024/04/FireSuppressor-SDS.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK (name-matching SDS chosen, not `WettingAgent-SDS.pdf`) |
-| 39 | Heat Barrier (32oz pump spray) | #professional | Product Brochure | `2023/04/GF_HeatBarrier_bro_final.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-| 40 | Heat Barrier (32oz pump spray) | #professional | Safety Data Sheet | `2024/03/HeatBarrier-SDS.pdf` | UNVERIFIABLE | UNVERIFIABLE | OK |
-
-> **sds.html deliberately links NO Pro Defense SDS and NO consumer SDS** — because the correct Pro Defense SDS is unresolved (three conflicting URLs, see below) and no consumer SDS exists in the repo or is linked anywhere. Those cards show a plain-text "SDS on request: Sales@haltfire.com" instead of guessing. This avoids propagating a suspect link onto the new canonical documents page.
-
----
-
-## 2. Cross-page / cross-section consistency (deterministic — no PDF read needed)
-
-| Product | SDS link(s) found | Consistent? | Detail |
+| Product | Canonical SDS URL | Product Identifier printed inside | Revision |
 |---|---|---|---|
-| **MCFWA (Multi-Class Foam Wetting Agent)** | `MFWA-SDS-2026.pdf` (industrial ×2, firedept, sds) | ✅ **Consistent** | Same self-hosted 2026 SDS everywhere it is labeled as MCFWA. |
-| **GFFF** | `GFFF-StandardUsage-SDS.pdf` (2026/01) on industrial doc-card, firedept, sds **vs** `GFFF-SDS.pdf` (2024/04) on industrial specs table | ⚠️ **INCONSISTENT** | industrial.html links **two different GFFF SDS revisions** on the same page (rows 8 vs 14). firedept + sds use only 2026. **Which revision is current?** → R&D. |
-| **Pro Defense** | `HeatBarrier-SDS.pdf` (industrial doc-card, row 5) **/** `WettingAgent-SDS.pdf` (industrial specs, row 12) **/** `ProDefense-SDS.pdf` (professional, row 28) | 🔴 **THREE-WAY CONFLICT** | "Pro Defense SDS" resolves to **three different files**, none confirmed. Only `ProDefense-SDS.pdf` matches by name. → R&D must confirm the correct file, then all three call-sites should point to it. |
-| **Pro Suppressor** | `WettingAgent-SDS.pdf` (professional upper spec card, row 20) **vs** `FireSuppressor-SDS.pdf` (professional lower doc-card, row 24) | ⚠️ **INCONSISTENT** | Same product, same page, **two different SDS files**. `FireSuppressor-SDS.pdf` matches by name; `WettingAgent-SDS.pdf` is the MCFWA filename. → R&D. |
-| **Heat Barrier** | `HeatBarrier-SDS.pdf` (professional lower doc-card, row 26) **vs** `WettingAgent-SDS.pdf` (professional upper spec card, row 22) | ⚠️ **INCONSISTENT** | Same product, same page, two different SDS files; the upper card *also* uses the wrong brochure (`GF_FireSuppressor_bro_final.pdf`, row 21). → R&D. |
+| Multi-Class Foam Wetting Agent | `https://haltfire.com/MFWA-SDS-2026.pdf` | unverified — see OUTSTANDING | 2026 |
+| GFFF Firefighting Foam | `…/2026/01/GFFF-StandardUsage-SDS.pdf` | GreenFire® Firefighting Foam (GFFF) – Standard Usage | January 2026 |
+| Pro Defense | `…/2024/03/ProDefense-SDS.pdf` | GreenFire® Pro Defense | February 2024 |
+| Pro Fire Suppressor | `…/2024/04/FireSuppressor-SDS.pdf` | GreenFire® Fire Suppressor | February 2024 |
+| Heat Barrier | `…/2024/03/HeatBarrier-SDS.pdf` | GreenFire® Heat Barrier | February 2024 |
 
-> **Root pattern:** `professional.html` has an **upper "Product Specs & Downloads" spec-card block** whose SDS/brochure links (rows 19–22) point at MCFWA/Suppressor files regardless of the product heading, and a **lower "Pro Docs Downloads" doc-card block** (rows 23–26) whose links are name-consistent. The two blocks disagree for both Pro Suppressor and Heat Barrier.
+- **Superseded (removed everywhere):** `…/2022/08/ProDefense-SDS-FINAL-Aug-2022.pdf` (Aug 2022 Pro Defense, replaced by Feb 2024). *Was not referenced in the codebase; confirmed absent.*
+- **Dead / HTTP 404 (removed everywhere):** `…/2024/04/WettingAgent-SDS.pdf`.
+- **R&D confirmations applied:** there is **one** Pro Defense product (the "homeowner"/"professional" split was a legacy dual-label, not two SKUs); the **February 2024** Pro Defense SDS is current.
 
 ---
 
-## 3. Products with NO SDS linked anywhere on the site
+## HTTP status verification — could NOT be performed from this sandbox
 
-| Product | Division | SDS status |
-|---|---|---|
-| HALT! Household (10 oz) | Consumer | **No SDS linked anywhere.** No consumer SDS PDF exists in the repo. sds.html shows "SDS on request." |
-| HALT! Grill (10 oz) | Consumer | **No SDS linked anywhere.** Same as above. |
-| HALT! Li-Ion (10 oz) | Consumer | **No SDS linked anywhere.** Same as above. |
-| Pro Defense | Industrial | Has SDS *links*, but all three are suspect/conflicting (§2). Effectively **no confirmed SDS**. |
+Outbound egress remains **blocked by policy** (re-tested at the time of these edits): `haltfire.com` and `gogreenfire.com` both return `HTTP 000 / 403 CONNECT tunnel failed`. Therefore the **live HTTP status of every URL below is UNVERIFIED from here.** Status in the inventory reflects the **R&D-verified registry** (which states the 404 and the canonical 200s), not an independent request from this environment. A human on an unrestricted network should spot-check the canonical URLs.
 
-> The consumer products page (`consumer.html`) carries product marketing but no SDS/brochure download links at all. If consumer SDS documents exist, they are neither in the repo nor referenced — R&D/marketing to supply.
+---
 
-## 4. Repo-hosted PDFs not linked from any page
+## Tasks 1–4 — Before / After (every link changed)
 
-| Repo file | Linked? |
+| # | Task | File | Section (product) | Before | After |
+|---|---|---|---|---|---|
+| 1 | Dead 404 | `industrial.html` | Pro Defense — spec table SDS | `2024/04/WettingAgent-SDS.pdf` (404) | `2024/03/ProDefense-SDS.pdf` |
+| 1 | Dead 404 | `professional.html` | Pro Suppressor — spec card SDS | `2024/04/WettingAgent-SDS.pdf` (404) | `2024/04/FireSuppressor-SDS.pdf` |
+| 1 | Dead 404 | `professional.html` | Pro 32oz Heat Barrier — spec card SDS | `2024/04/WettingAgent-SDS.pdf` (404) | `2024/03/HeatBarrier-SDS.pdf` |
+| 2 | Wrong product | `industrial.html` | Pro Defense — Technical Resources card SDS | `2024/03/HeatBarrier-SDS.pdf` (Heat Barrier doc) | `2024/03/ProDefense-SDS.pdf` |
+| 2 | Wrong product | `professional.html` | Pro 32oz Heat Barrier — spec card brochure | `2023/04/GF_FireSuppressor_bro_final.pdf` (Fire Suppressor brochure) | `2023/04/GF_HeatBarrier_bro_final.pdf` |
+| 4 | Revision conflict | `industrial.html` | GFFF — spec table SDS | `2024/04/GFFF-SDS.pdf` (older, unverified) | `2026/01/GFFF-StandardUsage-SDS.pdf` (Jan 2026) |
+| 3 | One-product wording | `professional.html` | Pro Defense docs prompt | "Need Pro Defense **homeowner** documentation or bulk compliance packages?" | "Need Pro Defense documentation or bulk compliance packages?" |
+| 6 | Registry match | `sds.html` | Pro Defense card | "SDS on request: Sales@haltfire.com" (no link) | `2024/03/ProDefense-SDS.pdf` — "Download SDS (PDF) — Rev. February 2024" |
+
+**Post-edit verification (repo-wide greps):**
+- `WettingAgent-SDS` → **0 matches** (all three dead buttons cleared).
+- `ProDefense-SDS-FINAL-Aug-2022` → **0 matches** (superseded file absent).
+- `2024/04/GFFF-SDS.pdf` → **0 matches** (older GFFF revision cleared).
+- Pro Defense SDS across the whole site → **exactly one URL**, `2024/03/ProDefense-SDS.pdf` (4 link sites: industrial ×2, professional ×1, sds ×1).
+
+## Task 3 — "homeowner / professional" sweep
+
+Repo grep for `homeowner`, `Homeowner`, `Pro Defense for Homeowners`, `Pro Defense for Professionals`:
+
+| Hit | Decision |
 |---|---|
-| `MFWA-SDS-2026.pdf` | ✅ Linked (industrial, firedept, sds) |
-| `SJFD-MCWA-Training-2026.pdf` | ✅ Linked (sds.html) |
+| `professional.html` — "Need Pro Defense **homeowner** documentation or bulk compliance packages?" | **Fixed** — "homeowner" removed (implied a separate doc set/variant paired against "bulk compliance"). |
+| `consumer.html` — section eyebrow "Structure & Wildfire Defense **for Homeowners**" | **Reviewed, kept.** This is an audience descriptor for the single product; the section body explicitly states *"Pro Defense is a bulk product, not a consumer spray can"* and never labels a "Pro Defense for Homeowners" SKU. It does not imply two variants. Changing it would alter marketing copy outside Task 3's scope. |
 
-**No orphaned/unlinked PDFs in the repo.** (These are the only two self-hosted PDFs; every other document link points to `gogreenfire.com`.)
+No occurrences of "Pro Defense for Homeowners" or "Pro Defense for Professionals" exist in the codebase.
+
+## Task 7 — Link-text standardization
+
+All SDS buttons now contain the literal string **"SDS"** and carry the revision date as visible text (findability + revision confirmation for safety officers). 13 SDS buttons standardized:
+
+- `Download SDS (PDF) — Rev. 2026` (MCFWA) ×3
+- `Download SDS (PDF) — Rev. January 2026` (GFFF) ×3
+- `Download SDS (PDF) — Rev. February 2024` (Pro Defense / Pro Suppressor / Heat Barrier) ×6
+- `Pro Defense SDS (PDF) — Rev. February 2024` (professional standalone Pro Defense block) ×1
 
 ---
 
-## 5. Summary of items requiring R&D sign-off
+## Task 7 — Full document-link inventory (post-correction)
 
-1. **Pro Defense SDS** — resolve the three-way conflict (`HeatBarrier-SDS` / `WettingAgent-SDS` / `ProDefense-SDS`) and confirm the single correct file. (rows 5, 12, 28)
-2. **GFFF SDS revision** — confirm current revision: `GFFF-StandardUsage-SDS.pdf` (2026/01) or `GFFF-SDS.pdf` (2024/04). (rows 8, 14, 18, 33)
-3. **Pro Suppressor SDS** — confirm `FireSuppressor-SDS.pdf` is correct and retire `WettingAgent-SDS.pdf` from that product. (rows 20, 24)
-4. **Heat Barrier brochure + SDS (upper spec card)** — the upper professional.html card uses the Fire Suppressor brochure and the Wetting Agent SDS. (rows 21, 22)
-5. **Confirm every remaining link by opening the PDF** — because PDF content could not be read here, even the "OK" rows are unconfirmed against Section 1. A human with network access must open each PDF and check the printed Product Identifier before any link is trusted or changed.
-6. **Consumer SDS documents** — supply if they exist.
+> HTTP status column omitted per the egress blocker above — status is per the verified registry: `2024/04/WettingAgent-SDS.pdf` = 404 (now removed); all listed canonical files = 200 per R&D. Independent re-check pending a human on an open network.
 
-**No links were changed. All findings above are advisory and await R&D decision.**
+| Page | Section / product heading | Link text | Target file |
+|---|---|---|---|
+| industrial.html | Multi-Class Foam Wetting Agent | Product Brochure (PDF) | `2022/08/WettingAgent-Brochure-1-07.pdf` |
+| industrial.html | Multi-Class Foam Wetting Agent | One-Page Cut Sheet (PDF) | `2022/08/WettingAgent-Brochure-Onepage-1-07-1.pdf` |
+| industrial.html | Multi-Class Foam Wetting Agent | Download SDS (PDF) — Rev. 2026 | `haltfire.com/MFWA-SDS-2026.pdf` |
+| industrial.html | Pro Defense | Product Brochure (PDF) | `2022/08/ProDefense-Brochure-FINAL.July-2022.pdf` |
+| industrial.html | Pro Defense | **Download SDS (PDF) — Rev. February 2024** | `2024/03/ProDefense-SDS.pdf` |
+| industrial.html | Pro Defense | Utility Contractor Info Sheet (PDF) | `2021/04/UTILITY-CONTRACTOR-INFORMATION.pdf` |
+| industrial.html | GFFF Firefighting Foam | Product Brochure (PDF) | `2022/08/GFFF-Brochure-1-07.pdf` |
+| industrial.html | GFFF Firefighting Foam | **Download SDS (PDF) — Rev. January 2026** | `2026/01/GFFF-StandardUsage-SDS.pdf` |
+| industrial.html | Multi-Class Foam Wetting Agent (spec table) | Download …Brochure | `2022/08/WettingAgent-Brochure-1-07.pdf` |
+| industrial.html | Multi-Class Foam Wetting Agent (spec table) | Download SDS (PDF) — Rev. 2026 | `haltfire.com/MFWA-SDS-2026.pdf` |
+| industrial.html | Pro Defense (spec table) | Download Pro Defense Brochure | `2022/08/ProDefense-Brochure-FINAL.July-2022.pdf` |
+| industrial.html | Pro Defense (spec table) | **Download SDS (PDF) — Rev. February 2024** | `2024/03/ProDefense-SDS.pdf` |
+| industrial.html | GFFF Firefighting Foam (spec table) | Download GFFF Brochure | `2022/08/GFFF-Brochure-1-07.pdf` |
+| industrial.html | GFFF Firefighting Foam (spec table) | **Download SDS (PDF) — Rev. January 2026** | `2026/01/GFFF-StandardUsage-SDS.pdf` |
+| firedept.html | Multi-Class Foam Wetting Agent | Download …Brochure | `2022/08/WettingAgent-Brochure-1-07.pdf` |
+| firedept.html | Multi-Class Foam Wetting Agent | Download SDS (PDF) — Rev. 2026 | `haltfire.com/MFWA-SDS-2026.pdf` |
+| firedept.html | GFFF Firefighting Foam | Download GFFF Brochure | `2022/08/GFFF-Brochure-1-07.pdf` |
+| firedept.html | GFFF Firefighting Foam | Download SDS (PDF) — Rev. January 2026 | `2026/01/GFFF-StandardUsage-SDS.pdf` |
+| professional.html | Pro Suppressor (spec card) | Download Product Brochure | `2023/04/GF_FireSuppressor_bro_final.pdf` |
+| professional.html | Pro Suppressor (spec card) | **Download SDS (PDF) — Rev. February 2024** | `2024/04/FireSuppressor-SDS.pdf` |
+| professional.html | Pro 32oz Heat Barrier (spec card) | **Download Product Brochure** | `2023/04/GF_HeatBarrier_bro_final.pdf` |
+| professional.html | Pro 32oz Heat Barrier (spec card) | **Download SDS (PDF) — Rev. February 2024** | `2024/03/HeatBarrier-SDS.pdf` |
+| professional.html | HALT Pro Fire Suppressor (doc-card) | Product Brochure (PDF) | `2023/04/GF_FireSuppressor_bro_final.pdf` |
+| professional.html | HALT Pro Fire Suppressor (doc-card) | Download SDS (PDF) — Rev. February 2024 | `2024/04/FireSuppressor-SDS.pdf` |
+| professional.html | HALT Pro Heat Barrier (doc-card) | Product Brochure (PDF) | `2023/04/GF_HeatBarrier_bro_final.pdf` |
+| professional.html | HALT Pro Heat Barrier (doc-card) | Download SDS (PDF) — Rev. February 2024 | `2024/03/HeatBarrier-SDS.pdf` |
+| professional.html | Pro Defense (standalone block) | Pro Defense Brochure (PDF) | `2022/08/ProDefense-Brochure-FINAL.July-2022.pdf` |
+| professional.html | Pro Defense (standalone block) | Pro Defense SDS (PDF) — Rev. February 2024 | `2024/03/ProDefense-SDS.pdf` |
+| sds.html | Multi-Class Foam Wetting Agent | Download SDS (PDF) — Rev. 2026 | `haltfire.com/MFWA-SDS-2026.pdf` |
+| sds.html | Multi-Class Foam Wetting Agent | Product Brochure (PDF) | `2022/08/WettingAgent-Brochure-1-07.pdf` |
+| sds.html | Multi-Class Foam Wetting Agent | One-Page Cut Sheet (PDF) | `2022/08/WettingAgent-Brochure-Onepage-1-07-1.pdf` |
+| sds.html | Multi-Class Foam Wetting Agent | SJFD Training Reference, 2026 (PDF) | `haltfire.com/SJFD-MCWA-Training-2026.pdf` |
+| sds.html | GFFF Firefighting Foam | Download SDS (PDF) — Rev. January 2026 | `2026/01/GFFF-StandardUsage-SDS.pdf` |
+| sds.html | GFFF Firefighting Foam | Product Brochure (PDF) | `2022/08/GFFF-Brochure-1-07.pdf` |
+| sds.html | Pro Defense | Product Brochure (PDF) | `2022/08/ProDefense-Brochure-FINAL.July-2022.pdf` |
+| sds.html | Pro Defense | Utility / Contractor Info Sheet (PDF) | `2021/04/UTILITY-CONTRACTOR-INFORMATION.pdf` |
+| sds.html | Pro Defense | **Download SDS (PDF) — Rev. February 2024** (new) | `2024/03/ProDefense-SDS.pdf` |
+| sds.html | Pro Suppressor (14oz / 20oz) | Product Brochure (PDF) | `2023/04/GF_FireSuppressor_bro_final.pdf` |
+| sds.html | Pro Suppressor (14oz / 20oz) | Download SDS (PDF) — Rev. February 2024 | `2024/04/FireSuppressor-SDS.pdf` |
+| sds.html | Heat Barrier (32oz pump spray) | Product Brochure (PDF) | `2023/04/GF_HeatBarrier_bro_final.pdf` |
+| sds.html | Heat Barrier (32oz pump spray) | Download SDS (PDF) — Rev. February 2024 | `2024/03/HeatBarrier-SDS.pdf` |
+
+---
+
+## Cross-page / cross-section consistency — now ✅
+
+| Product | SDS URL (all occurrences) | Pages | Verdict |
+|---|---|---|---|
+| Multi-Class Foam Wetting Agent | `haltfire.com/MFWA-SDS-2026.pdf` | industrial (card + spec), firedept, sds | ✅ single URL |
+| GFFF Firefighting Foam | `2026/01/GFFF-StandardUsage-SDS.pdf` | industrial (card + spec), firedept, sds | ✅ single URL (2024 revision removed) |
+| Pro Defense | `2024/03/ProDefense-SDS.pdf` | industrial (card + spec), professional, sds | ✅ single URL (HeatBarrier-SDS & WettingAgent-SDS references cleared) |
+| Pro Fire Suppressor | `2024/04/FireSuppressor-SDS.pdf` | professional (spec + doc-card), sds | ✅ single URL (WettingAgent-SDS cleared) |
+| Heat Barrier | `2024/03/HeatBarrier-SDS.pdf` | professional (spec + doc-card), sds | ✅ single URL; spec-card brochure corrected to Heat Barrier brochure |
+
+Both product pages that carry an upper spec-card block **and** a lower doc-card block (professional.html) now agree within the page for both Pro Suppressor and Heat Barrier.
+
+## Orphans & coverage
+
+- **Repo-hosted PDFs, both linked:** `MFWA-SDS-2026.pdf` (industrial/firedept/sds), `SJFD-MCWA-Training-2026.pdf` (sds). No orphaned repo PDFs.
+- **Products with no SDS linked anywhere:** the three consumer sprays — **HALT! Household 10 oz, Grill 10 oz, Li-Ion 10 oz** — still show "SDS on request: Sales@haltfire.com" on sds.html. **No consumer SDS exists in the registry or repo.** Left untouched (per the hard constraint: do not invent a link). Flagged for R&D/marketing to supply.
+
+---
+
+## OUTSTANDING — manual check required (Task 5, egress-blocked)
+
+The sandbox cannot reach these; a human must open them and confirm:
+
+1. **`https://haltfire.com/MFWA-SDS-2026.pdf`** — confirm the Section 1 Product Identifier reads as the Multi-Class Foam Wetting Agent (or legacy "GreenFire® Wetting Agent") and record the exact revision date. *(Currently labeled "Rev. 2026" from the registry; the identifier is the one field R&D marked unverified.)*
+2. **`https://gogreenfire.com/wp-content/uploads/2024/04/GFFF-SDS.pdf`** — confirm whether it resolves at all and what product it identifies as. *(This older GFFF SDS has been removed from the site in favor of the Jan 2026 revision; verification is only to close the loop on the legacy file — no site link depends on it any longer.)*
+
+Neither was marked verified. No link was pointed at an unverified/dead file.
